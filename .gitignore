@@ -1,0 +1,12 @@
+# Build files
+build/
+
+# Local database
+database.db
+
+# macOS
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
