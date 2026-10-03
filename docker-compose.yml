@@ -1,0 +1,13 @@
+services:
+  vectordb:
+    build: .
+    image: vectordb:latest
+    container_name: vectordb
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    volumes:
+      - vectordb_data:/app/data
+
+volumes:
+  vectordb_data:

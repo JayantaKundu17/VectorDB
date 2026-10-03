@@ -2,6 +2,7 @@
 
 #include <cstdint>
 #include <fstream>
+#include <filesystem>
 
 namespace {
 
@@ -53,7 +54,9 @@ bool readString(
         return false;
     }
 
-    value.resize(static_cast<std::size_t>(length));
+    value.resize(
+        static_cast<std::size_t>(length)
+    );
 
     if (length > 0) {
         file.read(
@@ -68,10 +71,24 @@ bool readString(
 } // namespace
 
 
+// ============================================================
+// Constructor
+// ============================================================
+
+VectorStore::VectorStore(
+    const std::string& filename
+)
+    : persistenceFile(filename) {
+}
+
+
+// ============================================================
+// Insert
+// ============================================================
+
 bool VectorStore::insert(
     const VectorRecord& record
 ) {
-
     if (record.id.empty()) {
         return false;
     }
@@ -85,6 +102,12 @@ bool VectorStore::insert(
         record
     );
 
+    // Persist immediately.
+    if (!save()) {
+        // Keep the in-memory record, but report failure.
+        return false;
+    }
+
     return true;
 }
 
@@ -96,7 +119,6 @@ bool VectorStore::insert(
 bool VectorStore::update(
     const VectorRecord& record
 ) {
-
     if (record.id.empty()) {
         return false;
     }
@@ -109,6 +131,10 @@ bool VectorStore::update(
 
     it->second = record;
 
+    if (!save()) {
+        return false;
+    }
+
     return true;
 }
 
@@ -120,7 +146,6 @@ bool VectorStore::update(
 bool VectorStore::upsert(
     const VectorRecord& record
 ) {
-
     if (record.id.empty()) {
         return false;
     }
@@ -134,27 +159,37 @@ bool VectorStore::upsert(
             record
         );
 
-        return true;
+    } else {
+
+        it->second = record;
     }
 
-    it->second = record;
+    if (!save()) {
+        return false;
+    }
 
     return true;
 }
 
 
+// ============================================================
+// Exists
+// ============================================================
+
 bool VectorStore::exists(
     const std::string& id
 ) const {
-
     return records.find(id) != records.end();
 }
 
 
+// ============================================================
+// Get
+// ============================================================
+
 const VectorRecord* VectorStore::get(
     const std::string& id
 ) const {
-
     auto it = records.find(id);
 
     if (it == records.end()) {
@@ -165,135 +200,266 @@ const VectorRecord* VectorStore::get(
 }
 
 
+// ============================================================
+// Remove
+// ============================================================
+
 bool VectorStore::remove(
     const std::string& id
 ) {
+    auto erased = records.erase(id);
 
-    return records.erase(id) > 0;
+    if (erased == 0) {
+        return false;
+    }
+
+    if (!save()) {
+        return false;
+    }
+
+    return true;
 }
 
 
-std::size_t VectorStore::size() const {
+// ============================================================
+// Size
+// ============================================================
 
+std::size_t VectorStore::size() const {
     return records.size();
 }
 
 
+// ============================================================
+// Clear
+// ============================================================
+
 void VectorStore::clear() {
 
     records.clear();
+
+    save();
 }
 
 
-const std::unordered_map<std::string, VectorRecord>&
-VectorStore::getAll() const {
+// ============================================================
+// Get All
+// ============================================================
 
+const std::unordered_map<
+    std::string,
+    VectorRecord
+>&
+VectorStore::getAll() const {
     return records;
 }
 
 
 // ============================================================
-// Persistence
+// Save using default persistence file
+// ============================================================
+
+bool VectorStore::save() const {
+    return save(persistenceFile);
+}
+
+
+// ============================================================
+// Load using default persistence file
+// ============================================================
+
+bool VectorStore::load() {
+    return load(persistenceFile);
+}
+
+
+// ============================================================
+// Persistence - Save
 // ============================================================
 
 bool VectorStore::save(
     const std::string& filename
 ) const {
 
-    std::ofstream file(
-        filename,
-        std::ios::binary
-    );
+    try {
 
-    if (!file) {
-        return false;
-    }
+        // Make sure parent directory exists.
+        std::filesystem::path path(filename);
 
-    constexpr std::uint64_t MAGIC =
-        0x564543444231ULL;
-
-    constexpr std::uint32_t VERSION = 1;
-
-    const std::uint64_t recordCount =
-        static_cast<std::uint64_t>(
-            records.size()
-        );
-
-    file.write(
-        reinterpret_cast<const char*>(&MAGIC),
-        sizeof(MAGIC)
-    );
-
-    file.write(
-        reinterpret_cast<const char*>(&VERSION),
-        sizeof(VERSION)
-    );
-
-    file.write(
-        reinterpret_cast<const char*>(&recordCount),
-        sizeof(recordCount)
-    );
-
-    if (!file) {
-        return false;
-    }
-
-    for (const auto& pair : records) {
-
-        const VectorRecord& record =
-            pair.second;
-
-        if (!writeString(
-                file,
-                record.id
-            )) {
-            return false;
-        }
-
-        if (!writeString(
-                file,
-                record.text
-            )) {
-            return false;
-        }
-
-        const std::vector<float>& data =
-            record.vector.data();
-
-        const std::uint64_t dimension =
-            static_cast<std::uint64_t>(
-                data.size()
+        if (!path.parent_path().empty()) {
+            std::filesystem::create_directories(
+                path.parent_path()
             );
+        }
 
-        file.write(
-            reinterpret_cast<const char*>(&dimension),
-            sizeof(dimension)
+        // Write to a temporary file first.
+        //
+        // This prevents a crash during writing from
+        // destroying the previous valid database.
+        std::string tempFilename =
+            filename + ".tmp";
+
+        std::ofstream file(
+            tempFilename,
+            std::ios::binary |
+            std::ios::trunc
         );
 
         if (!file) {
             return false;
         }
 
-        if (dimension > 0) {
+        constexpr std::uint64_t MAGIC =
+            0x564543444231ULL;
+
+        constexpr std::uint32_t VERSION = 1;
+
+        const std::uint64_t recordCount =
+            static_cast<std::uint64_t>(
+                records.size()
+            );
+
+        // ----------------------------------------------------
+        // Header
+        // ----------------------------------------------------
+
+        file.write(
+            reinterpret_cast<const char*>(&MAGIC),
+            sizeof(MAGIC)
+        );
+
+        file.write(
+            reinterpret_cast<const char*>(&VERSION),
+            sizeof(VERSION)
+        );
+
+        file.write(
+            reinterpret_cast<const char*>(&recordCount),
+            sizeof(recordCount)
+        );
+
+        if (!file) {
+            return false;
+        }
+
+        // ----------------------------------------------------
+        // Records
+        // ----------------------------------------------------
+
+        for (const auto& pair : records) {
+
+            const VectorRecord& record =
+                pair.second;
+
+            // ID
+            if (!writeString(
+                    file,
+                    record.id
+                )) {
+                return false;
+            }
+
+            // Text
+            if (!writeString(
+                    file,
+                    record.text
+                )) {
+                return false;
+            }
+
+            // Vector
+            const std::vector<float>& data =
+                record.vector.data();
+
+            const std::uint64_t dimension =
+                static_cast<std::uint64_t>(
+                    data.size()
+                );
 
             file.write(
                 reinterpret_cast<const char*>(
-                    data.data()
+                    &dimension
                 ),
-                static_cast<std::streamsize>(
-                    dimension * sizeof(float)
-                )
+                sizeof(dimension)
             );
 
             if (!file) {
                 return false;
             }
-        }
-    }
 
-    return true;
+            if (dimension > 0) {
+
+                file.write(
+                    reinterpret_cast<const char*>(
+                        data.data()
+                    ),
+                    static_cast<std::streamsize>(
+                        dimension * sizeof(float)
+                    )
+                );
+
+                if (!file) {
+                    return false;
+                }
+            }
+        }
+
+        file.flush();
+
+        if (!file) {
+            return false;
+        }
+
+        file.close();
+
+        // ----------------------------------------------------
+        // Atomically replace old database
+        // ----------------------------------------------------
+
+        std::error_code ec;
+
+        std::filesystem::rename(
+            tempFilename,
+            filename,
+            ec
+        );
+
+        if (ec) {
+
+            // On some systems rename() fails if the
+            // destination already exists.
+
+            std::filesystem::remove(
+                filename,
+                ec
+            );
+
+            ec.clear();
+
+            std::filesystem::rename(
+                tempFilename,
+                filename,
+                ec
+            );
+
+            if (ec) {
+                return false;
+            }
+        }
+
+        return true;
+
+    }
+    catch (...) {
+
+        return false;
+    }
 }
 
+
+// ============================================================
+// Persistence - Load
+// ============================================================
 
 bool VectorStore::load(
     const std::string& filename
@@ -304,6 +470,7 @@ bool VectorStore::load(
         std::ios::binary
     );
 
+    // First startup: database doesn't exist yet.
     if (!file) {
         return false;
     }
@@ -316,6 +483,10 @@ bool VectorStore::load(
     std::uint64_t storedMagic = 0;
     std::uint32_t storedVersion = 0;
     std::uint64_t recordCount = 0;
+
+    // --------------------------------------------------------
+    // Header
+    // --------------------------------------------------------
 
     file.read(
         reinterpret_cast<char*>(&storedMagic),
@@ -336,10 +507,12 @@ bool VectorStore::load(
         return false;
     }
 
+    // Check magic number.
     if (storedMagic != MAGIC) {
         return false;
     }
 
+    // Check database version.
     if (storedVersion != VERSION) {
         return false;
     }
@@ -351,8 +524,24 @@ bool VectorStore::load(
         return false;
     }
 
-    std::unordered_map<std::string, VectorRecord>
-        loadedRecords;
+    // Load into a temporary map first.
+    //
+    // This prevents partially loaded data from
+    // corrupting the current in-memory store.
+    std::unordered_map<
+        std::string,
+        VectorRecord
+    > loadedRecords;
+
+    loadedRecords.reserve(
+        static_cast<std::size_t>(
+            recordCount
+        )
+    );
+
+    // --------------------------------------------------------
+    // Records
+    // --------------------------------------------------------
 
     for (
         std::uint64_t i = 0;
@@ -360,26 +549,26 @@ bool VectorStore::load(
         ++i
     ) {
 
-        VectorRecord record;
+        std::string id;
+        std::string text;
 
+        // Read ID
         if (!readString(
                 file,
-                record.id
+                id
             )) {
             return false;
         }
 
-        if (record.id.empty()) {
-            return false;
-        }
-
+        // Read text
         if (!readString(
                 file,
-                record.text
+                text
             )) {
             return false;
         }
 
+        // Read vector dimension
         std::uint64_t dimension = 0;
 
         file.read(
@@ -398,7 +587,9 @@ bool VectorStore::load(
             return false;
         }
 
-        std::vector<float> values(
+        std::vector<float> values;
+
+        values.resize(
             static_cast<std::size_t>(
                 dimension
             )
@@ -420,18 +611,23 @@ bool VectorStore::load(
             }
         }
 
-        record.vector = Vector(values);
+        Vector vector(values);
 
-        auto result =
-            loadedRecords.emplace(
-                record.id,
-                std::move(record)
-            );
+        VectorRecord record{
+            id,
+            vector,
+            text
+        };
 
-        if (!result.second) {
-            return false;
-        }
+        loadedRecords.emplace(
+            id,
+            std::move(record)
+        );
     }
+
+    // --------------------------------------------------------
+    // Replace current records
+    // --------------------------------------------------------
 
     records = std::move(
         loadedRecords

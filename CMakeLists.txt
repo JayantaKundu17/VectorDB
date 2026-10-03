@@ -28,7 +28,6 @@ target_include_directories(vectordb_core
         ${PROJECT_SOURCE_DIR}/src
 )
 
-
 # --------------------------------------------------
 # Main application
 # --------------------------------------------------
@@ -41,7 +40,6 @@ target_link_libraries(vectordb
     PRIVATE
         vectordb_core
 )
-
 
 # --------------------------------------------------
 # Testing
@@ -62,6 +60,7 @@ add_test(
     NAME VectorTest
     COMMAND test_vector
 )
+
 add_executable(test_distance
     tests/test_distance.cpp
 )
@@ -75,6 +74,7 @@ add_test(
     NAME DistanceTest
     COMMAND test_distance
 )
+
 add_executable(test_vectorstore
     tests/test_vectorstore.cpp
 )
@@ -88,6 +88,7 @@ add_test(
     NAME VectorStoreTest
     COMMAND test_vectorstore
 )
+
 add_executable(test_bruteforce
     tests/test_bruteforce.cpp
 )
@@ -101,6 +102,7 @@ add_test(
     NAME BruteForceTest
     COMMAND test_bruteforce
 )
+
 add_executable(test_kdtree
     tests/test_kdtree.cpp
 )
@@ -114,18 +116,25 @@ add_test(
     NAME KDTreeTest
     COMMAND test_kdtree
 )
+
 add_executable(test_persistence
     tests/test_persistence.cpp
 )
 
 target_link_libraries(test_persistence
-    vectordb_core
+    PRIVATE
+        vectordb_core
 )
 
 add_test(
     NAME PersistenceTest
     COMMAND test_persistence
 )
+
+# --------------------------------------------------
+# Benchmarks
+# --------------------------------------------------
+
 add_executable(search_benchmark
     benchmarks/search_benchmark.cpp
 )
@@ -134,10 +143,36 @@ target_link_libraries(search_benchmark
     PRIVATE
         vectordb_core
 )
+
 add_executable(hnsw_tuning
     benchmarks/hnsw_tuning.cpp
 )
 
 target_link_libraries(hnsw_tuning
-    vectordb_core
+    PRIVATE
+        vectordb_core
+)
+
+# --------------------------------------------------
+# REST API
+# --------------------------------------------------
+
+find_package(CURL REQUIRED)
+
+add_executable(vectordb_server
+    src/api/main.cpp
+    src/api/Server.cpp
+    src/api/Server.h
+)
+
+target_link_libraries(vectordb_server
+    PRIVATE
+        vectordb_core
+        CURL::libcurl
+)
+
+target_include_directories(vectordb_server
+    PRIVATE
+        ${PROJECT_SOURCE_DIR}/src
+        /opt/homebrew/include
 )
