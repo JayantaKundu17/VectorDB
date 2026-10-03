@@ -1476,6 +1476,7 @@ void Server::run(int port) {
 
     app
         .port(port)
+        .bindaddr("0.0.0.0")
         .multithreaded()
         .run();
 }
