@@ -8,6 +8,22 @@
 [![Gemini](https://img.shields.io/badge/AI-Gemini-8E75B2.svg)](https://ai.google.dev/)
 [![Render](https://img.shields.io/badge/Deployed-Render-46E3B7.svg)](https://render.com/)
 
+---
+
+## Screenshots
+
+
+<img width="1461" height="797" alt="Screenshot 2026-10-04 at 8 18 30 AM" src="https://github.com/user-attachments/assets/36b43aad-9d6a-4dfc-bbfb-866befdb9349" />
+
+
+<img width="1456" height="798" alt="Screenshot 2026-10-04 at 8 18 37 AM" src="https://github.com/user-attachments/assets/95c612b1-a664-42bb-ab14-d89f54fdc4d0" />
+
+
+<img width="1463" height="797" alt="Screenshot 2026-10-04 at 8 18 44 AM" src="https://github.com/user-attachments/assets/0152b7f7-328a-4304-ad0b-ade71be39c07" />
+
+
+---
+
 ## Live Demo
 
 **Frontend:**  
