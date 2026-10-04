@@ -1,12 +1,6 @@
 # VectorDB — C++ Vector Database & RAG Engine
 
-> A vector database engine built from scratch in **C++17**, featuring **Brute Force, KD-Tree, and HNSW** similarity search, persistent vector storage, a REST API, **Gemini-powered embeddings and generation**, and an interactive web interface with **PCA vector visualization**.
-
-[![C++17](https://img.shields.io/badge/C%2B%2B-17-blue.svg)](https://isocpp.org/)
-[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED.svg)](https://www.docker.com/)
-[![HNSW](https://img.shields.io/badge/Index-HNSW-orange.svg)](https://arxiv.org/abs/1603.09320)
-[![Gemini](https://img.shields.io/badge/AI-Gemini-8E75B2.svg)](https://ai.google.dev/)
-[![Render](https://img.shields.io/badge/Deployed-Render-46E3B7.svg)](https://render.com/)
+ A vector database engine built from scratch in **C++17**, featuring **Brute Force, KD-Tree, and HNSW** similarity search, persistent vector storage, a REST API, **Gemini-powered embeddings and generation**, and an interactive web interface with **PCA vector visualization**.
 
 ---
 
