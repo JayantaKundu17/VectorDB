@@ -4,6 +4,16 @@
 
 ---
 
+## Live Demo
+
+**Frontend:**  
+https://vectordb-frontend.onrender.com
+
+**Backend API:**  
+https://vectordb-api-yxup.onrender.com
+
+---
+
 ## Screenshots
 
 
@@ -16,15 +26,6 @@
 <img width="1463" height="797" alt="Screenshot 2026-10-04 at 8 18 44 AM" src="https://github.com/user-attachments/assets/0152b7f7-328a-4304-ad0b-ade71be39c07" />
 
 
----
-
-## Live Demo
-
-**Frontend:**  
-https://vectordb-frontend.onrender.com
-
-**Backend API:**  
-https://vectordb-api-yxup.onrender.com
 
 ---
 
