@@ -174,5 +174,4 @@ target_link_libraries(vectordb_server
 target_include_directories(vectordb_server
     PRIVATE
         ${PROJECT_SOURCE_DIR}/src
-        /opt/homebrew/include
 )

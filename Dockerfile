@@ -4,13 +4,13 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     cmake \
     git \
+    ca-certificates \
     libasio-dev \
     libssl-dev \
     libcurl4-openssl-dev \
     nlohmann-json3-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Crow 1.3.4 from source
 RUN git clone --depth 1 --branch v1.3.4 \
     https://github.com/CrowCpp/Crow.git /tmp/crow \
     && cmake -S /tmp/crow -B /tmp/crow/build \
@@ -31,16 +31,21 @@ RUN cmake -S . -B build \
 FROM ubuntu:24.04
 
 RUN apt-get update && apt-get install -y \
-    libasio-dev \
+    ca-certificates \
     libssl3 \
     libcurl4 \
-    nlohmann-json3-dev \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
 COPY --from=builder /app/build/vectordb_server /app/vectordb_server
 
-EXPOSE 8080
+RUN mkdir -p /app/data
+
+COPY vectordb.db /app/data/vectordb.db
+
+ENV VECTORDB_DATA_PATH=/app/data/vectordb.db
+
+EXPOSE 10000
 
 CMD ["./vectordb_server"]
