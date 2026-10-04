@@ -194,7 +194,7 @@ function addAnswerMessage(data) {
                 VectorDB ·
                 ${escapeHTML(data.index || "HNSW")}
                 ·
-                ${escapeHTML(data.model || "llama3.2")}
+                ${escapeHTML(data.model || "gemini-3.5-flash-lite")}
             </div>
 
             <div class="answer-text">

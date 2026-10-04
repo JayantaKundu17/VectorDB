@@ -1,17 +1,27 @@
-# Build files
+# Build artifacts
 build/
-
-# Local database
-database.db
 
 # macOS
 .DS_Store
 
-# IDE files
-.vscode/
-.idea/
+# Python
+__pycache__/
+*.py[cod]
 
-# Docker
+# Local databases
 *.db
-.Docker/
-VectorDB_PCA_update/
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Keys / certificates
+*.pem
+*.key

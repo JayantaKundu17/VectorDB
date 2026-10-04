@@ -1,0 +1,7 @@
+A C++ vector database engine can be implemented using a vector storage layer, distance functions, search indexes, persistence, and an HTTP API.
+
+Brute-force search compares a query against every stored vector. KD-Trees can accelerate nearest neighbor search for some lower-dimensional workloads, while HNSW is often better suited to high-dimensional approximate nearest neighbor search.
+
+A REST API can expose operations for inserting vectors, retrieving vectors, performing similarity search, viewing statistics, and executing a RAG query.
+
+Persistence allows vectors and their associated document text to survive server restarts.

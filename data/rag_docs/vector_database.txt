@@ -1,0 +1,5 @@
+A vector database stores high-dimensional numerical vectors and provides similarity search over those vectors. Vectors are commonly produced by embedding models that convert text, images, audio, and other data into numerical representations. Vector databases are useful for semantic search because queries can be converted into vectors and compared with stored vectors.
+
+Unlike a traditional keyword search system, semantic search can retrieve information based on meaning rather than exact word matches. A vector database typically stores a vector together with an identifier and metadata or source text.
+
+Approximate nearest neighbor algorithms are commonly used to make vector search efficient at scale. HNSW, or Hierarchical Navigable Small World, is one such algorithm.

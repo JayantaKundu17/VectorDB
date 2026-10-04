@@ -23,6 +23,24 @@ using json = nlohmann::json;
 
 namespace {
 
+std::string envString(
+    const char* name,
+    const char* fallback
+) {
+    const char* value = std::getenv(name);
+
+    if (value && std::string(value).length() > 0) {
+        return std::string(value);
+    }
+
+    return std::string(fallback);
+}
+
+bool useGeminiProvider() {
+    return envString("RAG_PROVIDER", "gemini") == "gemini";
+}
+
+
 void addCorsHeaders(crow::response& response) {
     response.set_header(
         "Access-Control-Allow-Origin",
@@ -90,6 +108,22 @@ std::string ollamaPost(
         headers,
         "Content-Type: application/json"
     );
+
+    // Optional Ollama Cloud authentication.
+    // Local Ollama does not require an API key.
+    const char* apiKey =
+        std::getenv("OLLAMA_API_KEY");
+
+    if (apiKey && std::string(apiKey).length() > 0) {
+        const std::string authHeader =
+            "Authorization: Bearer " +
+            std::string(apiKey);
+
+        headers = curl_slist_append(
+            headers,
+            authHeader.c_str()
+        );
+    }
 
     curl_easy_setopt(
         curl,
@@ -173,6 +207,133 @@ std::string ollamaPost(
 }
 
 
+
+// ============================================================
+// Gemini HTTP Helper
+// ============================================================
+
+std::string geminiPost(
+    const std::string& endpoint,
+    const json& payload
+) {
+    CURL* curl = curl_easy_init();
+
+    if (!curl) {
+        throw std::runtime_error(
+            "Failed to initialize libcurl"
+        );
+    }
+
+    std::string response;
+
+    const std::string requestBody =
+        payload.dump();
+
+    struct curl_slist* headers = nullptr;
+
+    headers = curl_slist_append(
+        headers,
+        "Content-Type: application/json"
+    );
+
+    const std::string apiKey =
+        envString("GEMINI_API_KEY", "");
+
+    if (apiKey.empty()) {
+        curl_slist_free_all(headers);
+        curl_easy_cleanup(curl);
+
+        throw std::runtime_error(
+            "GEMINI_API_KEY is not configured"
+        );
+    }
+
+    headers = curl_slist_append(
+        headers,
+        ("x-goog-api-key: " + apiKey).c_str()
+    );
+
+    curl_easy_setopt(
+        curl,
+        CURLOPT_URL,
+        endpoint.c_str()
+    );
+
+    curl_easy_setopt(
+        curl,
+        CURLOPT_POST,
+        1L
+    );
+
+    curl_easy_setopt(
+        curl,
+        CURLOPT_POSTFIELDS,
+        requestBody.c_str()
+    );
+
+    curl_easy_setopt(
+        curl,
+        CURLOPT_HTTPHEADER,
+        headers
+    );
+
+    curl_easy_setopt(
+        curl,
+        CURLOPT_WRITEFUNCTION,
+        curlWriteCallback
+    );
+
+    curl_easy_setopt(
+        curl,
+        CURLOPT_WRITEDATA,
+        &response
+    );
+
+    curl_easy_setopt(
+        curl,
+        CURLOPT_TIMEOUT,
+        120L
+    );
+
+    CURLcode result =
+        curl_easy_perform(curl);
+
+    long httpStatus = 0;
+
+    curl_easy_getinfo(
+        curl,
+        CURLINFO_RESPONSE_CODE,
+        &httpStatus
+    );
+
+    curl_slist_free_all(headers);
+    curl_easy_cleanup(curl);
+
+    if (result != CURLE_OK) {
+        throw std::runtime_error(
+            std::string(
+                "Gemini request failed: "
+            ) +
+            curl_easy_strerror(result)
+        );
+    }
+
+    if (
+        httpStatus < 200 ||
+        httpStatus >= 300
+    ) {
+        throw std::runtime_error(
+            "Gemini returned HTTP " +
+            std::to_string(httpStatus) +
+            ": " +
+            response
+        );
+    }
+
+    return response;
+}
+
+
 // ============================================================
 // Generate Embedding
 // ============================================================
@@ -180,6 +341,72 @@ std::string ollamaPost(
 std::vector<float> generateEmbedding(
     const std::string& text
 ) {
+    // --------------------------------------------------------
+    // Gemini production provider
+    // --------------------------------------------------------
+
+    if (useGeminiProvider()) {
+
+        json payload;
+
+        payload["content"] = {
+            {"parts", {
+                {"text", text}
+            }}
+        };
+
+        payload["output_dimensionality"] = 768;
+
+        const std::string model =
+            envString(
+                "GEMINI_EMBED_MODEL",
+                "gemini-embedding-2"
+            );
+
+        const std::string endpoint =
+            "https://generativelanguage.googleapis.com/"
+            "v1beta/models/" +
+            model +
+            ":embedContent";
+
+        const std::string raw =
+            geminiPost(
+                endpoint,
+                payload
+            );
+
+        json result =
+            json::parse(raw);
+
+        if (
+            !result.contains("embedding") ||
+            !result["embedding"].contains("values")
+        ) {
+            throw std::runtime_error(
+                "Gemini embedding response does not "
+                "contain embedding values"
+            );
+        }
+
+        std::vector<float> embedding =
+            result["embedding"]["values"]
+                .get<std::vector<float>>();
+
+        if (embedding.size() != 768) {
+            throw std::runtime_error(
+                "Gemini embedding dimension is " +
+                std::to_string(embedding.size()) +
+                ", expected 768"
+            );
+        }
+
+        return embedding;
+    }
+
+    // --------------------------------------------------------
+    // Existing Ollama local provider
+    // --------------------------------------------------------
+
     json payload;
 
     payload["model"] =
@@ -188,9 +415,15 @@ std::vector<float> generateEmbedding(
     payload["input"] =
         text;
 
+    const std::string ollamaBaseUrl =
+        envString(
+            "OLLAMA_BASE_URL",
+            "http://localhost:11434"
+        );
+
     const std::string raw =
         ollamaPost(
-            "http://localhost:11434/api/embed",
+            ollamaBaseUrl + "/api/embed",
             payload
         );
 
@@ -246,11 +479,78 @@ std::string generateAnswer(
 
         << "Answer:\n";
 
+    // --------------------------------------------------------
+    // Gemini production provider
+    // --------------------------------------------------------
+
+    if (useGeminiProvider()) {
+
+        json payload;
+
+        payload["contents"] = {
+            {
+                {"parts", {
+                    {
+                        {"text", prompt.str()}
+                    }
+                }}
+            }
+        };
+
+        const std::string model =
+            envString(
+                "GEMINI_MODEL",
+                "gemini-3.5-flash-lite"
+            );
+
+        const std::string endpoint =
+            "https://generativelanguage.googleapis.com/"
+            "v1beta/models/" +
+            model +
+            ":generateContent";
+
+        const std::string raw =
+            geminiPost(
+                endpoint,
+                payload
+            );
+
+        json result =
+            json::parse(raw);
+
+        if (
+            !result.contains("candidates") ||
+            result["candidates"].empty() ||
+            !result["candidates"][0]
+                .contains("content") ||
+            !result["candidates"][0]["content"]
+                .contains("parts") ||
+            result["candidates"][0]["content"]["parts"]
+                .empty()
+        ) {
+            throw std::runtime_error(
+                "Gemini generation response does not "
+                "contain answer content"
+            );
+        }
+
+        return result["candidates"][0]
+            ["content"]["parts"][0]
+            ["text"]
+            .get<std::string>();
+    }
+
+    // --------------------------------------------------------
+    // Existing Ollama provider
+    // --------------------------------------------------------
 
     json payload;
 
     payload["model"] =
-        "llama3.2";
+        envString(
+            "OLLAMA_MODEL",
+            "llama3.2"
+        );
 
     payload["prompt"] =
         prompt.str();
@@ -258,17 +558,20 @@ std::string generateAnswer(
     payload["stream"] =
         false;
 
+    const std::string ollamaBaseUrl =
+        envString(
+            "OLLAMA_BASE_URL",
+            "http://localhost:11434"
+        );
 
     const std::string raw =
         ollamaPost(
-            "http://localhost:11434/api/generate",
+            ollamaBaseUrl + "/api/generate",
             payload
         );
 
-
     json result =
         json::parse(raw);
-
 
     if (!result.contains("response")) {
         throw std::runtime_error(
@@ -277,10 +580,10 @@ std::string generateAnswer(
         );
     }
 
-
     return result["response"]
         .get<std::string>();
 }
+
 
 } // namespace
 
@@ -1408,12 +1711,28 @@ void Server::run(int port) {
                 sources;
 
 
-            output["model"] =
-                "llama3.2";
+            if (useGeminiProvider()) {
+    output["model"] =
+        envString(
+            "GEMINI_MODEL",
+            "gemini-3.5-flash-lite"
+        );
 
+    output["embedding_model"] =
+        envString(
+            "GEMINI_EMBED_MODEL",
+            "gemini-embedding-2"
+        );
+} else {
+    output["model"] =
+        envString(
+            "OLLAMA_MODEL",
+            "llama3.2"
+        );
 
-            output["embedding_model"] =
-                "nomic-embed-text";
+    output["embedding_model"] =
+        "nomic-embed-text";
+}
 
 
             output["index"] =

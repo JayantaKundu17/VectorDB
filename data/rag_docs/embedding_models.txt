@@ -1,0 +1,5 @@
+Embedding models convert data such as text into numerical vectors that capture semantic information.
+
+Two pieces of text with related meanings should generally produce vectors that are close to one another in the embedding space. Similarity can be measured using metrics such as cosine similarity, Euclidean distance, or Manhattan distance.
+
+The same embedding model should be used when indexing documents and when embedding user queries. Mixing vectors produced by unrelated embedding models can make similarity search unreliable even when the vectors have the same dimensionality.

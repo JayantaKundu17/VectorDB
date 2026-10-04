@@ -1,0 +1,5 @@
+HNSW stands for Hierarchical Navigable Small World. It is an approximate nearest neighbor search algorithm based on a multilayer graph.
+
+The lower layers contain many vectors while the upper layers provide increasingly sparse connections that allow the search to move quickly through the vector space. During a query, HNSW starts from an entry point at a high level and moves toward increasingly similar vectors before descending through the hierarchy.
+
+HNSW is particularly useful for high-dimensional embeddings because exhaustive comparison against every vector can become expensive as the database grows. The tradeoff is that approximate search may not always return the exact mathematical nearest neighbor.
