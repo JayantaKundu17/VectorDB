@@ -1,94 +1,582 @@
-# VectorDB
+# VectorDB — C++ Vector Database & RAG Engine
 
-A lightweight vector database implemented in **C++17**, featuring multiple vector-search indexes, persistent storage, interactive CLI access, automated testing, and performance benchmarking.
-
-## Overview
-
-VectorDB is a from-scratch implementation of core concepts used in modern vector databases and approximate nearest-neighbor (ANN) search systems.
-
-The project supports storing high-dimensional vectors and retrieving the most similar vectors using multiple distance metrics and indexing strategies.
-
-### Key Features
-
-* Vector storage with unique IDs
-* Insert, update, upsert, retrieve, and delete operations
-* Cosine similarity
-* Euclidean distance
-* Manhattan distance
-* Brute-force nearest-neighbor search
-* KD-Tree indexing
-* HNSW approximate nearest-neighbor indexing
-* Top-K search
-* Recall@K evaluation
-* Database persistence using save/load
-* Interactive command-line interface
-* Automated CTest test suite
-* Search performance benchmarking
-* HNSW parameter tuning
+ A vector database engine built from scratch in **C++17**, featuring **Brute Force, KD-Tree, and HNSW** similarity search, persistent vector storage, a REST API, **Gemini-powered embeddings and generation**, and an interactive web interface with **PCA vector visualization**.
 
 ---
 
-## Architecture
+## Live Demo
+
+**Frontend:**  
+https://vectordb-frontend.onrender.com
+
+**Backend API:**  
+https://vectordb-api-yxup.onrender.com
+
+---
+
+## Screenshots
+
+
+<img width="1461" height="797" alt="Screenshot 2026-10-04 at 8 18 30 AM" src="https://github.com/user-attachments/assets/36b43aad-9d6a-4dfc-bbfb-866befdb9349" />
+
+
+<img width="1456" height="798" alt="Screenshot 2026-10-04 at 8 18 37 AM" src="https://github.com/user-attachments/assets/95c612b1-a664-42bb-ab14-d89f54fdc4d0" />
+
+
+<img width="1463" height="797" alt="Screenshot 2026-10-04 at 8 18 44 AM" src="https://github.com/user-attachments/assets/0152b7f7-328a-4304-ad0b-ade71be39c07" />
+
+
+
+---
+
+## Overview
+
+VectorDB is a lightweight vector database and Retrieval-Augmented Generation (RAG) system implemented in C++17.
+
+The project was designed to understand what happens underneath modern vector-search systems instead of relying entirely on an existing vector database.
+
+The engine provides:
+
+- High-dimensional vector storage
+- Multiple distance metrics
+- Multiple nearest-neighbor search algorithms
+- HNSW approximate nearest-neighbor indexing
+- File-based persistence
+- REST API endpoints
+- Gemini-based document embeddings
+- Gemini-based answer generation
+- End-to-end RAG retrieval
+- PCA-based 2D vector visualization
+- Search benchmarking
+- Docker deployment
+- Public cloud deployment using Render
+
+---
+
+# Architecture
 
 ```text
-                    ┌──────────────────────┐
-                    │    Interactive CLI   │
-                    │      vectordb        │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │     VectorStore      │
-                    │                      │
-                    │ Insert / Update      │
-                    │ Upsert / Delete      │
-                    │ Get / Persistence    │
-                    └──────────┬───────────┘
-                               │
-             ┌─────────────────┼─────────────────┐
-             │                 │                 │
-             ▼                 ▼                 ▼
-      ┌─────────────┐   ┌─────────────┐   ┌─────────────┐
-      │ Brute Force │   │   KD-Tree   │   │    HNSW     │
-      │    Index    │   │    Index    │   │    Index    │
-      └─────────────┘   └─────────────┘   └─────────────┘
-             │                 │                 │
-             └─────────────────┼─────────────────┘
-                               ▼
-                    ┌──────────────────────┐
-                    │   Distance Metrics   │
-                    │                      │
-                    │ Cosine               │
-                    │ Euclidean            │
-                    │ Manhattan            │
-                    └──────────────────────┘
+                        ┌─────────────────────┐
+                        │     Web Browser      │
+                        │ HTML / CSS / JS      │
+                        └──────────┬──────────┘
+                                   │
+                                   ▼
+                        ┌─────────────────────┐
+                        │   Render Frontend    │
+                        │   Static Site        │
+                        └──────────┬──────────┘
+                                   │ HTTP
+                                   ▼
+┌─────────────────────────────────────────────────────────┐
+│                VectorDB REST API                        │
+│                  C++ / Crow                             │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│   Query                                                  │
+│     │                                                    │
+│     ▼                                                    │
+│   Gemini Embedding                                       │
+│     │                                                    │
+│     ▼                                                    │
+│   HNSW Similarity Search                                  │
+│     │                                                    │
+│     ▼                                                    │
+│   Top-K Relevant Chunks                                  │
+│     │                                                    │
+│     ▼                                                    │
+│   Context Construction                                   │
+│     │                                                    │
+│     ▼                                                    │
+│   Gemini LLM Generation                                  │
+│     │                                                    │
+│     ▼                                                    │
+│   Grounded Answer + Sources                              │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+                                   │
+                                   ▼
+                          ┌─────────────────┐
+                          │ Gemini API      │
+                          │ Embeddings      │
+                          │ + Generation    │
+                          └─────────────────┘
 ```
 
 ---
 
-## Project Structure
+# Key Features
+
+## 1. Vector Storage
+
+The core `VectorStore` manages high-dimensional vectors together with:
+
+- Unique identifiers
+- Vector data
+- Associated text / metadata
+- Persistence to disk
+
+The database can be loaded when the server starts and saved back to disk.
+
+---
+
+## 2. Multiple Search Algorithms
+
+VectorDB implements three different similarity-search strategies.
+
+### Brute Force
+
+Compares the query vector against every stored vector.
+
+```text
+Query
+  │
+  ├── compare → Vector 1
+  ├── compare → Vector 2
+  ├── compare → Vector 3
+  ├── ...
+  └── compare → Vector N
+```
+
+Advantages:
+
+- Simple
+- Exact
+- Good baseline for benchmarking
+
+Complexity:
+
+```text
+O(N × D)
+```
+
+where:
+
+- `N` = number of vectors
+- `D` = vector dimensionality
+
+---
+
+### KD-Tree
+
+A tree-based nearest-neighbor structure designed primarily for lower-dimensional workloads.
+
+KD-Tree is useful as a comparison point but becomes less attractive as dimensionality increases.
+
+---
+
+### HNSW
+
+VectorDB implements **Hierarchical Navigable Small World (HNSW)** graph search.
+
+```text
+Level 2          A -------- D
+                  \        /
+                   \      /
+Level 1       A --- B --- D ---- F
+                \   |   /
+                 \  |  /
+Level 0      A -- B -- C -- D -- E -- F
+```
+
+Higher layers provide sparse long-range connections while lower layers contain denser local connections.
+
+During search:
+
+1. Start from an entry point at a high level.
+2. Move toward increasingly similar nodes.
+3. Descend through the hierarchy.
+4. Perform a denser search at the lowest level.
+5. Return the nearest candidates.
+
+This allows approximate nearest-neighbor search without scanning the entire database.
+
+---
+
+# Distance Metrics
+
+VectorDB supports multiple distance functions:
+
+### Cosine Similarity
+
+Measures the angle between vectors.
+
+Useful for semantic embeddings and text similarity.
+
+### Euclidean Distance
+
+Measures straight-line distance between vectors.
+
+### Manhattan Distance
+
+Measures the sum of absolute coordinate differences.
+
+```text
+Supported:
+
+COSINE
+EUCLIDEAN
+MANHATTAN
+```
+
+---
+
+# RAG Pipeline
+
+The project includes a complete Retrieval-Augmented Generation pipeline.
+
+```text
+Document
+   │
+   ▼
+Chunking
+   │
+   ▼
+Gemini Embedding
+   │
+   ▼
+768-dimensional vector
+   │
+   ▼
+VectorDB
+   │
+   ▼
+HNSW Index
+   │
+   ▼
+User Question
+   │
+   ▼
+Gemini Embedding
+   │
+   ▼
+HNSW Top-K Search
+   │
+   ▼
+Relevant Documents
+   │
+   ▼
+Context Construction
+   │
+   ▼
+Gemini LLM
+   │
+   ▼
+Grounded Answer
+```
+
+The ingestion pipeline:
+
+- Reads `.txt` documents
+- Splits them into chunks
+- Generates Gemini embeddings
+- Stores vectors and source text
+- Uses deterministic chunk IDs
+
+The current ingestion configuration uses:
+
+```text
+Embedding model : gemini-embedding-2
+Dimension       : 768
+Chunk size      : 120 words
+Chunk overlap   : 25 words
+```
+
+---
+
+# Gemini Integration
+
+VectorDB uses Gemini for both sides of the RAG pipeline.
+
+### Embeddings
+
+```text
+gemini-embedding-2
+```
+
+The embedding pipeline produces:
+
+```text
+768-dimensional vectors
+```
+
+### Generation
+
+```text
+gemini-3.5-flash-lite
+```
+
+The LLM receives the retrieved document context and generates a grounded response.
+
+---
+
+# REST API
+
+The C++ backend exposes the vector database through HTTP endpoints using **Crow**.
+
+## Health
+
+```http
+GET /health
+```
+
+Example:
+
+```json
+{
+  "service": "VectorDB",
+  "status": "ok"
+}
+```
+
+---
+
+## Statistics
+
+```http
+GET /stats
+```
+
+Example:
+
+```json
+{
+  "index": "HNSW",
+  "index_size": 6,
+  "vectors": 6
+}
+```
+
+---
+
+## Vector Visualization
+
+```http
+GET /visualization/vectors?limit=500
+```
+
+Returns vectors and associated metadata for visualization.
+
+The frontend applies PCA in JavaScript to project high-dimensional vectors into 2D.
+
+---
+
+## RAG Query
+
+```http
+POST /rag
+```
+
+Example request:
+
+```json
+{
+  "question": "What does HNSW stand for and how does it work?",
+  "k": 3
+}
+```
+
+Example response structure:
+
+```json
+{
+  "question": "What does HNSW stand for and how does it work?",
+  "answer": "...",
+  "query_vector": [...],
+  "sources": [...],
+  "model": "gemini-3.5-flash-lite",
+  "embedding_model": "gemini-embedding-2",
+  "index": "HNSW"
+}
+```
+
+---
+
+# Web Interface
+
+The frontend provides three main views.
+
+## RAG Search
+
+Ask questions against the indexed knowledge base.
+
+Displays:
+
+- Generated answer
+- Retrieved documents
+- Similarity scores
+- Embedding model
+- Search index
+- Generation model
+
+---
+
+## Vector Database
+
+Provides a live view of the database.
+
+Displays:
+
+- Number of vectors
+- HNSW node count
+- Index type
+- Embedding model
+- Search metric
+- HNSW configuration
+- RAG pipeline
+- Search benchmark results
+- PCA vector space
+
+---
+
+## System
+
+Displays the active system architecture and configuration.
+
+```text
+Core Engine       → C++17
+Vector Index      → HNSW
+Embedding Model   → gemini-embedding-2
+Generation Model  → gemini-3.5-flash-lite
+Search Metric     → Cosine
+REST API          → Crow
+```
+
+---
+
+# PCA Visualization
+
+The frontend includes a 2D PCA visualization of the high-dimensional vector space.
+
+```text
+768 dimensions
+      │
+      ▼
+     PCA
+      │
+      ▼
+  2D projection
+      │
+      ▼
+Interactive vector plot
+```
+
+This makes it possible to visually inspect how documents are distributed in embedding space.
+
+Users can click points to inspect the corresponding vector/document.
+
+---
+
+# Benchmarking
+
+The project includes a benchmark comparing:
+
+- Brute Force
+- KD-Tree
+- HNSW
+
+The benchmark evaluates different vector dimensions and measures:
+
+- Search latency
+- HNSW recall
+- Relative speedup
+
+Example local benchmark results from the current project:
+
+| Dimension | Brute Force | KD-Tree | HNSW | HNSW Recall | HNSW Speedup |
+|-----------|------------:|--------:|-----:|------------:|-------------:|
+| 32D  | 2.8398 ms | 2.2359 ms | 4.2515 ms | 100% | 0.668× |
+| 128D | 6.3158 ms | 5.8483 ms | 5.1391 ms | 90% | 1.229× |
+| 384D | 16.6928 ms | 17.1806 ms | 9.3564 ms | 90% | 1.784× |
+| 768D | 29.4938 ms | 29.0934 ms | 10.2078 ms | 80% | 2.889× |
+
+The benchmark demonstrates the increasing advantage of HNSW as vector dimensionality increases.
+
+> Benchmark results depend on hardware, dataset size, index parameters, and workload. The values above are from the project's local benchmark configuration.
+
+---
+
+# Technology Stack
+
+## Backend
+
+- C++17
+- Crow 1.3.4
+- CMake
+- libcurl
+- nlohmann/json
+
+## Vector Search
+
+- Brute Force
+- KD-Tree
+- HNSW
+
+## AI / RAG
+
+- Gemini Embeddings
+- Gemini LLM
+- Retrieval-Augmented Generation
+
+## Frontend
+
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- PCA visualization
+
+## Infrastructure
+
+- Docker
+- GitHub
+- Render
+
+---
+
+# Project Structure
 
 ```text
 VectorDB/
+│
+├── benchmarks/
+│   ├── hnsw_tuning.cpp
+│   └── search_benchmark.cpp
+│
+├── data/
+│   └── rag_docs/
+│       ├── cpp_engine.txt
+│       ├── embedding_models.txt
+│       ├── hnsw.txt
+│       ├── rag.txt
+│       └── vector_database.txt
+│
+├── frontend/
+│   ├── index.html
+│   ├── app.js
+│   └── style.css
+│
+├── scripts/
+│   └── ingest.py
+│
 ├── src/
+│   ├── api/
+│   │   ├── main.cpp
+│   │   ├── Server.cpp
+│   │   └── Server.h
+│   │
 │   ├── core/
 │   │   ├── Vector.cpp
 │   │   ├── Vector.h
 │   │   ├── VectorStore.cpp
 │   │   └── VectorStore.h
 │   │
-│   ├── indexes/
-│   │   ├── BruteForce.cpp
-│   │   ├── BruteForce.h
-│   │   ├── KDTree.cpp
-│   │   ├── KDTree.h
-│   │   ├── HNSW.cpp
-│   │   └── HNSW.h
-│   │
-│   ├── distance/
-│   │   └── DistanceMetric.h
-│   │
-│   └── main.cpp
+│   └── indexes/
+│       ├── BruteForce.cpp
+│       ├── BruteForce.h
+│       ├── KDTree.cpp
+│       ├── KDTree.h
+│       ├── HNSW.cpp
+│       └── HNSW.h
 │
 ├── tests/
 │   ├── test_vector.cpp
@@ -98,499 +586,335 @@ VectorDB/
 │   ├── test_kdtree.cpp
 │   └── test_persistence.cpp
 │
-├── benchmarks/
-│   ├── search_benchmark.cpp
-│   └── hnsw_tuning.cpp
-│
+├── .dockerignore
+├── .env.example
+├── .gitignore
 ├── CMakeLists.txt
-├── README.md
-└── .gitignore
+├── Dockerfile
+└── README.md
 ```
 
 ---
 
-# Core Components
+# Local Setup
 
-## Vector
+## Requirements
 
-The `Vector` class represents an arbitrary-dimensional numerical vector.
+Install:
 
-Example:
+- C++17 compiler
+- CMake 3.20+
+- Git
+- Python 3
+- Docker
+- Gemini API key
 
-```text
-[1.0, 2.0, 3.0]
-```
-
-Vectors can represent embeddings produced by machine-learning models.
-
----
-
-## VectorStore
-
-`VectorStore` manages the underlying vector records.
-
-Each record contains:
-
-```text
-ID
-Vector
-Text / metadata
-```
-
-Example:
-
-```text
-doc_001
-[1.0, 2.0, 3.0]
-"Document about machine learning."
-```
-
-Supported operations include:
-
-```text
-insert()
-update()
-upsert()
-exists()
-get()
-remove()
-size()
-clear()
-getAll()
-save()
-load()
-```
-
-The store uses an `unordered_map` for ID-based record management.
-
----
-
-# Distance Metrics
-
-VectorDB currently supports three distance/similarity measures.
-
-## Cosine Similarity
-
-Measures the angular similarity between two vectors.
-
-A value closer to `1` indicates higher similarity.
-
-Example:
-
-```text
-Query: [1, 2, 3]
-
-doc_001 → 1.000000
-doc_002 → 0.999859
-doc_003 → 0.925820
-```
-
----
-
-## Euclidean Distance
-
-Measures straight-line distance between vectors.
-
-Smaller values indicate greater similarity.
-
-```text
-Query: [1, 2, 3]
-
-doc_001 → 0.000000
-doc_002 → 0.173205
-doc_003 → larger distance
-```
-
----
-
-## Manhattan Distance
-
-Measures the sum of absolute differences between vector dimensions.
-
-Smaller values indicate greater similarity.
-
----
-
-# Search Indexes
-
-## 1. Brute Force
-
-The brute-force index compares the query against every stored vector.
-
-### Advantages
-
-* Simple
-* Exact
-* Reliable ground truth
-* Useful for benchmarking approximate indexes
-
-### Disadvantage
-
-Search cost increases significantly as the number and dimensionality of vectors grow.
-
-The brute-force implementation is therefore used as the ground-truth reference when calculating recall.
-
----
-
-## 2. KD-Tree
-
-KD-Tree recursively partitions vectors according to dimensions.
-
-It can reduce the amount of the search space examined compared with a full brute-force scan.
-
-In the benchmark, KD-Tree produced exact results for the tested configurations.
-
----
-
-## 3. HNSW
-
-HNSW (Hierarchical Navigable Small World) is an approximate nearest-neighbor graph index.
-
-It trades some search accuracy for significantly faster query performance at higher dimensions.
-
-The implementation exposes the major HNSW parameters:
-
-```text
-M
-efConstruction
-efSearch
-```
-
-These parameters control graph connectivity, construction effort, and search effort.
-
----
-
-# Benchmarking
-
-The search benchmark evaluates:
-
-* Brute-force search
-* KD-Tree search
-* HNSW search
-* Query latency
-* Build time
-* Recall@10
-* Speedup
-
-The benchmark was run with:
-
-```text
-Vectors : 5000
-Top-K   : 10
-Queries : 100
-```
-
-Dimensions tested:
-
-```text
-32
-128
-384
-768
-```
-
-## Benchmark Results
-
-### 32 Dimensions
-
-| Index       | Query Latency | Recall@10 | Speedup |
-| ----------- | ------------: | --------: | ------: |
-| Brute Force |     2.8252 ms |      100% |   1.00x |
-| KD-Tree     |     2.2371 ms |      100% |   1.26x |
-| HNSW        |     4.2307 ms |      100% |   0.67x |
-
-At 32 dimensions, HNSW does not outperform brute force because the dataset is relatively small and low-dimensional.
-
-### 128 Dimensions
-
-| Index       | Query Latency | Recall@10 | Speedup |
-| ----------- | ------------: | --------: | ------: |
-| Brute Force |     6.2927 ms |      100% |   1.00x |
-| KD-Tree     |     5.8607 ms |      100% |   1.07x |
-| HNSW        |     5.1366 ms |       90% |   1.23x |
-
-HNSW begins to provide a measurable query-speed advantage.
-
-### 384 Dimensions
-
-| Index       | Query Latency | Recall@10 | Speedup |
-| ----------- | ------------: | --------: | ------: |
-| Brute Force |    15.4624 ms |      100% |   1.00x |
-| KD-Tree     |    15.1755 ms |      100% |   1.02x |
-| HNSW        |     7.1915 ms |       90% |   2.15x |
-
-At 384 dimensions, HNSW provides approximately **2.15× query speedup** over brute force.
-
-### 768 Dimensions
-
-| Index       | Query Latency | Recall@10 | Speedup |
-| ----------- | ------------: | --------: | ------: |
-| Brute Force |    29.3314 ms |      100% |   1.00x |
-| KD-Tree     |    28.9573 ms |      100% |   1.01x |
-| HNSW        |    10.1153 ms |       80% |   2.90x |
-
-At 768 dimensions, HNSW provides approximately **2.9× query speedup** over brute force, at the cost of reduced recall.
-
----
-
-# HNSW Parameter Tuning
-
-A separate benchmark evaluates different HNSW configurations.
-
-Dataset:
-
-```text
-Vectors   : 5000
-Dimension : 384
-Top-K     : 10
-Queries   : 50
-```
-
-Parameters tested:
-
-```text
-M:
-8, 16, 32
-
-efConstruction:
-100, 200
-
-efSearch:
-50, 100, 200
-```
-
-One strong configuration observed during testing was:
-
-```text
-M = 32
-efConstruction = 100
-efSearch = 100
-```
-
-Results:
-
-```text
-Recall@10 : 100%
-Query     : ~8.26 ms
-Speedup   : ~2.22x
-```
-
-Another configuration:
-
-```text
-M = 32
-efConstruction = 100
-efSearch = 50
-```
-
-produced:
-
-```text
-Recall@10 : 80%
-Query     : ~6.93 ms
-Speedup   : ~2.72x
-```
-
-This demonstrates the fundamental HNSW trade-off:
-
-```text
-Higher efSearch
-       ↓
-Higher recall
-       ↓
-Higher query latency
-```
-
----
-
-# Persistence
-
-VectorDB supports saving and loading the database.
-
-Example:
-
-```text
-vectordb> save database.db
-Database saved to database.db
-
-vectordb> delete doc_001
-Deleted doc_001 successfully.
-
-vectordb> load database.db
-Database loaded from database.db
-
-vectordb> get doc_001
-ID: doc_001
-Vector: [1.000000, 2.000000, 3.000000]
-```
-
-Persistence is covered by an automated test.
-
----
-
-# Interactive CLI
-
-Start VectorDB with:
+On macOS:
 
 ```bash
-./build/vectordb
-```
-
-The shell supports operations such as:
-
-```text
-insert
-get
-delete
-list
-search
-save
-load
-help
-```
-
-Example:
-
-```text
-vectordb> insert doc_001 1 2 3
-Inserted doc_001 successfully.
-
-vectordb> insert doc_002 1.1 2.1 3.1
-Inserted doc_002 successfully.
-
-vectordb> search 1 2 3 3 cosine
-
-Search results:
-
-1. doc_001 | score = 1.000000
-2. doc_002 | score = 0.999859
+brew install cmake
+brew install curl
 ```
 
 ---
 
-# Building
+## Clone
 
-Requirements:
+```bash
+git clone https://github.com/JayantaKundu17/VectorDB.git
+cd VectorDB
+```
 
-* C++17 compiler
-* CMake 3.20+
-* macOS, Linux, or another C++17-compatible environment
+---
 
-Clone the repository and build:
+# Build
 
 ```bash
 cmake -S . -B build
-cmake --build build
+cmake --build build -j2
 ```
 
-Run the application:
+The REST API executable will be created at:
 
-```bash
-./build/vectordb
+```text
+build/vectordb_server
 ```
 
 ---
 
-# Testing
+# Run Locally
 
-Run the complete test suite:
+Set the environment variables:
+
+```bash
+export RAG_PROVIDER=gemini
+export GEMINI_API_KEY="YOUR_API_KEY"
+export GEMINI_EMBED_MODEL=gemini-embedding-2
+export GEMINI_MODEL=gemini-3.5-flash-lite
+export VECTORDB_DATA_PATH=./vectordb.db
+```
+
+Start the server:
+
+```bash
+./build/vectordb_server
+```
+
+The local API runs on:
+
+```text
+http://localhost:8080
+```
+
+---
+
+# Ingest Documents
+
+The RAG ingestion script reads files from:
+
+```text
+data/rag_docs/
+```
+
+Run:
+
+```bash
+python3 scripts/ingest.py
+```
+
+The script generates Gemini embeddings and stores the resulting vectors in VectorDB.
+
+---
+
+# Run the Frontend Locally
+
+From the project root:
+
+```bash
+python3 -m http.server 5500 --directory frontend
+```
+
+Open:
+
+```text
+http://localhost:5500
+```
+
+---
+
+# Docker
+
+Build the image:
+
+```bash
+docker build -t vectordb .
+```
+
+Run:
+
+```bash
+docker run \
+  -p 8080:10000 \
+  -e PORT=10000 \
+  -e RAG_PROVIDER=gemini \
+  -e GEMINI_API_KEY="$GEMINI_API_KEY" \
+  -e GEMINI_EMBED_MODEL=gemini-embedding-2 \
+  -e GEMINI_MODEL=gemini-3.5-flash-lite \
+  -e VECTORDB_DATA_PATH=/app/data/vectordb.db \
+  vectordb
+```
+
+Check:
+
+```bash
+curl http://localhost:8080/health
+```
+
+---
+
+# Running Tests
+
+Configure and build:
+
+```bash
+cmake -S . -B build
+cmake --build build -j2
+```
+
+Run the test suite:
 
 ```bash
 ctest --test-dir build --output-on-failure
 ```
 
-Current test suite:
+---
+
+# Security
+
+Never commit API keys or secrets.
+
+Use environment variables:
 
 ```text
-VectorTest
-DistanceTest
-VectorStoreTest
-BruteForceTest
-KDTreeTest
-PersistenceTest
+GEMINI_API_KEY
 ```
 
-Current result:
+A template is provided in:
 
 ```text
-100% tests passed
-6/6 tests passed
+.env.example
+```
+
+The actual `.env` file is ignored by Git.
+
+---
+
+# Deployment
+
+The project is deployed using two Render services.
+
+### Backend
+
+```text
+Docker Web Service
+```
+
+The backend runs the C++ REST API and connects to Gemini.
+
+### Frontend
+
+```text
+Render Static Site
+```
+
+The frontend communicates with the deployed C++ backend over HTTPS.
+
+## Production Architecture
+
+```text
+GitHub
+   │
+   ├── Render Static Site
+   │       │
+   │       ▼
+   │   Web Interface
+   │       │
+   │       ▼
+   │   C++ REST API
+   │       │
+   │       ├── VectorStore
+   │       ├── HNSW
+   │       └── Gemini API
+   │
+   └── Dockerized Backend
 ```
 
 ---
 
-# Running Benchmarks
+# Current Deployment
 
-Search benchmark:
+### Frontend
+
+https://vectordb-frontend.onrender.com
+
+### API
+
+https://vectordb-api-yxup.onrender.com
+
+### Example API
 
 ```bash
-./build/search_benchmark
+curl https://vectordb-api-yxup.onrender.com/health
 ```
 
-HNSW parameter tuning:
+Expected:
 
-```bash
-./build/hnsw_tuning
+```json
+{
+  "service": "VectorDB",
+  "status": "ok"
+}
 ```
 
 ---
 
 # Design Goals
 
-The project focuses on understanding the engineering behind vector databases rather than relying on an external vector database implementation.
+This project was built to explore the internal architecture of modern vector-search and RAG systems.
 
-The main goals are:
+The implementation focuses on understanding:
 
-1. Implement vector storage from scratch.
-2. Implement multiple nearest-neighbor search strategies.
-3. Compare exact and approximate search.
-4. Measure query performance and recall.
-5. Understand HNSW parameter trade-offs.
-6. Add persistent storage.
-7. Provide a usable command-line interface.
-8. Maintain correctness through automated tests.
+- How vector databases store embeddings
+- How distance metrics affect retrieval
+- How nearest-neighbor algorithms work
+- Why HNSW performs well for high-dimensional vectors
+- How embeddings connect semantic search with machine learning
+- How retrieved context is passed into an LLM
+- How a C++ backend can expose vector search through a REST API
+- How to package and deploy the system using Docker
 
 ---
 
 # Future Improvements
 
-Potential next steps include:
+Possible extensions include:
 
-* HNSW-specific unit tests
-* Larger-scale benchmarks
-* Real embedding datasets
-* Batch insertion
-* Batch search
-* Metadata filtering
-* Concurrent queries
-* Multithreaded indexing
-* Memory-usage benchmarking
-* More persistence formats
-* REST API
-* Python bindings
-* Docker deployment
-* Improved CLI command parsing
-* Production-oriented error handling
+- Persistent cloud storage for vectors
+- Authentication and API keys
+- Rate limiting
+- Streaming LLM responses
+- Batch ingestion
+- Metadata filtering
+- More advanced HNSW tuning
+- Larger benchmark datasets
+- ANN recall/latency dashboards
+- WebSocket-based live indexing
+- Multi-user document collections
+- Hybrid keyword + vector search
+- GPU-accelerated embeddings
+- Background document ingestion
 
 ---
 
-# Technology Stack
+# Why This Project?
+
+Modern AI applications increasingly depend on semantic search, embeddings, vector databases, and RAG.
+
+Instead of treating the vector database as a black box, this project implements the core components directly:
 
 ```text
-Language       : C++17
-Build System   : CMake
-Testing        : CTest
-Storage        : In-memory unordered_map + file persistence
-Indexes        : Brute Force, KD-Tree, HNSW
-Distance       : Cosine, Euclidean, Manhattan
-Benchmarking   : Custom C++ benchmarks
+Vector Storage
+       +
+Distance Functions
+       +
+Nearest Neighbor Search
+       +
+HNSW Graph
+       +
+Persistence
+       +
+REST API
+       +
+Embeddings
+       +
+RAG
+       =
+End-to-End Vector Search System
 ```
 
 ---
 
-## Project Status
+# Author
 
-**VectorDB v1.0**
+**Jayanta Kundu**
 
-The current implementation provides a functional vector-storage and vector-search engine with exact and approximate nearest-neighbor indexes, persistence, automated tests, benchmarking, and an interactive CLI.
+CSE Student | NIT Calicut
 
+GitHub:  
+https://github.com/JayantaKundu17
+
+---
+
+## License
+
+This project is intended for educational, experimental, and portfolio use.
