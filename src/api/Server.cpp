@@ -1446,7 +1446,7 @@ void Server::run(int port) {
             std::size_t k =
                 body.value(
                     "k",
-                    static_cast<std::size_t>(3)
+                    static_cast<std::size_t>(10)
                 );
 
 
