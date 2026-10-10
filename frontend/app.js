@@ -190,6 +190,10 @@ function addUserMessage(question) {
 }
 
 
+function stripInlineMathDelimiters(value) {
+    return String(value ?? "").replace(/\$([^$\n]+)\$/g, "$1");
+}
+
 function renderInlineMarkdown(text) {
     let html = escapeHTML(text);
     const codeParts = [];
@@ -216,7 +220,7 @@ function renderInlineMarkdown(text) {
 function renderMarkdownSafe(markdown) {
     // Handle numbered steps or bullets even when the model puts
     // several items on a single line.
-    const source = String(markdown ?? "")
+    const source = stripInlineMathDelimiters(markdown)
         .replace(/\r\n?/g, "\n")
         .replace(/[ \t]+(\d+[.)][ \t]+\*\*)/g, "\n$1")
         .replace(/[ \t]+([-*+][ \t]+\*\*)/g, "\n$1");
@@ -438,10 +442,7 @@ function displaySources(sources) {
             </div>
 
             <div class="source-text">
-                ${escapeHTML(
-                    source.text ||
-                    "No text available."
-                )}
+                ${escapeHTML(stripInlineMathDelimiters(source.text || "No text available."))}
             </div>
         `;
 
