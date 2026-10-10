@@ -1,4 +1,4 @@
-const API_BASE = "https://" + "vectordb-api-" + "yxup.onrender.com";
+const API_BASE = "https://vectordb-api-3kio.onrender.com";
 
 const questionInput = document.getElementById("questionInput");
 const sendButton = document.getElementById("sendButton");
