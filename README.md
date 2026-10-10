@@ -918,3 +918,115 @@ https://github.com/JayantaKundu17
 ## License
 
 This project is intended for educational, experimental, and portfolio use.
+
+---
+
+## Knowledge Base Coverage and Example Questions
+
+VectorDB includes a Retrieval-Augmented Generation (RAG) pipeline that
+retrieves relevant text chunks from the indexed vector database and uses
+Gemini to generate answers grounded in the retrieved context.
+
+The knowledge base covers a broad range of AI and machine learning topics.
+Actual answer quality depends on the indexed documents and the relevance
+of the retrieved sources.
+
+### Topics Covered
+
+| Category | Topics |
+|---|---|
+| AI Fundamentals | AI fundamentals, Generative AI, AI agents, expert systems, symbolic AI, knowledge representation, AI system design, fairness, privacy, adversarial ML, federated learning, and multimodal AI |
+| Machine Learning | Linear and logistic regression, Ridge, Lasso, Elastic Net, decision trees, Random Forest, XGBoost, LightGBM, CatBoost, gradient boosting, SVM, KNN, Naive Bayes, Bayesian methods, bagging, and ensemble learning |
+| Deep Learning | MLPs, CNNs, RNNs, LSTMs, GRUs, Transformers, attention, BERT, GPT, Vision Transformers, graph neural networks, autoencoders, VAEs, GANs, diffusion models, and Mixture of Experts |
+| Model Training | Gradient descent, backpropagation, Adam, SGD with momentum, loss functions, initialization, activation functions, normalization, learning-rate schedules, regularization, and hyperparameter optimization |
+| Reinforcement Learning | Markov Decision Processes, Bellman equations, Q-learning, SARSA, DQN, policy gradients, actor-critic methods, and PPO |
+| LLMs and Fine-Tuning | Pretraining, supervised fine-tuning, RLHF, DPO, LoRA, quantization, knowledge distillation, transfer learning, few-shot learning, and zero-shot learning |
+| Vector Databases and Search | Vector embeddings, HNSW, KD-Trees, approximate nearest-neighbor search, brute-force search, semantic search, BM25, TF-IDF, hybrid search, reranking, bi-encoders, and cross-encoders |
+| RAG and Prompt Engineering | Retrieval-Augmented Generation, chunking, context windows, KV caching, tokenization, prompt engineering, tool calling, MCP, structured outputs, hallucinations, prompt injection, and RAG evaluation and security |
+| Statistics and Data Analysis | Probability, linear algebra, hypothesis testing, exploratory data analysis, K-Means, DBSCAN, hierarchical clustering, Gaussian Mixture Models, PCA, t-SNE, UMAP, ARIMA, time series, anomaly detection, data cleaning, imputation, and feature engineering |
+| Computer Vision and Graphs | Object detection, YOLO, OCR, image segmentation, graph embeddings, knowledge graphs, link prediction, and graph neural networks |
+| Recommendation Systems | Collaborative filtering, recommender systems, and recommendation-related methods |
+| MLOps and Evaluation | Model serving, model registries, experiment tracking, model monitoring, CI/CD for ML, data drift, concept drift, data leakage, cross-validation, ROC-AUC, PR-AUC, calibration, SHAP, LIME, and explainable AI |
+
+### Types of Questions You Can Ask
+
+The RAG interface supports natural-language questions. Useful question types include:
+
+- **Definitions:** Understand concepts and terminology.
+- **Step-by-step explanations:** Learn how algorithms and training procedures work.
+- **Comparisons:** Compare algorithms, architectures, methods, and trade-offs.
+- **Numerical problems:** Apply formulas and request calculations using the retrieved knowledge.
+- **Use cases:** Explore where particular methods are appropriate.
+- **Cross-topic questions:** Connect related concepts across multiple retrieved documents.
+- **Evaluation questions:** Investigate model quality, performance, limitations, and reliability.
+- **Knowledge-boundary tests:** Ask questions whose answers may not exist in the indexed documents.
+
+### Example Questions
+
+Try these prompts in the RAG Search interface.
+
+#### Machine Learning
+
+1. Explain step by step how XGBoost builds decision trees sequentially.
+2. Compare XGBoost and Random Forest in how they train trees and control overfitting.
+3. Explain how gradient descent and backpropagation work together.
+4. Compare Adam and SGD with momentum.
+5. When should I use classification metrics such as ROC-AUC or PR-AUC?
+
+#### Vector Databases and Search
+
+1. Compare HNSW, KD-Tree, and brute-force search for 768-dimensional vectors.
+2. How does increasing HNSW's search width affect recall and latency?
+3. Explain how embedding models enable semantic search.
+4. Compare BM25, TF-IDF, dense retrieval, and hybrid search.
+5. Explain the role of vector embeddings, Top-K retrieval, and reranking in RAG.
+
+#### Deep Learning and LLMs
+
+1. Explain how attention and self-attention work in Transformers.
+2. Compare CNNs and Vision Transformers for image recognition.
+3. Explain LoRA and how it reduces the cost of fine-tuning large language models.
+4. What are context windows and KV caches, and why do they matter?
+5. Explain the differences between supervised fine-tuning, RLHF, and DPO.
+
+#### Data Science and Production ML
+
+1. Compare K-Means, DBSCAN, and hierarchical clustering.
+2. Explain PCA and how dimensionality reduction works.
+3. How do data drift and concept drift affect a deployed machine learning model?
+4. How can cross-validation and hyperparameter tuning improve model evaluation?
+5. Explain how collaborative filtering generates recommendations.
+
+#### Calculations and Reasoning
+
+1. A weight is 0.5, its gradient is 0.2, and the learning rate is 0.1. Calculate the updated weight.
+2. Compare HNSW and KD-Tree in terms of dimensionality, search complexity, recall, and practical trade-offs.
+3. Explain how chunk size, embedding quality, Top-K retrieval, and context length influence RAG answers.
+4. Compare Random Forest, gradient boosting, and a single decision tree for supervised learning.
+
+#### Grounding and Reliability
+
+1. Explain a concept using only the information available in the indexed documents.
+2. Compare two related methods and identify the trade-offs supported by the retrieved sources.
+3. Ask for a specific fact that is absent from the knowledge base and check whether the system acknowledges the limitation.
+
+### How RAG Answers Are Generated
+
+The RAG pipeline follows these steps:
+
+1. **Query:** The user submits a question.
+2. **Embedding:** The question is converted into a vector using the configured Gemini embedding model.
+3. **Search:** HNSW retrieves the nearest matching vectors from the index.
+4. **Retrieval:** The corresponding document chunks are collected as context.
+5. **Generation:** Gemini generates an answer using the retrieved context.
+6. **Sources:** The interface displays retrieved source IDs and similarity scores to help users inspect the supporting material.
+
+### Limitations
+
+- The system answers from the indexed knowledge base rather than automatically searching the internet.
+- Information absent from the retrieved context may be reported as unavailable.
+- Answer detail and accuracy depend on document coverage, retrieval relevance, and generation quality.
+- Similarity scores measure retrieval similarity; they are not probabilities that an answer is correct.
+- Numerical calculations and technical explanations should be verified when correctness is important.
+- The topics listed above describe the knowledge areas represented in the corpus, not a guarantee of complete coverage of every subtopic.
+
