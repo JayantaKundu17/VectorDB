@@ -1,5 +1,15 @@
 const API_BASE = "https://vectordb-api-3kio.onrender.com";
 
+const statusUrlLabel = document.querySelector(".status-url");
+if (statusUrlLabel) {
+    try {
+        statusUrlLabel.textContent = new URL(API_BASE).host;
+    } catch (_) {
+        statusUrlLabel.textContent = API_BASE;
+    }
+}
+
+
 const questionInput = document.getElementById("questionInput");
 const sendButton = document.getElementById("sendButton");
 const chatMessages = document.getElementById("chatMessages");
@@ -179,38 +189,126 @@ function addUserMessage(question) {
     scrollChat();
 }
 
+
+function renderInlineMarkdown(text) {
+    let html = escapeHTML(text);
+    const codeParts = [];
+
+    // Protect inline code before processing other Markdown.
+    html = html.replace(/`([^`]+)`/g, (_, code) => {
+        const token = `VDBCODETOKEN${codeParts.length}END`;
+        codeParts.push(`<code>${code}</code>`);
+        return token;
+    });
+
+    html = html.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    html = html.replace(
+        /(^|[^*])\*([^*\n]+)\*(?!\*)/g,
+        "$1<em>$2</em>"
+    );
+
+    return html.replace(
+        /VDBCODETOKEN(\d+)END/g,
+        (_, index) => codeParts[Number(index)] || ""
+    );
+}
+
+function renderMarkdownSafe(markdown) {
+    // Handle numbered steps or bullets even when the model puts
+    // several items on a single line.
+    const source = String(markdown ?? "")
+        .replace(/\r\n?/g, "\n")
+        .replace(/[ \t]+(\d+[.)][ \t]+\*\*)/g, "\n$1")
+        .replace(/[ \t]+([-*+][ \t]+\*\*)/g, "\n$1");
+
+    const output = [];
+    let paragraph = [];
+    let listType = null;
+
+    function flushParagraph() {
+        if (!paragraph.length) return;
+
+        output.push(
+            `<p>${paragraph.map(renderInlineMarkdown).join(" ")}</p>`
+        );
+        paragraph = [];
+    }
+
+    function closeList() {
+        if (listType) {
+            output.push(listType === "ol" ? "</ol>" : "</ul>");
+            listType = null;
+        }
+    }
+
+    for (const rawLine of source.split("\n")) {
+        const line = rawLine.trim();
+
+        if (!line) {
+            flushParagraph();
+            closeList();
+            continue;
+        }
+
+        const heading = line.match(/^(#{1,6})\s+(.+)$/);
+        if (heading) {
+            flushParagraph();
+            closeList();
+            const level = heading[1].length;
+            output.push(
+                `<h${level}>${renderInlineMarkdown(heading[2])}</h${level}>`
+            );
+            continue;
+        }
+
+        const ordered = line.match(/^\d+[.)]\s+(.+)$/);
+        const unordered = line.match(/^[-*+]\s+(.+)$/);
+
+        if (ordered || unordered) {
+            flushParagraph();
+
+            const nextType = ordered ? "ol" : "ul";
+            if (listType !== nextType) {
+                closeList();
+                output.push(nextType === "ol" ? "<ol>" : "<ul>");
+                listType = nextType;
+            }
+
+            const content = ordered ? ordered[1] : unordered[1];
+            output.push(`<li>${renderInlineMarkdown(content)}</li>`);
+            continue;
+        }
+
+        closeList();
+        paragraph.push(line);
+    }
+
+    flushParagraph();
+    closeList();
+
+    return output.join("\n") || "<p></p>";
+}
+
 function addAnswerMessage(data) {
-
-    const message =
-        document.createElement("div");
-
-    message.className =
-        "message";
-
+    const message = document.createElement("div");
+    message.className = "message";
     message.innerHTML = `
         <div class="answer-block">
-
             <div class="answer-label">
                 VectorDB ·
                 ${escapeHTML(data.index || "HNSW")}
                 ·
                 ${escapeHTML(data.model || "gemini-3.5-flash-lite")}
             </div>
-
             <div class="answer-text">
-                ${escapeHTML(
-                    data.answer ||
-                    "No answer returned."
-                )}
+                ${renderMarkdownSafe(data.answer || "No answer returned.")}
             </div>
-
         </div>
     `;
-
     chatMessages.appendChild(message);
-
     scrollChat();
 }
+
 
 function addErrorMessage(text) {
 

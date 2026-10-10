@@ -2018,3 +2018,39 @@ svg[fill="#3b82f6"] {
 .send-button {
     transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
+
+
+/* Readable formatting for Markdown answers */
+.answer-text p {
+    margin: 0 0 0.7rem;
+}
+
+.answer-text p:last-child {
+    margin-bottom: 0;
+}
+
+.answer-text ol,
+.answer-text ul {
+    margin: 0.35rem 0 0.85rem;
+    padding-left: 1.5rem;
+}
+
+.answer-text li {
+    margin: 0.35rem 0;
+    padding-left: 0.15rem;
+}
+
+.answer-text strong {
+    font-weight: 700;
+}
+
+.answer-text em {
+    font-style: italic;
+}
+
+.answer-text code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    background: #f1f5f9;
+    padding: 0.1em 0.3em;
+    border-radius: 4px;
+}
