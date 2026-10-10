@@ -25,7 +25,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN cmake -S . -B build \
+RUN cmake -S . -B build -DCMAKE_BUILD_TYPE=Release \
     && cmake --build build --target vectordb_server
 
 FROM ubuntu:24.04
