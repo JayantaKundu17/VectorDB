@@ -344,11 +344,46 @@ void HNSW::build() {
             candidates.reserve(current);
 
             // Find previous nodes that exist on this level.
+            // Bound construction work on resource-constrained hosts.
+            // Sample older nodes and retain recent candidates.
+            const std::size_t candidateLimit =
+                std::max<std::size_t>(M_ * 4, 128);
+
+            const std::size_t recentLimit =
+                std::min(candidateLimit / 2, current);
+
+            const std::size_t olderCount =
+                current - recentLimit;
+
+            const std::size_t globalLimit =
+                candidateLimit - recentLimit;
+
+            const std::size_t stride =
+                std::max<std::size_t>(
+                    1,
+                    (olderCount + globalLimit - 1) / globalLimit
+                );
+
+            std::vector<std::size_t> previousIndices;
+            previousIndices.reserve(candidateLimit);
+
             for (
                 std::size_t previous = 0;
+                previous < olderCount;
+                previous += stride
+            ) {
+                previousIndices.push_back(previous);
+            }
+
+            for (
+                std::size_t previous = olderCount;
                 previous < current;
                 ++previous
             ) {
+                previousIndices.push_back(previous);
+            }
+
+            for (std::size_t previous : previousIndices) {
 
                 if (
                     level >=
