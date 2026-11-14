@@ -1,0 +1,77 @@
+QUESTION BANK: Actor-Critic
+CATEGORY: actor_critic
+
+Q1 [Easy]: What is Actor-Critic?
+A1: Actor-critic methods combine a policy model (actor) with a value estimator (critic).
+
+Q2 [Easy]: Why is Actor-Critic important in AI or machine learning?
+A2: Actor-Critic matters because general RL and continuous control and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Actor-Critic work at a high level?
+A3: The critic helps reduce variance in policy-gradient updates by estimating expected return or advantage.
+
+Q4 [Easy]: What problem does Actor-Critic solve?
+A4: Actor-Critic addresses problems involving general RL and continuous control.
+
+Q5 [Easy]: What are the main components of Actor-Critic?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Actor-Critic?
+A6: Actor-critic methods combine a policy model (actor) with a value estimator (critic).
+
+Q7 [Medium]: When should you avoid Actor-Critic?
+A7: critic bias and instability
+
+Q8 [Medium]: What are the main advantages of Actor-Critic?
+A8: Strengths of Actor-Critic include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Actor-Critic?
+A9: critic bias and instability
+
+Q10 [Medium]: What assumptions does Actor-Critic make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Actor-Critic?
+A11: The critic helps reduce variance in policy-gradient updates by estimating expected return or advantage.
+
+Q12 [Medium]: What common mistakes occur when implementing Actor-Critic?
+A12: Common checks for Actor-Critic include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Actor-Critic?
+A13: Common checks for Actor-Critic include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Actor-Critic to a larger dataset or workload?
+A14: Scaling Actor-Critic typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Actor-Critic?
+A15: The central trade-offs for Actor-Critic involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Actor-Critic?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Actor-Critic after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Actor-Critic compare with a closely related approach?
+A18: The critic helps reduce variance in policy-gradient updates by estimating expected return or advantage.
+
+Q19 [Interview]: Give a practical example where Actor-Critic is the right choice.
+A19: A practical example is applying Actor-Critic to general RL and continuous control, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Actor-Critic in a way suitable for an ML engineering interview.
+A20: In an interview, define Actor-Critic, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Actor-Critic but sees unstable production results. What should they investigate first?
+A21: Actor-critic methods combine a policy model (actor) with a value estimator (critic).
+
+Q22 [Scenario]: A model based on Actor-Critic performs well offline but poorly after deployment. What are plausible causes?
+A22: Actor-critic methods combine a policy model (actor) with a value estimator (critic).
+
+Q23 [Scenario]: How would you explain the main trade-off of Actor-Critic to a product manager?
+A23: The central trade-offs for Actor-Critic involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Actor-Critic?
+A24: Actor-critic methods combine a policy model (actor) with a value estimator (critic).
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Actor-Critic?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

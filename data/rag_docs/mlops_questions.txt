@@ -1,0 +1,77 @@
+QUESTION BANK: MLOps
+CATEGORY: mlops
+
+Q1 [Easy]: What is MLOps?
+A1: MLOps applies software-engineering and operations practices to the lifecycle of ML systems.
+
+Q2 [Easy]: Why is MLOps important in AI or machine learning?
+A2: MLOps matters because production ML and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does MLOps work at a high level?
+A3: Core practices include reproducibility, data and model versioning, testing, deployment automation, monitoring, and rollback.
+
+Q4 [Easy]: What problem does MLOps solve?
+A4: MLOps addresses problems involving production ML.
+
+Q5 [Easy]: What are the main components of MLOps?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use MLOps?
+A6: MLOps applies software-engineering and operations practices to the lifecycle of ML systems.
+
+Q7 [Medium]: When should you avoid MLOps?
+A7: operational complexity and silent data changes
+
+Q8 [Medium]: What are the main advantages of MLOps?
+A8: Strengths of MLOps include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of MLOps?
+A9: operational complexity and silent data changes
+
+Q10 [Medium]: What assumptions does MLOps make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on MLOps?
+A11: Core practices include reproducibility, data and model versioning, testing, deployment automation, monitoring, and rollback.
+
+Q12 [Medium]: What common mistakes occur when implementing MLOps?
+A12: Common checks for MLOps include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in MLOps?
+A13: Common checks for MLOps include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale MLOps to a larger dataset or workload?
+A14: Scaling MLOps typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing MLOps?
+A15: The central trade-offs for MLOps involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using MLOps?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect MLOps after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does MLOps compare with a closely related approach?
+A18: Core practices include reproducibility, data and model versioning, testing, deployment automation, monitoring, and rollback.
+
+Q19 [Interview]: Give a practical example where MLOps is the right choice.
+A19: A practical example is applying MLOps to production ML, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain MLOps in a way suitable for an ML engineering interview.
+A20: In an interview, define MLOps, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts MLOps but sees unstable production results. What should they investigate first?
+A21: MLOps applies software-engineering and operations practices to the lifecycle of ML systems.
+
+Q22 [Scenario]: A model based on MLOps performs well offline but poorly after deployment. What are plausible causes?
+A22: MLOps applies software-engineering and operations practices to the lifecycle of ML systems.
+
+Q23 [Scenario]: How would you explain the main trade-off of MLOps to a product manager?
+A23: The central trade-offs for MLOps involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind MLOps?
+A24: MLOps applies software-engineering and operations practices to the lifecycle of ML systems.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for MLOps?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

@@ -1,0 +1,77 @@
+QUESTION BANK: Feature Engineering
+CATEGORY: feature_engineering
+
+Q1 [Easy]: What is Feature Engineering?
+A1: Feature engineering transforms raw data into variables that make useful predictive structure easier for a model to learn.
+
+Q2 [Easy]: Why is Feature Engineering important in AI or machine learning?
+A2: Feature Engineering matters because tabular ML and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Feature Engineering work at a high level?
+A3: Examples include interaction terms, ratios, date parts, aggregates, text features, and domain-specific transformations.
+
+Q4 [Easy]: What problem does Feature Engineering solve?
+A4: Feature Engineering addresses problems involving tabular ML, forecasting, ranking.
+
+Q5 [Easy]: What are the main components of Feature Engineering?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Feature Engineering?
+A6: Feature engineering transforms raw data into variables that make useful predictive structure easier for a model to learn.
+
+Q7 [Medium]: When should you avoid Feature Engineering?
+A7: leakage, brittle transformations, excessive manual complexity
+
+Q8 [Medium]: What are the main advantages of Feature Engineering?
+A8: Strengths of Feature Engineering include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Feature Engineering?
+A9: leakage, brittle transformations, excessive manual complexity
+
+Q10 [Medium]: What assumptions does Feature Engineering make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Feature Engineering?
+A11: Examples include interaction terms, ratios, date parts, aggregates, text features, and domain-specific transformations.
+
+Q12 [Medium]: What common mistakes occur when implementing Feature Engineering?
+A12: Common checks for Feature Engineering include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Feature Engineering?
+A13: Common checks for Feature Engineering include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Feature Engineering to a larger dataset or workload?
+A14: Scaling Feature Engineering typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Feature Engineering?
+A15: The central trade-offs for Feature Engineering involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Feature Engineering?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Feature Engineering after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Feature Engineering compare with a closely related approach?
+A18: Examples include interaction terms, ratios, date parts, aggregates, text features, and domain-specific transformations.
+
+Q19 [Interview]: Give a practical example where Feature Engineering is the right choice.
+A19: A practical example is applying Feature Engineering to tabular ML, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Feature Engineering in a way suitable for an ML engineering interview.
+A20: In an interview, define Feature Engineering, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Feature Engineering but sees unstable production results. What should they investigate first?
+A21: Feature engineering transforms raw data into variables that make useful predictive structure easier for a model to learn.
+
+Q22 [Scenario]: A model based on Feature Engineering performs well offline but poorly after deployment. What are plausible causes?
+A22: Feature engineering transforms raw data into variables that make useful predictive structure easier for a model to learn.
+
+Q23 [Scenario]: How would you explain the main trade-off of Feature Engineering to a product manager?
+A23: The central trade-offs for Feature Engineering involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Feature Engineering?
+A24: Feature engineering transforms raw data into variables that make useful predictive structure easier for a model to learn.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Feature Engineering?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

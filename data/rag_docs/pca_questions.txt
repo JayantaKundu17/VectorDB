@@ -1,0 +1,77 @@
+QUESTION BANK: Principal Component Analysis
+CATEGORY: pca
+
+Q1 [Easy]: What is Principal Component Analysis?
+A1: PCA projects data onto orthogonal directions of maximum variance.
+
+Q2 [Easy]: Why is Principal Component Analysis important in AI or machine learning?
+A2: Principal Component Analysis matters because dimensionality reduction and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Principal Component Analysis work at a high level?
+A3: Components can be obtained through eigendecomposition of the covariance matrix or SVD. Centering is commonly required.
+
+Q4 [Easy]: What problem does Principal Component Analysis solve?
+A4: Principal Component Analysis addresses problems involving dimensionality reduction, visualization, denoising.
+
+Q5 [Easy]: What are the main components of Principal Component Analysis?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Principal Component Analysis?
+A6: PCA projects data onto orthogonal directions of maximum variance.
+
+Q7 [Medium]: When should you avoid Principal Component Analysis?
+A7: components maximize variance, not necessarily predictive usefulness
+
+Q8 [Medium]: What are the main advantages of Principal Component Analysis?
+A8: Strengths of Principal Component Analysis include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Principal Component Analysis?
+A9: components maximize variance, not necessarily predictive usefulness
+
+Q10 [Medium]: What assumptions does Principal Component Analysis make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Principal Component Analysis?
+A11: Components can be obtained through eigendecomposition of the covariance matrix or SVD. Centering is commonly required.
+
+Q12 [Medium]: What common mistakes occur when implementing Principal Component Analysis?
+A12: Common checks for Principal Component Analysis include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Principal Component Analysis?
+A13: Common checks for Principal Component Analysis include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Principal Component Analysis to a larger dataset or workload?
+A14: Scaling Principal Component Analysis typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Principal Component Analysis?
+A15: The central trade-offs for Principal Component Analysis involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Principal Component Analysis?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Principal Component Analysis after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Principal Component Analysis compare with a closely related approach?
+A18: Components can be obtained through eigendecomposition of the covariance matrix or SVD. Centering is commonly required.
+
+Q19 [Interview]: Give a practical example where Principal Component Analysis is the right choice.
+A19: A practical example is applying Principal Component Analysis to dimensionality reduction, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Principal Component Analysis in a way suitable for an ML engineering interview.
+A20: In an interview, define Principal Component Analysis, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Principal Component Analysis but sees unstable production results. What should they investigate first?
+A21: PCA projects data onto orthogonal directions of maximum variance.
+
+Q22 [Scenario]: A model based on Principal Component Analysis performs well offline but poorly after deployment. What are plausible causes?
+A22: PCA projects data onto orthogonal directions of maximum variance.
+
+Q23 [Scenario]: How would you explain the main trade-off of Principal Component Analysis to a product manager?
+A23: The central trade-offs for Principal Component Analysis involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Principal Component Analysis?
+A24: PCA projects data onto orthogonal directions of maximum variance.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Principal Component Analysis?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

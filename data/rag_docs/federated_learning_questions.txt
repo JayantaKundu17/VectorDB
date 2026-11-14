@@ -1,0 +1,77 @@
+QUESTION BANK: Federated Learning
+CATEGORY: federated_learning
+
+Q1 [Easy]: What is Federated Learning?
+A1: Federated learning trains a shared model across decentralized clients while keeping raw training data on each client in common formulations.
+
+Q2 [Easy]: Why is Federated Learning important in AI or machine learning?
+A2: Federated Learning matters because privacy-sensitive distributed learning and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Federated Learning work at a high level?
+A3: Clients compute local updates and a server or coordinator aggregates them, for example using federated averaging.
+
+Q4 [Easy]: What problem does Federated Learning solve?
+A4: Federated Learning addresses problems involving privacy-sensitive distributed learning.
+
+Q5 [Easy]: What are the main components of Federated Learning?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Federated Learning?
+A6: Federated learning trains a shared model across decentralized clients while keeping raw training data on each client in common formulations.
+
+Q7 [Medium]: When should you avoid Federated Learning?
+A7: communication cost, client heterogeneity, poisoning risks
+
+Q8 [Medium]: What are the main advantages of Federated Learning?
+A8: Strengths of Federated Learning include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Federated Learning?
+A9: communication cost, client heterogeneity, poisoning risks
+
+Q10 [Medium]: What assumptions does Federated Learning make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Federated Learning?
+A11: Clients compute local updates and a server or coordinator aggregates them, for example using federated averaging.
+
+Q12 [Medium]: What common mistakes occur when implementing Federated Learning?
+A12: Common checks for Federated Learning include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Federated Learning?
+A13: Common checks for Federated Learning include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Federated Learning to a larger dataset or workload?
+A14: Scaling Federated Learning typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Federated Learning?
+A15: The central trade-offs for Federated Learning involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Federated Learning?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Federated Learning after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Federated Learning compare with a closely related approach?
+A18: Clients compute local updates and a server or coordinator aggregates them, for example using federated averaging.
+
+Q19 [Interview]: Give a practical example where Federated Learning is the right choice.
+A19: A practical example is applying Federated Learning to privacy-sensitive distributed learning, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Federated Learning in a way suitable for an ML engineering interview.
+A20: In an interview, define Federated Learning, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Federated Learning but sees unstable production results. What should they investigate first?
+A21: Federated learning trains a shared model across decentralized clients while keeping raw training data on each client in common formulations.
+
+Q22 [Scenario]: A model based on Federated Learning performs well offline but poorly after deployment. What are plausible causes?
+A22: Federated learning trains a shared model across decentralized clients while keeping raw training data on each client in common formulations.
+
+Q23 [Scenario]: How would you explain the main trade-off of Federated Learning to a product manager?
+A23: The central trade-offs for Federated Learning involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Federated Learning?
+A24: Federated learning trains a shared model across decentralized clients while keeping raw training data on each client in common formulations.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Federated Learning?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

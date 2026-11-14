@@ -1,0 +1,77 @@
+QUESTION BANK: DPO
+CATEGORY: dpo
+
+Q1 [Easy]: What is DPO?
+A1: Direct Preference Optimization trains a policy directly from preference pairs without separately running an online reinforcement-learning loop in the standard formulation.
+
+Q2 [Easy]: Why is DPO important in AI or machine learning?
+A2: DPO matters because LLM alignment and preference tuning and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does DPO work at a high level?
+A3: The objective increases the relative likelihood of preferred responses compared with rejected responses under a reference model.
+
+Q4 [Easy]: What problem does DPO solve?
+A4: DPO addresses problems involving LLM alignment and preference tuning.
+
+Q5 [Easy]: What are the main components of DPO?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use DPO?
+A6: Direct Preference Optimization trains a policy directly from preference pairs without separately running an online reinforcement-learning loop in the standard formulation.
+
+Q7 [Medium]: When should you avoid DPO?
+A7: quality of preference data and reference-model choices matter
+
+Q8 [Medium]: What are the main advantages of DPO?
+A8: Strengths of DPO include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of DPO?
+A9: quality of preference data and reference-model choices matter
+
+Q10 [Medium]: What assumptions does DPO make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on DPO?
+A11: The objective increases the relative likelihood of preferred responses compared with rejected responses under a reference model.
+
+Q12 [Medium]: What common mistakes occur when implementing DPO?
+A12: Common checks for DPO include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in DPO?
+A13: Common checks for DPO include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale DPO to a larger dataset or workload?
+A14: Scaling DPO typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing DPO?
+A15: The central trade-offs for DPO involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using DPO?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect DPO after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does DPO compare with a closely related approach?
+A18: The objective increases the relative likelihood of preferred responses compared with rejected responses under a reference model.
+
+Q19 [Interview]: Give a practical example where DPO is the right choice.
+A19: A practical example is applying DPO to LLM alignment and preference tuning, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain DPO in a way suitable for an ML engineering interview.
+A20: In an interview, define DPO, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts DPO but sees unstable production results. What should they investigate first?
+A21: Direct Preference Optimization trains a policy directly from preference pairs without separately running an online reinforcement-learning loop in the standard formulation.
+
+Q22 [Scenario]: A model based on DPO performs well offline but poorly after deployment. What are plausible causes?
+A22: Direct Preference Optimization trains a policy directly from preference pairs without separately running an online reinforcement-learning loop in the standard formulation.
+
+Q23 [Scenario]: How would you explain the main trade-off of DPO to a product manager?
+A23: The central trade-offs for DPO involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind DPO?
+A24: Direct Preference Optimization trains a policy directly from preference pairs without separately running an online reinforcement-learning loop in the standard formulation.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for DPO?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

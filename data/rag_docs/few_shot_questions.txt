@@ -1,0 +1,77 @@
+QUESTION BANK: Few-Shot Learning
+CATEGORY: few_shot
+
+Q1 [Easy]: What is Few-Shot Learning?
+A1: Few-shot prompting gives a model a small number of input-output examples in the prompt.
+
+Q2 [Easy]: Why is Few-Shot Learning important in AI or machine learning?
+A2: Few-Shot Learning matters because classification and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Few-Shot Learning work at a high level?
+A3: The examples demonstrate the desired mapping or format without updating model parameters.
+
+Q4 [Easy]: What problem does Few-Shot Learning solve?
+A4: Few-Shot Learning addresses problems involving classification, extraction, formatting, task adaptation.
+
+Q5 [Easy]: What are the main components of Few-Shot Learning?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Few-Shot Learning?
+A6: Few-shot prompting gives a model a small number of input-output examples in the prompt.
+
+Q7 [Medium]: When should you avoid Few-Shot Learning?
+A7: example quality and prompt length matter
+
+Q8 [Medium]: What are the main advantages of Few-Shot Learning?
+A8: Strengths of Few-Shot Learning include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Few-Shot Learning?
+A9: example quality and prompt length matter
+
+Q10 [Medium]: What assumptions does Few-Shot Learning make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Few-Shot Learning?
+A11: The examples demonstrate the desired mapping or format without updating model parameters.
+
+Q12 [Medium]: What common mistakes occur when implementing Few-Shot Learning?
+A12: Common checks for Few-Shot Learning include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Few-Shot Learning?
+A13: Common checks for Few-Shot Learning include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Few-Shot Learning to a larger dataset or workload?
+A14: Scaling Few-Shot Learning typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Few-Shot Learning?
+A15: The central trade-offs for Few-Shot Learning involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Few-Shot Learning?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Few-Shot Learning after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Few-Shot Learning compare with a closely related approach?
+A18: The examples demonstrate the desired mapping or format without updating model parameters.
+
+Q19 [Interview]: Give a practical example where Few-Shot Learning is the right choice.
+A19: A practical example is applying Few-Shot Learning to classification, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Few-Shot Learning in a way suitable for an ML engineering interview.
+A20: In an interview, define Few-Shot Learning, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Few-Shot Learning but sees unstable production results. What should they investigate first?
+A21: Few-shot prompting gives a model a small number of input-output examples in the prompt.
+
+Q22 [Scenario]: A model based on Few-Shot Learning performs well offline but poorly after deployment. What are plausible causes?
+A22: Few-shot prompting gives a model a small number of input-output examples in the prompt.
+
+Q23 [Scenario]: How would you explain the main trade-off of Few-Shot Learning to a product manager?
+A23: The central trade-offs for Few-Shot Learning involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Few-Shot Learning?
+A24: Few-shot prompting gives a model a small number of input-output examples in the prompt.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Few-Shot Learning?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

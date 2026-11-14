@@ -1,0 +1,30 @@
+TOPIC: ARIMA
+CATEGORY: arima
+
+DEFINITION
+ARIMA models time series using autoregressive terms, differencing, and moving-average terms.
+
+HOW IT WORKS
+It is useful for relatively structured univariate series and has interpretable statistical foundations.
+
+KEY IDEAS
+The exact implementation depends on the model family, data type, objective, and operating constraints.
+The main design variables are representation, objective function, optimization or search procedure, and evaluation criteria.
+
+COMMON USE CASES
+classical forecasting
+
+ADVANTAGES / STRENGTHS
+This approach is useful when its assumptions and inductive biases match the structure of the problem. It can provide a strong baseline, specialized performance, interpretability, efficiency, or scalability depending on the topic.
+
+LIMITATIONS / FAILURE MODES
+assumption and parameter choices may limit performance on complex data
+
+COMPARISON
+ARIMA should be distinguished from closely related approaches in the same problem family. The best choice depends on data size, feature type, dimensionality, latency, accuracy, interpretability, and operational constraints.
+
+EVALUATION / PRACTICAL CHECKS
+Choose metrics that match the task and business cost of errors. Validate on a representative holdout or cross-validation design, check leakage, inspect failure cases, and monitor performance after deployment.
+
+INTERVIEW TAKEAWAY
+Be prepared to explain what ARIMA is, how it works, when to use it, what assumptions it makes, and what trade-offs or failure modes it has.

@@ -1,0 +1,77 @@
+QUESTION BANK: t-SNE
+CATEGORY: tsne
+
+Q1 [Easy]: What is t-SNE?
+A1: t-SNE is a nonlinear dimensionality-reduction method designed mainly for visualization of local neighborhoods.
+
+Q2 [Easy]: Why is t-SNE important in AI or machine learning?
+A2: t-SNE matters because 2D/3D visualization of embeddings or clusters and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does t-SNE work at a high level?
+A3: It converts pairwise relationships into probabilities and optimizes a low-dimensional representation to preserve local structure.
+
+Q4 [Easy]: What problem does t-SNE solve?
+A4: t-SNE addresses problems involving 2D/3D visualization of embeddings or clusters.
+
+Q5 [Easy]: What are the main components of t-SNE?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use t-SNE?
+A6: t-SNE is a nonlinear dimensionality-reduction method designed mainly for visualization of local neighborhoods.
+
+Q7 [Medium]: When should you avoid t-SNE?
+A7: global distances can be misleading and results depend on settings and randomness
+
+Q8 [Medium]: What are the main advantages of t-SNE?
+A8: Strengths of t-SNE include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of t-SNE?
+A9: global distances can be misleading and results depend on settings and randomness
+
+Q10 [Medium]: What assumptions does t-SNE make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on t-SNE?
+A11: It converts pairwise relationships into probabilities and optimizes a low-dimensional representation to preserve local structure.
+
+Q12 [Medium]: What common mistakes occur when implementing t-SNE?
+A12: Common checks for t-SNE include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in t-SNE?
+A13: Common checks for t-SNE include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale t-SNE to a larger dataset or workload?
+A14: Scaling t-SNE typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing t-SNE?
+A15: The central trade-offs for t-SNE involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using t-SNE?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect t-SNE after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does t-SNE compare with a closely related approach?
+A18: It converts pairwise relationships into probabilities and optimizes a low-dimensional representation to preserve local structure.
+
+Q19 [Interview]: Give a practical example where t-SNE is the right choice.
+A19: A practical example is applying t-SNE to 2D/3D visualization of embeddings or clusters, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain t-SNE in a way suitable for an ML engineering interview.
+A20: In an interview, define t-SNE, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts t-SNE but sees unstable production results. What should they investigate first?
+A21: t-SNE is a nonlinear dimensionality-reduction method designed mainly for visualization of local neighborhoods.
+
+Q22 [Scenario]: A model based on t-SNE performs well offline but poorly after deployment. What are plausible causes?
+A22: t-SNE is a nonlinear dimensionality-reduction method designed mainly for visualization of local neighborhoods.
+
+Q23 [Scenario]: How would you explain the main trade-off of t-SNE to a product manager?
+A23: The central trade-offs for t-SNE involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind t-SNE?
+A24: t-SNE is a nonlinear dimensionality-reduction method designed mainly for visualization of local neighborhoods.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for t-SNE?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

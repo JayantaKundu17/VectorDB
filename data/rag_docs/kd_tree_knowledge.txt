@@ -1,0 +1,29 @@
+TOPIC: KD-Tree
+CATEGORY: kd_tree
+
+DEFINITION
+A KD-Tree is a space-partitioning data structure used for organizing points in a k-dimensional space. It can support nearest-neighbor and range searches.
+
+HOW IT WORKS
+A KD-Tree recursively partitions the space by selecting a dimension and splitting the points around a chosen value. The resulting binary tree allows parts of the search space to be pruned during nearest-neighbor queries.
+
+NEAREST NEIGHBOR SEARCH
+A query descends through the tree toward a promising region and then checks whether other branches could contain a closer point. Branches that cannot improve the current best distance can be skipped.
+
+STRENGTHS
+KD-Trees can provide efficient exact nearest-neighbor search for suitable low-dimensional datasets and can reduce the amount of exhaustive comparison required.
+
+LIMITATIONS
+KD-Trees become less effective as dimensionality increases because more branches may need to be explored. This makes them less attractive for very high-dimensional embedding search.
+
+HIGH-DIMENSIONAL SEARCH
+For high-dimensional vector embeddings, KD-Trees can suffer from the curse of dimensionality. HNSW is an approximate nearest-neighbor graph structure that is often more suitable for large high-dimensional embedding workloads.
+
+KD-TREE VS HNSW
+KD-Tree is a tree-based partitioning structure that can provide exact nearest-neighbor search for suitable lower-dimensional workloads. HNSW uses a multilayer graph and approximate search to efficiently navigate high-dimensional vector spaces. KD-Tree generally favors exact search and lower dimensions, while HNSW favors scalable approximate similarity search in high dimensions.
+
+USE CASES
+KD-Trees are useful for spatial points, geometric data, and suitable low-dimensional nearest-neighbor problems.
+
+KEY TRADE-OFF
+The primary trade-off is exactness and suitability for lower-dimensional data versus scalability and approximate search performance for high-dimensional data.

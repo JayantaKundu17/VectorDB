@@ -22,7 +22,7 @@
         <div class="status-card">
             <div class="status-row">
                 <span class="status-dot"></span>
-                <span id="systemStatus">System Online</span>
+                <span id="systemStatus">Connecting...</span>
             </div>
             <div class="status-url">vectordb-api-yxup.onrender.com</div>
         </div>
@@ -63,6 +63,14 @@
             </div>
             <button id="refreshButton" class="refresh-button">↻ Refresh</button>
         </header>
+
+        <div id="backendNotice" class="backend-notice" role="status" aria-live="polite">
+            <span class="backend-notice-indicator" aria-hidden="true"></span>
+            <div class="backend-notice-copy">
+                <strong id="backendNoticeTitle">VectorDB is waking up...</strong>
+                <p id="backendNoticeMessage">The backend may be starting after a period of inactivity. This can take up to a minute. Please keep this page open; we will reconnect automatically.</p>
+            </div>
+        </div>
 
         <section id="ragSection" class="section active">
             <div class="rag-layout">

@@ -1,0 +1,77 @@
+QUESTION BANK: ROC AUC
+CATEGORY: roc_auc
+
+Q1 [Easy]: What is ROC AUC?
+A1: ROC AUC summarizes ranking performance across classification thresholds using true-positive and false-positive rates.
+
+Q2 [Easy]: Why is ROC AUC important in AI or machine learning?
+A2: ROC AUC matters because binary classification and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does ROC AUC work at a high level?
+A3: It can be interpreted as the probability that a randomly chosen positive receives a higher score than a randomly chosen negative under common conditions.
+
+Q4 [Easy]: What problem does ROC AUC solve?
+A4: ROC AUC addresses problems involving binary classification.
+
+Q5 [Easy]: What are the main components of ROC AUC?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use ROC AUC?
+A6: ROC AUC summarizes ranking performance across classification thresholds using true-positive and false-positive rates.
+
+Q7 [Medium]: When should you avoid ROC AUC?
+A7: can look strong even when precision at the operating point is poor under severe imbalance
+
+Q8 [Medium]: What are the main advantages of ROC AUC?
+A8: Strengths of ROC AUC include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of ROC AUC?
+A9: can look strong even when precision at the operating point is poor under severe imbalance
+
+Q10 [Medium]: What assumptions does ROC AUC make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on ROC AUC?
+A11: It can be interpreted as the probability that a randomly chosen positive receives a higher score than a randomly chosen negative under common conditions.
+
+Q12 [Medium]: What common mistakes occur when implementing ROC AUC?
+A12: Common checks for ROC AUC include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in ROC AUC?
+A13: Common checks for ROC AUC include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale ROC AUC to a larger dataset or workload?
+A14: Scaling ROC AUC typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing ROC AUC?
+A15: The central trade-offs for ROC AUC involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using ROC AUC?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect ROC AUC after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does ROC AUC compare with a closely related approach?
+A18: It can be interpreted as the probability that a randomly chosen positive receives a higher score than a randomly chosen negative under common conditions.
+
+Q19 [Interview]: Give a practical example where ROC AUC is the right choice.
+A19: A practical example is applying ROC AUC to binary classification, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain ROC AUC in a way suitable for an ML engineering interview.
+A20: In an interview, define ROC AUC, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts ROC AUC but sees unstable production results. What should they investigate first?
+A21: ROC AUC summarizes ranking performance across classification thresholds using true-positive and false-positive rates.
+
+Q22 [Scenario]: A model based on ROC AUC performs well offline but poorly after deployment. What are plausible causes?
+A22: ROC AUC summarizes ranking performance across classification thresholds using true-positive and false-positive rates.
+
+Q23 [Scenario]: How would you explain the main trade-off of ROC AUC to a product manager?
+A23: The central trade-offs for ROC AUC involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind ROC AUC?
+A24: ROC AUC summarizes ranking performance across classification thresholds using true-positive and false-positive rates.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for ROC AUC?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

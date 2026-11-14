@@ -1,0 +1,86 @@
+QUESTION BANK: RAG
+CATEGORY: rag
+
+Q1 [Easy]: What is RAG?
+A1: Retrieval-Augmented Generation retrieves relevant external context and supplies it to a generative model before answer generation.
+
+Q2 [Easy]: Why is RAG important in AI or machine learning?
+A2: RAG matters because knowledge assistants and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does RAG work at a high level?
+A3: A typical pipeline chunks documents, embeds the chunks, retrieves similar vectors, optionally reranks them, and generates an answer grounded in retrieved context.
+
+Q4 [Easy]: What problem does RAG solve?
+A4: RAG addresses problems involving knowledge assistants, enterprise QA, private data.
+
+Q5 [Easy]: What are the main components of RAG?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use RAG?
+A6: Retrieval-Augmented Generation retrieves relevant external context and supplies it to a generative model before answer generation.
+
+Q7 [Medium]: When should you avoid RAG?
+A7: retrieval failures, stale documents, context dilution, hallucination
+
+Q8 [Medium]: What are the main advantages of RAG?
+A8: Strengths of RAG include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of RAG?
+A9: retrieval failures, stale documents, context dilution, hallucination
+
+Q10 [Medium]: What assumptions does RAG make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on RAG?
+A11: A typical pipeline chunks documents, embeds the chunks, retrieves similar vectors, optionally reranks them, and generates an answer grounded in retrieved context.
+
+Q12 [Medium]: What common mistakes occur when implementing RAG?
+A12: Common checks for RAG include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in RAG?
+A13: Common checks for RAG include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale RAG to a larger dataset or workload?
+A14: Scaling RAG typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing RAG?
+A15: The central trade-offs for RAG involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using RAG?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect RAG after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does RAG compare with a closely related approach?
+A18: A typical pipeline chunks documents, embeds the chunks, retrieves similar vectors, optionally reranks them, and generates an answer grounded in retrieved context.
+
+Q19 [Interview]: Give a practical example where RAG is the right choice.
+A19: A practical example is applying RAG to knowledge assistants, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain RAG in a way suitable for an ML engineering interview.
+A20: In an interview, define RAG, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Advanced]: What are the main stages of a RAG pipeline?
+A21: Retrieval-Augmented Generation retrieves relevant external context and supplies it to a generative model before answer generation.
+
+Q22 [Advanced]: Why does chunk size matter in RAG?
+A22: Retrieval-Augmented Generation retrieves relevant external context and supplies it to a generative model before answer generation.
+
+Q23 [Advanced]: What is the difference between retrieval recall and answer faithfulness?
+A23: Retrieval-Augmented Generation retrieves relevant external context and supplies it to a generative model before answer generation.
+
+Q24 [Scenario]: A team adopts RAG but sees unstable production results. What should they investigate first?
+A24: Retrieval-Augmented Generation retrieves relevant external context and supplies it to a generative model before answer generation.
+
+Q25 [Scenario]: A model based on RAG performs well offline but poorly after deployment. What are plausible causes?
+A25: Retrieval-Augmented Generation retrieves relevant external context and supplies it to a generative model before answer generation.
+
+Q26 [Scenario]: How would you explain the main trade-off of RAG to a product manager?
+A26: The central trade-offs for RAG involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q27 [Deep Dive]: What is the mathematical or algorithmic intuition behind RAG?
+A27: Retrieval-Augmented Generation retrieves relevant external context and supplies it to a generative model before answer generation.
+
+Q28 [Deep Dive]: What hyperparameters or design choices matter most for RAG?
+A28: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

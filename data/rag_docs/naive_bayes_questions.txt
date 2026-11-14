@@ -1,0 +1,77 @@
+QUESTION BANK: Naive Bayes
+CATEGORY: naive_bayes
+
+Q1 [Easy]: What is Naive Bayes?
+A1: Naive Bayes is a probabilistic classifier that assumes conditional independence among features given the class.
+
+Q2 [Easy]: Why is Naive Bayes important in AI or machine learning?
+A2: Naive Bayes matters because text classification and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Naive Bayes work at a high level?
+A3: Despite the strong assumption, it can work well with sparse high-dimensional inputs such as text.
+
+Q4 [Easy]: What problem does Naive Bayes solve?
+A4: Naive Bayes addresses problems involving text classification, simple probabilistic baselines.
+
+Q5 [Easy]: What are the main components of Naive Bayes?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Naive Bayes?
+A6: Naive Bayes is a probabilistic classifier that assumes conditional independence among features given the class.
+
+Q7 [Medium]: When should you avoid Naive Bayes?
+A7: independence assumption can be unrealistic
+
+Q8 [Medium]: What are the main advantages of Naive Bayes?
+A8: Strengths of Naive Bayes include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Naive Bayes?
+A9: independence assumption can be unrealistic
+
+Q10 [Medium]: What assumptions does Naive Bayes make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Naive Bayes?
+A11: Despite the strong assumption, it can work well with sparse high-dimensional inputs such as text.
+
+Q12 [Medium]: What common mistakes occur when implementing Naive Bayes?
+A12: Common checks for Naive Bayes include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Naive Bayes?
+A13: Common checks for Naive Bayes include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Naive Bayes to a larger dataset or workload?
+A14: Scaling Naive Bayes typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Naive Bayes?
+A15: The central trade-offs for Naive Bayes involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Naive Bayes?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Naive Bayes after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Naive Bayes compare with a closely related approach?
+A18: Despite the strong assumption, it can work well with sparse high-dimensional inputs such as text.
+
+Q19 [Interview]: Give a practical example where Naive Bayes is the right choice.
+A19: A practical example is applying Naive Bayes to text classification, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Naive Bayes in a way suitable for an ML engineering interview.
+A20: In an interview, define Naive Bayes, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Naive Bayes but sees unstable production results. What should they investigate first?
+A21: Naive Bayes is a probabilistic classifier that assumes conditional independence among features given the class.
+
+Q22 [Scenario]: A model based on Naive Bayes performs well offline but poorly after deployment. What are plausible causes?
+A22: Naive Bayes is a probabilistic classifier that assumes conditional independence among features given the class.
+
+Q23 [Scenario]: How would you explain the main trade-off of Naive Bayes to a product manager?
+A23: The central trade-offs for Naive Bayes involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Naive Bayes?
+A24: Naive Bayes is a probabilistic classifier that assumes conditional independence among features given the class.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Naive Bayes?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

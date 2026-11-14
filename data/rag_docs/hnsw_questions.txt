@@ -1,0 +1,86 @@
+QUESTION BANK: HNSW
+CATEGORY: hnsw
+
+Q1 [Easy]: What is HNSW?
+A1: HNSW stands for Hierarchical Navigable Small World and is an approximate nearest-neighbor search structure based on a multilayer graph.
+
+Q2 [Easy]: Why is HNSW important in AI or machine learning?
+A2: HNSW matters because high-dimensional similarity search and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does HNSW work at a high level?
+A3: Search begins at a high level, navigates toward promising neighbors, and descends through progressively denser layers.
+
+Q4 [Easy]: What problem does HNSW solve?
+A4: HNSW addresses problems involving high-dimensional similarity search.
+
+Q5 [Easy]: What are the main components of HNSW?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use HNSW?
+A6: HNSW stands for Hierarchical Navigable Small World and is an approximate nearest-neighbor search structure based on a multilayer graph.
+
+Q7 [Medium]: When should you avoid HNSW?
+A7: approximation can miss the exact nearest neighbor and memory can be significant
+
+Q8 [Medium]: What are the main advantages of HNSW?
+A8: Strengths of HNSW include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of HNSW?
+A9: approximation can miss the exact nearest neighbor and memory can be significant
+
+Q10 [Medium]: What assumptions does HNSW make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on HNSW?
+A11: Search begins at a high level, navigates toward promising neighbors, and descends through progressively denser layers.
+
+Q12 [Medium]: What common mistakes occur when implementing HNSW?
+A12: Common checks for HNSW include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in HNSW?
+A13: Common checks for HNSW include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale HNSW to a larger dataset or workload?
+A14: Scaling HNSW typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing HNSW?
+A15: The central trade-offs for HNSW involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using HNSW?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect HNSW after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does HNSW compare with a closely related approach?
+A18: Search begins at a high level, navigates toward promising neighbors, and descends through progressively denser layers.
+
+Q19 [Interview]: Give a practical example where HNSW is the right choice.
+A19: A practical example is applying HNSW to high-dimensional similarity search, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain HNSW in a way suitable for an ML engineering interview.
+A20: In an interview, define HNSW, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Advanced]: What does HNSW stand for?
+A21: HNSW stands for Hierarchical Navigable Small World and is an approximate nearest-neighbor search structure based on a multilayer graph.
+
+Q22 [Advanced]: Why does HNSW use multiple graph layers?
+A22: HNSW stands for Hierarchical Navigable Small World and is an approximate nearest-neighbor search structure based on a multilayer graph.
+
+Q23 [Advanced]: What is the recall-speed trade-off in HNSW?
+A23: HNSW stands for Hierarchical Navigable Small World and is an approximate nearest-neighbor search structure based on a multilayer graph.
+
+Q24 [Scenario]: A team adopts HNSW but sees unstable production results. What should they investigate first?
+A24: HNSW stands for Hierarchical Navigable Small World and is an approximate nearest-neighbor search structure based on a multilayer graph.
+
+Q25 [Scenario]: A model based on HNSW performs well offline but poorly after deployment. What are plausible causes?
+A25: HNSW stands for Hierarchical Navigable Small World and is an approximate nearest-neighbor search structure based on a multilayer graph.
+
+Q26 [Scenario]: How would you explain the main trade-off of HNSW to a product manager?
+A26: The central trade-offs for HNSW involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q27 [Deep Dive]: What is the mathematical or algorithmic intuition behind HNSW?
+A27: HNSW stands for Hierarchical Navigable Small World and is an approximate nearest-neighbor search structure based on a multilayer graph.
+
+Q28 [Deep Dive]: What hyperparameters or design choices matter most for HNSW?
+A28: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

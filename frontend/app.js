@@ -519,45 +519,122 @@ async function loadStats() {
 // HEALTH
 // ============================================================
 
+let healthRetryTimer = null;
+let healthCheckInProgress = false;
+let firstHealthCheckAt = Date.now();
+
 async function checkHealth() {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 12000);
 
     try {
-
-        const response =
-            await fetch(`${API_BASE}/health`);
+        const response = await fetch(`${API_BASE}/health`, {
+            method: "GET",
+            cache: "no-store",
+            signal: controller.signal
+        });
 
         return response.ok;
-
     } catch (_) {
-
         return false;
+    } finally {
+        clearTimeout(timeoutId);
     }
 }
 
 async function updateHealth() {
+    if (healthCheckInProgress) return false;
 
-    const healthy =
-        await checkHealth();
+    healthCheckInProgress = true;
+    setSystemWaking();
 
-    healthy
-        ? setSystemOnline()
-        : setSystemOffline();
+    try {
+        const healthy = await checkHealth();
+
+        if (healthy) {
+            setSystemOnline();
+            return true;
+        }
+
+        setSystemOffline();
+        return false;
+    } finally {
+        healthCheckInProgress = false;
+    }
+}
+
+function setSystemWaking() {
+    if (systemStatus) {
+        systemStatus.textContent = "Waking up...";
+    }
+
+    const statusDot = document.querySelector(".status-card .status-dot");
+    statusDot?.classList.remove("is-online", "is-offline");
+    statusDot?.classList.add("is-waking");
+
+    const notice = document.getElementById("backendNotice");
+    const title = document.getElementById("backendNoticeTitle");
+    const message = document.getElementById("backendNoticeMessage");
+
+    if (notice) notice.classList.remove("is-hidden");
+
+    const waitingFor = Date.now() - firstHealthCheckAt;
+    if (title) {
+        title.textContent = waitingFor > 60000
+            ? "VectorDB is still starting..."
+            : "VectorDB is waking up...";
+    }
+    if (message) {
+        message.textContent = waitingFor > 60000
+            ? "The backend is taking longer than usual to respond. Keep this page open; we are checking again automatically."
+            : "The backend may be starting after a period of inactivity. This can take up to a minute. Please keep this page open; we will reconnect automatically.";
+    }
 }
 
 function setSystemOnline() {
-
     if (systemStatus) {
-        systemStatus.textContent =
-            "System Online";
+        systemStatus.textContent = "System Online";
     }
+
+    const statusDot = document.querySelector(".status-card .status-dot");
+    statusDot?.classList.remove("is-waking", "is-offline");
+    statusDot?.classList.add("is-online");
+
+    const notice = document.getElementById("backendNotice");
+    if (notice) notice.classList.add("is-hidden");
+
+    firstHealthCheckAt = Date.now();
 }
 
 function setSystemOffline() {
-
     if (systemStatus) {
-        systemStatus.textContent =
-            "System Offline";
+        systemStatus.textContent = "System Offline";
     }
+
+    const statusDot = document.querySelector(".status-card .status-dot");
+    statusDot?.classList.remove("is-waking", "is-online");
+    statusDot?.classList.add("is-offline");
+
+    const notice = document.getElementById("backendNotice");
+    const title = document.getElementById("backendNoticeTitle");
+    const message = document.getElementById("backendNoticeMessage");
+
+    if (notice) notice.classList.remove("is-hidden");
+    if (title) title.textContent = "The backend is temporarily unavailable";
+    if (message) {
+        message.textContent = "VectorDB cannot reach its server right now. We will keep retrying automatically; you do not need to refresh the page.";
+    }
+}
+
+function startHealthMonitoring() {
+    if (healthRetryTimer) clearTimeout(healthRetryTimer);
+
+    const checkAndSchedule = async () => {
+        await updateHealth();
+        healthRetryTimer = setTimeout(checkAndSchedule, 5000);
+    };
+
+    checkAndSchedule();
 }
 
 
@@ -2512,4 +2589,4 @@ function formatNumber(value) {
 
 loadStats();
 
-updateHealth();
+startHealthMonitoring();

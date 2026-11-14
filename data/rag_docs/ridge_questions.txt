@@ -1,0 +1,77 @@
+QUESTION BANK: Ridge Regression
+CATEGORY: ridge
+
+Q1 [Easy]: What is Ridge Regression?
+A1: Ridge regression adds an L2 penalty to the linear-regression objective to shrink coefficients toward zero.
+
+Q2 [Easy]: Why is Ridge Regression important in AI or machine learning?
+A2: Ridge Regression matters because regularized regression and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Ridge Regression work at a high level?
+A3: The penalty can reduce variance and stabilize estimates when features are correlated.
+
+Q4 [Easy]: What problem does Ridge Regression solve?
+A4: Ridge Regression addresses problems involving regularized regression, correlated predictors.
+
+Q5 [Easy]: What are the main components of Ridge Regression?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Ridge Regression?
+A6: Ridge regression adds an L2 penalty to the linear-regression objective to shrink coefficients toward zero.
+
+Q7 [Medium]: When should you avoid Ridge Regression?
+A7: regularization strength must be tuned and coefficients remain nonzero
+
+Q8 [Medium]: What are the main advantages of Ridge Regression?
+A8: Strengths of Ridge Regression include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Ridge Regression?
+A9: regularization strength must be tuned and coefficients remain nonzero
+
+Q10 [Medium]: What assumptions does Ridge Regression make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Ridge Regression?
+A11: The penalty can reduce variance and stabilize estimates when features are correlated.
+
+Q12 [Medium]: What common mistakes occur when implementing Ridge Regression?
+A12: Common checks for Ridge Regression include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Ridge Regression?
+A13: Common checks for Ridge Regression include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Ridge Regression to a larger dataset or workload?
+A14: Scaling Ridge Regression typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Ridge Regression?
+A15: The central trade-offs for Ridge Regression involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Ridge Regression?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Ridge Regression after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Ridge Regression compare with a closely related approach?
+A18: The penalty can reduce variance and stabilize estimates when features are correlated.
+
+Q19 [Interview]: Give a practical example where Ridge Regression is the right choice.
+A19: A practical example is applying Ridge Regression to regularized regression, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Ridge Regression in a way suitable for an ML engineering interview.
+A20: In an interview, define Ridge Regression, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Ridge Regression but sees unstable production results. What should they investigate first?
+A21: Ridge regression adds an L2 penalty to the linear-regression objective to shrink coefficients toward zero.
+
+Q22 [Scenario]: A model based on Ridge Regression performs well offline but poorly after deployment. What are plausible causes?
+A22: Ridge regression adds an L2 penalty to the linear-regression objective to shrink coefficients toward zero.
+
+Q23 [Scenario]: How would you explain the main trade-off of Ridge Regression to a product manager?
+A23: The central trade-offs for Ridge Regression involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Ridge Regression?
+A24: Ridge regression adds an L2 penalty to the linear-regression objective to shrink coefficients toward zero.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Ridge Regression?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

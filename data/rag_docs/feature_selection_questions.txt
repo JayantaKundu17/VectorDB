@@ -1,0 +1,77 @@
+QUESTION BANK: Feature Selection
+CATEGORY: feature_selection
+
+Q1 [Easy]: What is Feature Selection?
+A1: Feature selection chooses a subset of variables that are useful for prediction or interpretation.
+
+Q2 [Easy]: Why is Feature Selection important in AI or machine learning?
+A2: Feature Selection matters because dimensionality reduction and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Feature Selection work at a high level?
+A3: Filter methods use statistics, wrapper methods use model performance, and embedded methods select features during training.
+
+Q4 [Easy]: What problem does Feature Selection solve?
+A4: Feature Selection addresses problems involving dimensionality reduction, faster models, interpretability.
+
+Q5 [Easy]: What are the main components of Feature Selection?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Feature Selection?
+A6: Feature selection chooses a subset of variables that are useful for prediction or interpretation.
+
+Q7 [Medium]: When should you avoid Feature Selection?
+A7: selection bias and unstable choices under correlated features
+
+Q8 [Medium]: What are the main advantages of Feature Selection?
+A8: Strengths of Feature Selection include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Feature Selection?
+A9: selection bias and unstable choices under correlated features
+
+Q10 [Medium]: What assumptions does Feature Selection make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Feature Selection?
+A11: Filter methods use statistics, wrapper methods use model performance, and embedded methods select features during training.
+
+Q12 [Medium]: What common mistakes occur when implementing Feature Selection?
+A12: Common checks for Feature Selection include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Feature Selection?
+A13: Common checks for Feature Selection include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Feature Selection to a larger dataset or workload?
+A14: Scaling Feature Selection typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Feature Selection?
+A15: The central trade-offs for Feature Selection involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Feature Selection?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Feature Selection after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Feature Selection compare with a closely related approach?
+A18: Filter methods use statistics, wrapper methods use model performance, and embedded methods select features during training.
+
+Q19 [Interview]: Give a practical example where Feature Selection is the right choice.
+A19: A practical example is applying Feature Selection to dimensionality reduction, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Feature Selection in a way suitable for an ML engineering interview.
+A20: In an interview, define Feature Selection, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Feature Selection but sees unstable production results. What should they investigate first?
+A21: Feature selection chooses a subset of variables that are useful for prediction or interpretation.
+
+Q22 [Scenario]: A model based on Feature Selection performs well offline but poorly after deployment. What are plausible causes?
+A22: Feature selection chooses a subset of variables that are useful for prediction or interpretation.
+
+Q23 [Scenario]: How would you explain the main trade-off of Feature Selection to a product manager?
+A23: The central trade-offs for Feature Selection involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Feature Selection?
+A24: Feature selection chooses a subset of variables that are useful for prediction or interpretation.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Feature Selection?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

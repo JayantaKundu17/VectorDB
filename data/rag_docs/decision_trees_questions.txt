@@ -1,0 +1,86 @@
+QUESTION BANK: Decision Trees
+CATEGORY: decision_trees
+
+Q1 [Easy]: What is Decision Trees?
+A1: A decision tree recursively partitions data using feature-based rules to create homogeneous regions.
+
+Q2 [Easy]: Why is Decision Trees important in AI or machine learning?
+A2: Decision Trees matters because tabular data and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Decision Trees work at a high level?
+A3: Splits can be chosen using criteria such as Gini impurity or entropy for classification and variance reduction for regression.
+
+Q4 [Easy]: What problem does Decision Trees solve?
+A4: Decision Trees addresses problems involving tabular data, interpretable rules, mixed feature types.
+
+Q5 [Easy]: What are the main components of Decision Trees?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Decision Trees?
+A6: A decision tree recursively partitions data using feature-based rules to create homogeneous regions.
+
+Q7 [Medium]: When should you avoid Decision Trees?
+A7: deep trees overfit and unstable splits can change with small data changes
+
+Q8 [Medium]: What are the main advantages of Decision Trees?
+A8: Strengths of Decision Trees include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Decision Trees?
+A9: deep trees overfit and unstable splits can change with small data changes
+
+Q10 [Medium]: What assumptions does Decision Trees make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Decision Trees?
+A11: Splits can be chosen using criteria such as Gini impurity or entropy for classification and variance reduction for regression.
+
+Q12 [Medium]: What common mistakes occur when implementing Decision Trees?
+A12: Common checks for Decision Trees include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Decision Trees?
+A13: Common checks for Decision Trees include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Decision Trees to a larger dataset or workload?
+A14: Scaling Decision Trees typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Decision Trees?
+A15: The central trade-offs for Decision Trees involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Decision Trees?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Decision Trees after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Decision Trees compare with a closely related approach?
+A18: Splits can be chosen using criteria such as Gini impurity or entropy for classification and variance reduction for regression.
+
+Q19 [Interview]: Give a practical example where Decision Trees is the right choice.
+A19: A practical example is applying Decision Trees to tabular data, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Decision Trees in a way suitable for an ML engineering interview.
+A20: In an interview, define Decision Trees, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Advanced]: What is Gini impurity?
+A21: A decision tree recursively partitions data using feature-based rules to create homogeneous regions.
+
+Q22 [Advanced]: What is information gain?
+A22: A decision tree recursively partitions data using feature-based rules to create homogeneous regions.
+
+Q23 [Advanced]: Why do deep decision trees overfit?
+A23: A decision tree recursively partitions data using feature-based rules to create homogeneous regions.
+
+Q24 [Scenario]: A team adopts Decision Trees but sees unstable production results. What should they investigate first?
+A24: A decision tree recursively partitions data using feature-based rules to create homogeneous regions.
+
+Q25 [Scenario]: A model based on Decision Trees performs well offline but poorly after deployment. What are plausible causes?
+A25: A decision tree recursively partitions data using feature-based rules to create homogeneous regions.
+
+Q26 [Scenario]: How would you explain the main trade-off of Decision Trees to a product manager?
+A26: The central trade-offs for Decision Trees involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q27 [Deep Dive]: What is the mathematical or algorithmic intuition behind Decision Trees?
+A27: A decision tree recursively partitions data using feature-based rules to create homogeneous regions.
+
+Q28 [Deep Dive]: What hyperparameters or design choices matter most for Decision Trees?
+A28: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

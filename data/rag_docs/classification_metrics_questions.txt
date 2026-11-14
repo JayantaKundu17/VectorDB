@@ -1,0 +1,77 @@
+QUESTION BANK: Precision Recall F1
+CATEGORY: classification_metrics
+
+Q1 [Easy]: What is Precision Recall F1?
+A1: Precision measures how many predicted positives are correct; recall measures how many true positives were found; F1 is their harmonic mean.
+
+Q2 [Easy]: Why is Precision Recall F1 important in AI or machine learning?
+A2: Precision Recall F1 matters because imbalanced classification and information retrieval and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Precision Recall F1 work at a high level?
+A3: Precision = TP/(TP+FP), recall = TP/(TP+FN), and F1 = 2PR/(P+R).
+
+Q4 [Easy]: What problem does Precision Recall F1 solve?
+A4: Precision Recall F1 addresses problems involving imbalanced classification and information retrieval.
+
+Q5 [Easy]: What are the main components of Precision Recall F1?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Precision Recall F1?
+A6: Precision measures how many predicted positives are correct; recall measures how many true positives were found; F1 is their harmonic mean.
+
+Q7 [Medium]: When should you avoid Precision Recall F1?
+A7: metric choice should reflect costs of errors
+
+Q8 [Medium]: What are the main advantages of Precision Recall F1?
+A8: Strengths of Precision Recall F1 include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Precision Recall F1?
+A9: metric choice should reflect costs of errors
+
+Q10 [Medium]: What assumptions does Precision Recall F1 make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Precision Recall F1?
+A11: Precision = TP/(TP+FP), recall = TP/(TP+FN), and F1 = 2PR/(P+R).
+
+Q12 [Medium]: What common mistakes occur when implementing Precision Recall F1?
+A12: Common checks for Precision Recall F1 include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Precision Recall F1?
+A13: Common checks for Precision Recall F1 include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Precision Recall F1 to a larger dataset or workload?
+A14: Scaling Precision Recall F1 typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Precision Recall F1?
+A15: The central trade-offs for Precision Recall F1 involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Precision Recall F1?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Precision Recall F1 after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Precision Recall F1 compare with a closely related approach?
+A18: Precision = TP/(TP+FP), recall = TP/(TP+FN), and F1 = 2PR/(P+R).
+
+Q19 [Interview]: Give a practical example where Precision Recall F1 is the right choice.
+A19: A practical example is applying Precision Recall F1 to imbalanced classification and information retrieval, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Precision Recall F1 in a way suitable for an ML engineering interview.
+A20: In an interview, define Precision Recall F1, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Precision Recall F1 but sees unstable production results. What should they investigate first?
+A21: Precision measures how many predicted positives are correct; recall measures how many true positives were found; F1 is their harmonic mean.
+
+Q22 [Scenario]: A model based on Precision Recall F1 performs well offline but poorly after deployment. What are plausible causes?
+A22: Precision measures how many predicted positives are correct; recall measures how many true positives were found; F1 is their harmonic mean.
+
+Q23 [Scenario]: How would you explain the main trade-off of Precision Recall F1 to a product manager?
+A23: The central trade-offs for Precision Recall F1 involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Precision Recall F1?
+A24: Precision measures how many predicted positives are correct; recall measures how many true positives were found; F1 is their harmonic mean.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Precision Recall F1?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

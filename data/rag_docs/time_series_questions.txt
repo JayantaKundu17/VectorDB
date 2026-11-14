@@ -1,0 +1,77 @@
+QUESTION BANK: Time Series
+CATEGORY: time_series
+
+Q1 [Easy]: What is Time Series?
+A1: Time-series data is indexed by time and often exhibits trend, seasonality, autocorrelation, or changing variance.
+
+Q2 [Easy]: Why is Time Series important in AI or machine learning?
+A2: Time Series matters because forecasting and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Time Series work at a high level?
+A3: Temporal ordering must be respected when creating training and validation splits.
+
+Q4 [Easy]: What problem does Time Series solve?
+A4: Time Series addresses problems involving forecasting, monitoring, finance, demand prediction.
+
+Q5 [Easy]: What are the main components of Time Series?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Time Series?
+A6: Time-series data is indexed by time and often exhibits trend, seasonality, autocorrelation, or changing variance.
+
+Q7 [Medium]: When should you avoid Time Series?
+A7: nonstationarity, leakage from future data, regime changes
+
+Q8 [Medium]: What are the main advantages of Time Series?
+A8: Strengths of Time Series include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Time Series?
+A9: nonstationarity, leakage from future data, regime changes
+
+Q10 [Medium]: What assumptions does Time Series make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Time Series?
+A11: Temporal ordering must be respected when creating training and validation splits.
+
+Q12 [Medium]: What common mistakes occur when implementing Time Series?
+A12: Common checks for Time Series include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Time Series?
+A13: Common checks for Time Series include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Time Series to a larger dataset or workload?
+A14: Scaling Time Series typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Time Series?
+A15: The central trade-offs for Time Series involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Time Series?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Time Series after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Time Series compare with a closely related approach?
+A18: Temporal ordering must be respected when creating training and validation splits.
+
+Q19 [Interview]: Give a practical example where Time Series is the right choice.
+A19: A practical example is applying Time Series to forecasting, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Time Series in a way suitable for an ML engineering interview.
+A20: In an interview, define Time Series, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Time Series but sees unstable production results. What should they investigate first?
+A21: Time-series data is indexed by time and often exhibits trend, seasonality, autocorrelation, or changing variance.
+
+Q22 [Scenario]: A model based on Time Series performs well offline but poorly after deployment. What are plausible causes?
+A22: Time-series data is indexed by time and often exhibits trend, seasonality, autocorrelation, or changing variance.
+
+Q23 [Scenario]: How would you explain the main trade-off of Time Series to a product manager?
+A23: The central trade-offs for Time Series involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Time Series?
+A24: Time-series data is indexed by time and often exhibits trend, seasonality, autocorrelation, or changing variance.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Time Series?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

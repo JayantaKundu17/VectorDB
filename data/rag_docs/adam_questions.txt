@@ -1,0 +1,77 @@
+QUESTION BANK: Adam Optimizer
+CATEGORY: adam
+
+Q1 [Easy]: What is Adam Optimizer?
+A1: Adam adapts learning rates using estimates of the first and second moments of gradients.
+
+Q2 [Easy]: Why is Adam Optimizer important in AI or machine learning?
+A2: Adam Optimizer matters because deep learning and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Adam Optimizer work at a high level?
+A3: The update combines momentum-like behavior with per-parameter scaling. Learning rate and weight decay still require care.
+
+Q4 [Easy]: What problem does Adam Optimizer solve?
+A4: Adam Optimizer addresses problems involving deep learning, general optimization.
+
+Q5 [Easy]: What are the main components of Adam Optimizer?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Adam Optimizer?
+A6: Adam adapts learning rates using estimates of the first and second moments of gradients.
+
+Q7 [Medium]: When should you avoid Adam Optimizer?
+A7: can generalize differently from SGD and is sensitive to hyperparameters
+
+Q8 [Medium]: What are the main advantages of Adam Optimizer?
+A8: Strengths of Adam Optimizer include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Adam Optimizer?
+A9: can generalize differently from SGD and is sensitive to hyperparameters
+
+Q10 [Medium]: What assumptions does Adam Optimizer make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Adam Optimizer?
+A11: The update combines momentum-like behavior with per-parameter scaling. Learning rate and weight decay still require care.
+
+Q12 [Medium]: What common mistakes occur when implementing Adam Optimizer?
+A12: Common checks for Adam Optimizer include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Adam Optimizer?
+A13: Common checks for Adam Optimizer include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Adam Optimizer to a larger dataset or workload?
+A14: Scaling Adam Optimizer typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Adam Optimizer?
+A15: The central trade-offs for Adam Optimizer involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Adam Optimizer?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Adam Optimizer after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Adam Optimizer compare with a closely related approach?
+A18: The update combines momentum-like behavior with per-parameter scaling. Learning rate and weight decay still require care.
+
+Q19 [Interview]: Give a practical example where Adam Optimizer is the right choice.
+A19: A practical example is applying Adam Optimizer to deep learning, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Adam Optimizer in a way suitable for an ML engineering interview.
+A20: In an interview, define Adam Optimizer, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Adam Optimizer but sees unstable production results. What should they investigate first?
+A21: Adam adapts learning rates using estimates of the first and second moments of gradients.
+
+Q22 [Scenario]: A model based on Adam Optimizer performs well offline but poorly after deployment. What are plausible causes?
+A22: Adam adapts learning rates using estimates of the first and second moments of gradients.
+
+Q23 [Scenario]: How would you explain the main trade-off of Adam Optimizer to a product manager?
+A23: The central trade-offs for Adam Optimizer involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Adam Optimizer?
+A24: Adam adapts learning rates using estimates of the first and second moments of gradients.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Adam Optimizer?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

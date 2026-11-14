@@ -1,0 +1,30 @@
+TOPIC: Q-Learning
+CATEGORY: q_learning
+
+DEFINITION
+Q-learning learns an action-value function for an optimal policy using off-policy temporal-difference updates.
+
+HOW IT WORKS
+A standard tabular update is Q(s,a) <- Q(s,a) + alpha[r + gamma max_a' Q(s',a') - Q(s,a)].
+
+KEY IDEAS
+Q(s,a) <- Q(s,a) + alpha[r + gamma max_a' Q(s',a') - Q(s,a)].
+The main design variables are representation, objective function, optimization or search procedure, and evaluation criteria.
+
+COMMON USE CASES
+discrete-action RL
+
+ADVANTAGES / STRENGTHS
+This approach is useful when its assumptions and inductive biases match the structure of the problem. It can provide a strong baseline, specialized performance, interpretability, efficiency, or scalability depending on the topic.
+
+LIMITATIONS / FAILURE MODES
+large state spaces and exploration challenges
+
+COMPARISON
+Q-Learning should be distinguished from SARSA and DQN. The best choice depends on data size, feature type, dimensionality, latency, accuracy, interpretability, and operational constraints.
+
+EVALUATION / PRACTICAL CHECKS
+Choose metrics that match the task and business cost of errors. Validate on a representative holdout or cross-validation design, check leakage, inspect failure cases, and monitor performance after deployment.
+
+INTERVIEW TAKEAWAY
+Be prepared to explain what Q-Learning is, how it works, when to use it, what assumptions it makes, and what trade-offs or failure modes it has.

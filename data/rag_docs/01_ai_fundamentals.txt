@@ -1,0 +1,7 @@
+Artificial Intelligence Fundamentals
+
+Artificial Intelligence (AI) is the field of computing concerned with building systems that perform tasks associated with intelligent behavior, such as reasoning, perception, planning, language understanding, learning, and decision making. AI includes both learning-based methods and systems built from explicit rules or search procedures.
+
+A useful distinction is between narrow AI and general intelligence. Most deployed AI systems are narrow systems designed for a specific task or family of tasks. Common AI approaches include search, optimization, knowledge representation, probabilistic reasoning, machine learning, deep learning, and reinforcement learning.
+
+A modern AI system often combines several components: data, a model, an inference procedure, evaluation, and an application layer. Machine learning is a major subfield of AI in which a model learns patterns from data rather than being completely programmed with fixed rules.

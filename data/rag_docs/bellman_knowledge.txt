@@ -1,0 +1,30 @@
+TOPIC: Bellman Equation
+CATEGORY: bellman
+
+DEFINITION
+The Bellman equations express a value function recursively in terms of immediate reward and expected future value.
+
+HOW IT WORKS
+For a policy, V(s)=E[r + gamma V(s')] in the standard discounted formulation. Optimal Bellman equations replace policy expectations with maximizing actions.
+
+KEY IDEAS
+Policy-value form: V(s) = E[r + gamma V(s') | s].
+The main design variables are representation, objective function, optimization or search procedure, and evaluation criteria.
+
+COMMON USE CASES
+dynamic programming and RL
+
+ADVANTAGES / STRENGTHS
+This approach is useful when its assumptions and inductive biases match the structure of the problem. It can provide a strong baseline, specialized performance, interpretability, efficiency, or scalability depending on the topic.
+
+LIMITATIONS / FAILURE MODES
+bootstrapping estimates can propagate error
+
+COMPARISON
+Bellman Equation should be distinguished from closely related approaches in the same problem family. The best choice depends on data size, feature type, dimensionality, latency, accuracy, interpretability, and operational constraints.
+
+EVALUATION / PRACTICAL CHECKS
+Choose metrics that match the task and business cost of errors. Validate on a representative holdout or cross-validation design, check leakage, inspect failure cases, and monitor performance after deployment.
+
+INTERVIEW TAKEAWAY
+Be prepared to explain what Bellman Equation is, how it works, when to use it, what assumptions it makes, and what trade-offs or failure modes it has.

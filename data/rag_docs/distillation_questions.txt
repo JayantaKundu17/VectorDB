@@ -1,0 +1,77 @@
+QUESTION BANK: Knowledge Distillation
+CATEGORY: distillation
+
+Q1 [Easy]: What is Knowledge Distillation?
+A1: Knowledge distillation trains a smaller student model to reproduce useful behavior from a larger teacher model.
+
+Q2 [Easy]: Why is Knowledge Distillation important in AI or machine learning?
+A2: Knowledge Distillation matters because model compression and deployment and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Knowledge Distillation work at a high level?
+A3: The student can learn from teacher probabilities or intermediate representations in addition to hard labels.
+
+Q4 [Easy]: What problem does Knowledge Distillation solve?
+A4: Knowledge Distillation addresses problems involving model compression and deployment.
+
+Q5 [Easy]: What are the main components of Knowledge Distillation?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Knowledge Distillation?
+A6: Knowledge distillation trains a smaller student model to reproduce useful behavior from a larger teacher model.
+
+Q7 [Medium]: When should you avoid Knowledge Distillation?
+A7: teacher errors and task mismatch can transfer
+
+Q8 [Medium]: What are the main advantages of Knowledge Distillation?
+A8: Strengths of Knowledge Distillation include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Knowledge Distillation?
+A9: teacher errors and task mismatch can transfer
+
+Q10 [Medium]: What assumptions does Knowledge Distillation make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Knowledge Distillation?
+A11: The student can learn from teacher probabilities or intermediate representations in addition to hard labels.
+
+Q12 [Medium]: What common mistakes occur when implementing Knowledge Distillation?
+A12: Common checks for Knowledge Distillation include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Knowledge Distillation?
+A13: Common checks for Knowledge Distillation include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Knowledge Distillation to a larger dataset or workload?
+A14: Scaling Knowledge Distillation typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Knowledge Distillation?
+A15: The central trade-offs for Knowledge Distillation involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Knowledge Distillation?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Knowledge Distillation after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Knowledge Distillation compare with a closely related approach?
+A18: The student can learn from teacher probabilities or intermediate representations in addition to hard labels.
+
+Q19 [Interview]: Give a practical example where Knowledge Distillation is the right choice.
+A19: A practical example is applying Knowledge Distillation to model compression and deployment, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Knowledge Distillation in a way suitable for an ML engineering interview.
+A20: In an interview, define Knowledge Distillation, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Knowledge Distillation but sees unstable production results. What should they investigate first?
+A21: Knowledge distillation trains a smaller student model to reproduce useful behavior from a larger teacher model.
+
+Q22 [Scenario]: A model based on Knowledge Distillation performs well offline but poorly after deployment. What are plausible causes?
+A22: Knowledge distillation trains a smaller student model to reproduce useful behavior from a larger teacher model.
+
+Q23 [Scenario]: How would you explain the main trade-off of Knowledge Distillation to a product manager?
+A23: The central trade-offs for Knowledge Distillation involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Knowledge Distillation?
+A24: Knowledge distillation trains a smaller student model to reproduce useful behavior from a larger teacher model.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Knowledge Distillation?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

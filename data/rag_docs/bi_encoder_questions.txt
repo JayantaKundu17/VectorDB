@@ -1,0 +1,77 @@
+QUESTION BANK: Bi-Encoders
+CATEGORY: bi_encoder
+
+Q1 [Easy]: What is Bi-Encoders?
+A1: A bi-encoder separately embeds queries and documents so vectors can be compared efficiently.
+
+Q2 [Easy]: Why is Bi-Encoders important in AI or machine learning?
+A2: Bi-Encoders matters because dense retrieval and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Bi-Encoders work at a high level?
+A3: Independent encodings enable large-scale vector indexing and retrieval, while sacrificing some pairwise interaction.
+
+Q4 [Easy]: What problem does Bi-Encoders solve?
+A4: Bi-Encoders addresses problems involving dense retrieval, semantic search.
+
+Q5 [Easy]: What are the main components of Bi-Encoders?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Bi-Encoders?
+A6: A bi-encoder separately embeds queries and documents so vectors can be compared efficiently.
+
+Q7 [Medium]: When should you avoid Bi-Encoders?
+A7: embedding quality and domain mismatch
+
+Q8 [Medium]: What are the main advantages of Bi-Encoders?
+A8: Strengths of Bi-Encoders include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Bi-Encoders?
+A9: embedding quality and domain mismatch
+
+Q10 [Medium]: What assumptions does Bi-Encoders make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Bi-Encoders?
+A11: Independent encodings enable large-scale vector indexing and retrieval, while sacrificing some pairwise interaction.
+
+Q12 [Medium]: What common mistakes occur when implementing Bi-Encoders?
+A12: Common checks for Bi-Encoders include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Bi-Encoders?
+A13: Common checks for Bi-Encoders include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Bi-Encoders to a larger dataset or workload?
+A14: Scaling Bi-Encoders typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Bi-Encoders?
+A15: The central trade-offs for Bi-Encoders involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Bi-Encoders?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Bi-Encoders after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Bi-Encoders compare with a closely related approach?
+A18: Independent encodings enable large-scale vector indexing and retrieval, while sacrificing some pairwise interaction.
+
+Q19 [Interview]: Give a practical example where Bi-Encoders is the right choice.
+A19: A practical example is applying Bi-Encoders to dense retrieval, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Bi-Encoders in a way suitable for an ML engineering interview.
+A20: In an interview, define Bi-Encoders, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Bi-Encoders but sees unstable production results. What should they investigate first?
+A21: A bi-encoder separately embeds queries and documents so vectors can be compared efficiently.
+
+Q22 [Scenario]: A model based on Bi-Encoders performs well offline but poorly after deployment. What are plausible causes?
+A22: A bi-encoder separately embeds queries and documents so vectors can be compared efficiently.
+
+Q23 [Scenario]: How would you explain the main trade-off of Bi-Encoders to a product manager?
+A23: The central trade-offs for Bi-Encoders involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Bi-Encoders?
+A24: A bi-encoder separately embeds queries and documents so vectors can be compared efficiently.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Bi-Encoders?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

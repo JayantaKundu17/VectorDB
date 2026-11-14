@@ -1,0 +1,77 @@
+QUESTION BANK: UMAP
+CATEGORY: umap
+
+Q1 [Easy]: What is UMAP?
+A1: UMAP is a manifold-learning method that builds a graph of local relationships and optimizes a lower-dimensional representation.
+
+Q2 [Easy]: Why is UMAP important in AI or machine learning?
+A2: UMAP matters because embedding visualization and dimensionality reduction and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does UMAP work at a high level?
+A3: It is often faster than t-SNE on larger datasets and can preserve both local and some global structure depending on settings.
+
+Q4 [Easy]: What problem does UMAP solve?
+A4: UMAP addresses problems involving embedding visualization and dimensionality reduction.
+
+Q5 [Easy]: What are the main components of UMAP?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use UMAP?
+A6: UMAP is a manifold-learning method that builds a graph of local relationships and optimizes a lower-dimensional representation.
+
+Q7 [Medium]: When should you avoid UMAP?
+A7: hyperparameter sensitivity and visualization can still be overinterpreted
+
+Q8 [Medium]: What are the main advantages of UMAP?
+A8: Strengths of UMAP include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of UMAP?
+A9: hyperparameter sensitivity and visualization can still be overinterpreted
+
+Q10 [Medium]: What assumptions does UMAP make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on UMAP?
+A11: It is often faster than t-SNE on larger datasets and can preserve both local and some global structure depending on settings.
+
+Q12 [Medium]: What common mistakes occur when implementing UMAP?
+A12: Common checks for UMAP include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in UMAP?
+A13: Common checks for UMAP include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale UMAP to a larger dataset or workload?
+A14: Scaling UMAP typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing UMAP?
+A15: The central trade-offs for UMAP involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using UMAP?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect UMAP after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does UMAP compare with a closely related approach?
+A18: It is often faster than t-SNE on larger datasets and can preserve both local and some global structure depending on settings.
+
+Q19 [Interview]: Give a practical example where UMAP is the right choice.
+A19: A practical example is applying UMAP to embedding visualization and dimensionality reduction, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain UMAP in a way suitable for an ML engineering interview.
+A20: In an interview, define UMAP, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts UMAP but sees unstable production results. What should they investigate first?
+A21: UMAP is a manifold-learning method that builds a graph of local relationships and optimizes a lower-dimensional representation.
+
+Q22 [Scenario]: A model based on UMAP performs well offline but poorly after deployment. What are plausible causes?
+A22: UMAP is a manifold-learning method that builds a graph of local relationships and optimizes a lower-dimensional representation.
+
+Q23 [Scenario]: How would you explain the main trade-off of UMAP to a product manager?
+A23: The central trade-offs for UMAP involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind UMAP?
+A24: UMAP is a manifold-learning method that builds a graph of local relationships and optimizes a lower-dimensional representation.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for UMAP?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

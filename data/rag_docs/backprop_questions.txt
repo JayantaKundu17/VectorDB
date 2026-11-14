@@ -1,0 +1,77 @@
+QUESTION BANK: Backpropagation
+CATEGORY: backprop
+
+Q1 [Easy]: What is Backpropagation?
+A1: Backpropagation computes gradients of a differentiable loss with respect to network parameters using the chain rule.
+
+Q2 [Easy]: Why is Backpropagation important in AI or machine learning?
+A2: Backpropagation matters because training neural networks and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Backpropagation work at a high level?
+A3: It propagates error signals backward through the computation graph so an optimizer can update weights.
+
+Q4 [Easy]: What problem does Backpropagation solve?
+A4: Backpropagation addresses problems involving training neural networks.
+
+Q5 [Easy]: What are the main components of Backpropagation?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Backpropagation?
+A6: Backpropagation computes gradients of a differentiable loss with respect to network parameters using the chain rule.
+
+Q7 [Medium]: When should you avoid Backpropagation?
+A7: vanishing or exploding gradients and numerical instability
+
+Q8 [Medium]: What are the main advantages of Backpropagation?
+A8: Strengths of Backpropagation include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Backpropagation?
+A9: vanishing or exploding gradients and numerical instability
+
+Q10 [Medium]: What assumptions does Backpropagation make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Backpropagation?
+A11: It propagates error signals backward through the computation graph so an optimizer can update weights.
+
+Q12 [Medium]: What common mistakes occur when implementing Backpropagation?
+A12: Common checks for Backpropagation include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Backpropagation?
+A13: Common checks for Backpropagation include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Backpropagation to a larger dataset or workload?
+A14: Scaling Backpropagation typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Backpropagation?
+A15: The central trade-offs for Backpropagation involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Backpropagation?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Backpropagation after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Backpropagation compare with a closely related approach?
+A18: It propagates error signals backward through the computation graph so an optimizer can update weights.
+
+Q19 [Interview]: Give a practical example where Backpropagation is the right choice.
+A19: A practical example is applying Backpropagation to training neural networks, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Backpropagation in a way suitable for an ML engineering interview.
+A20: In an interview, define Backpropagation, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Backpropagation but sees unstable production results. What should they investigate first?
+A21: Backpropagation computes gradients of a differentiable loss with respect to network parameters using the chain rule.
+
+Q22 [Scenario]: A model based on Backpropagation performs well offline but poorly after deployment. What are plausible causes?
+A22: Backpropagation computes gradients of a differentiable loss with respect to network parameters using the chain rule.
+
+Q23 [Scenario]: How would you explain the main trade-off of Backpropagation to a product manager?
+A23: The central trade-offs for Backpropagation involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Backpropagation?
+A24: Backpropagation computes gradients of a differentiable loss with respect to network parameters using the chain rule.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Backpropagation?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

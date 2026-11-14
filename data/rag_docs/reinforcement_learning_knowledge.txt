@@ -1,0 +1,30 @@
+TOPIC: Reinforcement Learning
+CATEGORY: reinforcement_learning
+
+DEFINITION
+Reinforcement learning learns how an agent should act through interaction with an environment and reward signals.
+
+HOW IT WORKS
+An RL problem is often described by states, actions, rewards, transitions, and a policy.
+
+KEY IDEAS
+The exact implementation depends on the model family, data type, objective, and operating constraints.
+The main design variables are representation, objective function, optimization or search procedure, and evaluation criteria.
+
+COMMON USE CASES
+control, games, robotics, decision-making
+
+ADVANTAGES / STRENGTHS
+This approach is useful when its assumptions and inductive biases match the structure of the problem. It can provide a strong baseline, specialized performance, interpretability, efficiency, or scalability depending on the topic.
+
+LIMITATIONS / FAILURE MODES
+sample inefficiency, exploration, reward design
+
+COMPARISON
+Reinforcement Learning should be distinguished from closely related approaches in the same problem family. The best choice depends on data size, feature type, dimensionality, latency, accuracy, interpretability, and operational constraints.
+
+EVALUATION / PRACTICAL CHECKS
+Choose metrics that match the task and business cost of errors. Validate on a representative holdout or cross-validation design, check leakage, inspect failure cases, and monitor performance after deployment.
+
+INTERVIEW TAKEAWAY
+Be prepared to explain what Reinforcement Learning is, how it works, when to use it, what assumptions it makes, and what trade-offs or failure modes it has.

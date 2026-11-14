@@ -1,0 +1,30 @@
+TOPIC: TF-IDF
+CATEGORY: tfidf
+
+DEFINITION
+TF-IDF weights terms using their frequency in a document and inverse frequency across a corpus.
+
+HOW IT WORKS
+A common form is TF multiplied by IDF, making terms common in one document but rare across the corpus more prominent.
+
+KEY IDEAS
+TF-IDF is commonly written as TF(t,d) * IDF(t), where IDF decreases as a term appears in more documents.
+The main design variables are representation, objective function, optimization or search procedure, and evaluation criteria.
+
+COMMON USE CASES
+information retrieval, text classification
+
+ADVANTAGES / STRENGTHS
+This approach is useful when its assumptions and inductive biases match the structure of the problem. It can provide a strong baseline, specialized performance, interpretability, efficiency, or scalability depending on the topic.
+
+LIMITATIONS / FAILURE MODES
+bag-of-words representation ignores richer semantics
+
+COMPARISON
+TF-IDF should be distinguished from closely related approaches in the same problem family. The best choice depends on data size, feature type, dimensionality, latency, accuracy, interpretability, and operational constraints.
+
+EVALUATION / PRACTICAL CHECKS
+Choose metrics that match the task and business cost of errors. Validate on a representative holdout or cross-validation design, check leakage, inspect failure cases, and monitor performance after deployment.
+
+INTERVIEW TAKEAWAY
+Be prepared to explain what TF-IDF is, how it works, when to use it, what assumptions it makes, and what trade-offs or failure modes it has.

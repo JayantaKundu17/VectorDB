@@ -1,0 +1,60 @@
+TOPIC: XGBoost Training Process
+
+CATEGORY: xgboost, gradient_boosting, decision_trees
+
+WHAT IS XGBOOST?
+
+XGBoost stands for Extreme Gradient Boosting. It is a machine learning library that implements gradient-boosted decision trees with regularization and efficient training techniques. It is commonly used for supervised learning tasks such as classification and regression.
+
+HOW XGBOOST BUILDS TREES SEQUENTIALLY
+
+XGBoost builds an additive ensemble of decision trees. Instead of training every tree independently, it adds trees sequentially so that each new tree improves the predictions made by the existing ensemble.
+
+STEP 1: INITIALIZE PREDICTIONS
+
+Start with an initial prediction for each training example. The initial prediction depends on the objective function and the learning task.
+
+STEP 2: CALCULATE THE LOSS
+
+Compare the current predictions with the true targets using the chosen loss function. The loss measures how far the predictions are from the desired outputs.
+
+STEP 3: COMPUTE GRADIENTS AND HESSIANS
+
+XGBoost calculates first-order gradients and second-order derivatives, called Hessians, of the loss with respect to the current predictions. Gradients indicate how the loss changes, while Hessians provide information about its curvature. These quantities help determine how the next tree should improve the objective.
+
+STEP 4: BUILD THE NEXT DECISION TREE
+
+Construct a tree that helps improve the current model according to the gradients and Hessians. The algorithm evaluates candidate splits and selects splits that improve the regularized training objective. The tree partitions examples into leaves, and each leaf receives a learned contribution to the predictions.
+
+STEP 5: REGULARIZE THE TREE
+
+XGBoost uses regularization to control model complexity. Its objective can penalize the number of leaves and the magnitude of leaf weights. These penalties help reduce overfitting. XGBoost also supports row and column subsampling to make training more efficient and help control overfitting.
+
+STEP 6: UPDATE THE ENSEMBLE
+
+Add the new tree's predictions to the existing model, scaled by the learning rate, also called shrinkage. A smaller learning rate makes each tree's contribution smaller and often requires more trees.
+
+STEP 7: REPEAT
+
+Recalculate the objective derivatives using the updated predictions, then build another tree. Continue this process until the chosen number of boosting rounds is reached or a suitable stopping condition is met.
+
+WHY EACH TREE REDUCES ERRORS
+
+Each new tree is trained to improve the current ensemble according to the gradients of the loss. It does not necessarily fit ordinary residuals directly in every task; rather, gradient boosting uses loss derivatives to guide improvements. The combined model progressively optimizes its objective.
+
+IMPORTANT XGBOOST FEATURES
+
+1. Gradient boosting: adds trees sequentially to improve existing predictions.
+2. Second-order optimization: uses gradients and Hessians to guide tree construction.
+3. Regularization: penalizes model complexity and helps reduce overfitting.
+4. Shrinkage: scales each new tree's contribution using the learning rate.
+5. Subsampling: can sample training rows and features to improve efficiency and generalization.
+6. Efficient training: uses optimized implementations for practical model training.
+
+XGBOOST VS RANDOM FOREST
+
+XGBoost generally builds trees sequentially, with new trees improving the current ensemble. A random forest generally builds many trees independently, often using bootstrap samples and feature subsampling, and combines their predictions. XGBoost emphasizes iterative loss optimization, while random forests emphasize ensemble averaging or voting.
+
+SUMMARY
+
+XGBoost initializes predictions, computes gradients and Hessians, constructs a tree that improves the regularized objective, scales the tree's contribution using the learning rate, updates predictions, and repeats. Regularization, shrinkage, and subsampling help balance predictive performance, complexity, and efficiency.

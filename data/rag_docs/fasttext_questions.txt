@@ -1,0 +1,77 @@
+QUESTION BANK: FastText
+CATEGORY: fasttext
+
+Q1 [Easy]: What is FastText?
+A1: FastText extends word embeddings with subword information such as character n-grams.
+
+Q2 [Easy]: Why is FastText important in AI or machine learning?
+A2: FastText matters because text classification and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does FastText work at a high level?
+A3: Subword features help represent rare words and morphology more effectively than a pure word lookup.
+
+Q4 [Easy]: What problem does FastText solve?
+A4: FastText addresses problems involving text classification, languages with rich morphology.
+
+Q5 [Easy]: What are the main components of FastText?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use FastText?
+A6: FastText extends word embeddings with subword information such as character n-grams.
+
+Q7 [Medium]: When should you avoid FastText?
+A7: still provides static rather than fully contextual representations
+
+Q8 [Medium]: What are the main advantages of FastText?
+A8: Strengths of FastText include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of FastText?
+A9: still provides static rather than fully contextual representations
+
+Q10 [Medium]: What assumptions does FastText make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on FastText?
+A11: Subword features help represent rare words and morphology more effectively than a pure word lookup.
+
+Q12 [Medium]: What common mistakes occur when implementing FastText?
+A12: Common checks for FastText include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in FastText?
+A13: Common checks for FastText include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale FastText to a larger dataset or workload?
+A14: Scaling FastText typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing FastText?
+A15: The central trade-offs for FastText involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using FastText?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect FastText after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does FastText compare with a closely related approach?
+A18: Subword features help represent rare words and morphology more effectively than a pure word lookup.
+
+Q19 [Interview]: Give a practical example where FastText is the right choice.
+A19: A practical example is applying FastText to text classification, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain FastText in a way suitable for an ML engineering interview.
+A20: In an interview, define FastText, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts FastText but sees unstable production results. What should they investigate first?
+A21: FastText extends word embeddings with subword information such as character n-grams.
+
+Q22 [Scenario]: A model based on FastText performs well offline but poorly after deployment. What are plausible causes?
+A22: FastText extends word embeddings with subword information such as character n-grams.
+
+Q23 [Scenario]: How would you explain the main trade-off of FastText to a product manager?
+A23: The central trade-offs for FastText involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind FastText?
+A24: FastText extends word embeddings with subword information such as character n-grams.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for FastText?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

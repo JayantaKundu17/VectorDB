@@ -2054,3 +2054,80 @@ svg[fill="#3b82f6"] {
     padding: 0.1em 0.3em;
     border-radius: 4px;
 }
+
+
+/* =========================
+   BACKEND WAKE-UP NOTICE
+   ========================= */
+
+.backend-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 14px 32px 0;
+    padding: 14px 16px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    color: #1e3a8a;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.backend-notice.is-hidden {
+    display: none;
+}
+
+.backend-notice-indicator {
+    flex: 0 0 9px;
+    width: 9px;
+    height: 9px;
+    margin-top: 5px;
+    border-radius: 50%;
+    background: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+    animation: backend-pulse 1.5s ease-in-out infinite;
+}
+
+.backend-notice-copy {
+    min-width: 0;
+}
+
+.backend-notice-copy strong {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.backend-notice-copy p {
+    margin: 5px 0 0;
+    color: #475569;
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+.status-card .status-dot.is-waking {
+    background: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.13);
+    animation: backend-pulse 1.5s ease-in-out infinite;
+}
+
+.status-card .status-dot.is-offline {
+    background: #dc2626;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+}
+
+.status-card .status-dot.is-online {
+    background: #16a34a;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.12);
+}
+
+@keyframes backend-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+@media (max-width: 700px) {
+    .backend-notice {
+        margin: 12px 16px 0;
+    }
+}

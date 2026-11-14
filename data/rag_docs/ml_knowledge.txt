@@ -1,0 +1,30 @@
+TOPIC: Machine Learning
+CATEGORY: ml
+
+DEFINITION
+Machine learning is the study of algorithms that improve their performance on a task through experience or data.
+
+HOW IT WORKS
+The main learning settings are supervised, unsupervised, self-supervised, and reinforcement learning. A good ML workflow includes data preparation, training, validation, evaluation, and deployment.
+
+KEY IDEAS
+The exact implementation depends on the model family, data type, objective, and operating constraints.
+The main design variables are representation, objective function, optimization or search procedure, and evaluation criteria.
+
+COMMON USE CASES
+prediction, ranking, classification, forecasting, anomaly detection
+
+ADVANTAGES / STRENGTHS
+This approach is useful when its assumptions and inductive biases match the structure of the problem. It can provide a strong baseline, specialized performance, interpretability, efficiency, or scalability depending on the topic.
+
+LIMITATIONS / FAILURE MODES
+overfitting, leakage, biased data, mismatch between training and production
+
+COMPARISON
+Machine Learning should be distinguished from traditional programming and deep learning. The best choice depends on data size, feature type, dimensionality, latency, accuracy, interpretability, and operational constraints.
+
+EVALUATION / PRACTICAL CHECKS
+Choose metrics that match the task and business cost of errors. Validate on a representative holdout or cross-validation design, check leakage, inspect failure cases, and monitor performance after deployment.
+
+INTERVIEW TAKEAWAY
+Be prepared to explain what Machine Learning is, how it works, when to use it, what assumptions it makes, and what trade-offs or failure modes it has.

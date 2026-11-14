@@ -1,0 +1,30 @@
+TOPIC: AI Agents
+CATEGORY: agents
+
+DEFINITION
+An AI agent is a system that uses a model plus state, tools, and a control loop to act toward a goal.
+
+HOW IT WORKS
+A common loop is observe context, decide or plan, call tools, inspect results, and continue until a stopping condition is reached.
+
+KEY IDEAS
+The exact implementation depends on the model family, data type, objective, and operating constraints.
+The main design variables are representation, objective function, optimization or search procedure, and evaluation criteria.
+
+COMMON USE CASES
+automation, research, coding, workflows
+
+ADVANTAGES / STRENGTHS
+This approach is useful when its assumptions and inductive biases match the structure of the problem. It can provide a strong baseline, specialized performance, interpretability, efficiency, or scalability depending on the topic.
+
+LIMITATIONS / FAILURE MODES
+tool misuse, loops, hidden state, authorization and security risks
+
+COMPARISON
+AI Agents should be distinguished from ordinary chat completion. The best choice depends on data size, feature type, dimensionality, latency, accuracy, interpretability, and operational constraints.
+
+EVALUATION / PRACTICAL CHECKS
+Choose metrics that match the task and business cost of errors. Validate on a representative holdout or cross-validation design, check leakage, inspect failure cases, and monitor performance after deployment.
+
+INTERVIEW TAKEAWAY
+Be prepared to explain what AI Agents is, how it works, when to use it, what assumptions it makes, and what trade-offs or failure modes it has.

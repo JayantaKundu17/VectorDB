@@ -1,0 +1,77 @@
+QUESTION BANK: Cross-Encoders
+CATEGORY: cross_encoder
+
+Q1 [Easy]: What is Cross-Encoders?
+A1: A cross-encoder jointly encodes a query and candidate text to produce a relevance score.
+
+Q2 [Easy]: Why is Cross-Encoders important in AI or machine learning?
+A2: Cross-Encoders matters because reranking and high-precision retrieval and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Cross-Encoders work at a high level?
+A3: Unlike a bi-encoder retrieval model, the pair is processed together, allowing richer token-level interaction at higher computational cost.
+
+Q4 [Easy]: What problem does Cross-Encoders solve?
+A4: Cross-Encoders addresses problems involving reranking and high-precision retrieval.
+
+Q5 [Easy]: What are the main components of Cross-Encoders?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Cross-Encoders?
+A6: A cross-encoder jointly encodes a query and candidate text to produce a relevance score.
+
+Q7 [Medium]: When should you avoid Cross-Encoders?
+A7: too slow to score very large candidate sets
+
+Q8 [Medium]: What are the main advantages of Cross-Encoders?
+A8: Strengths of Cross-Encoders include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Cross-Encoders?
+A9: too slow to score very large candidate sets
+
+Q10 [Medium]: What assumptions does Cross-Encoders make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Cross-Encoders?
+A11: Unlike a bi-encoder retrieval model, the pair is processed together, allowing richer token-level interaction at higher computational cost.
+
+Q12 [Medium]: What common mistakes occur when implementing Cross-Encoders?
+A12: Common checks for Cross-Encoders include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Cross-Encoders?
+A13: Common checks for Cross-Encoders include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Cross-Encoders to a larger dataset or workload?
+A14: Scaling Cross-Encoders typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Cross-Encoders?
+A15: The central trade-offs for Cross-Encoders involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Cross-Encoders?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Cross-Encoders after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Cross-Encoders compare with a closely related approach?
+A18: Unlike a bi-encoder retrieval model, the pair is processed together, allowing richer token-level interaction at higher computational cost.
+
+Q19 [Interview]: Give a practical example where Cross-Encoders is the right choice.
+A19: A practical example is applying Cross-Encoders to reranking and high-precision retrieval, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Cross-Encoders in a way suitable for an ML engineering interview.
+A20: In an interview, define Cross-Encoders, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Cross-Encoders but sees unstable production results. What should they investigate first?
+A21: A cross-encoder jointly encodes a query and candidate text to produce a relevance score.
+
+Q22 [Scenario]: A model based on Cross-Encoders performs well offline but poorly after deployment. What are plausible causes?
+A22: A cross-encoder jointly encodes a query and candidate text to produce a relevance score.
+
+Q23 [Scenario]: How would you explain the main trade-off of Cross-Encoders to a product manager?
+A23: The central trade-offs for Cross-Encoders involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Cross-Encoders?
+A24: A cross-encoder jointly encodes a query and candidate text to produce a relevance score.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Cross-Encoders?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

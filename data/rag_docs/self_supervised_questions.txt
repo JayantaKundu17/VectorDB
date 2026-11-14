@@ -1,0 +1,77 @@
+QUESTION BANK: Self-Supervised Learning
+CATEGORY: self_supervised
+
+Q1 [Easy]: What is Self-Supervised Learning?
+A1: Self-supervised learning creates supervision from the data itself, often by predicting masked, transformed, or related parts.
+
+Q2 [Easy]: Why is Self-Supervised Learning important in AI or machine learning?
+A2: Self-Supervised Learning matters because LLM pretraining and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Self-Supervised Learning work at a high level?
+A3: It allows models to learn general representations from large unlabeled datasets.
+
+Q4 [Easy]: What problem does Self-Supervised Learning solve?
+A4: Self-Supervised Learning addresses problems involving LLM pretraining, contrastive learning, vision representation learning.
+
+Q5 [Easy]: What are the main components of Self-Supervised Learning?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Self-Supervised Learning?
+A6: Self-supervised learning creates supervision from the data itself, often by predicting masked, transformed, or related parts.
+
+Q7 [Medium]: When should you avoid Self-Supervised Learning?
+A7: pretext objective may not align perfectly with downstream goals
+
+Q8 [Medium]: What are the main advantages of Self-Supervised Learning?
+A8: Strengths of Self-Supervised Learning include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Self-Supervised Learning?
+A9: pretext objective may not align perfectly with downstream goals
+
+Q10 [Medium]: What assumptions does Self-Supervised Learning make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Self-Supervised Learning?
+A11: It allows models to learn general representations from large unlabeled datasets.
+
+Q12 [Medium]: What common mistakes occur when implementing Self-Supervised Learning?
+A12: Common checks for Self-Supervised Learning include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Self-Supervised Learning?
+A13: Common checks for Self-Supervised Learning include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Self-Supervised Learning to a larger dataset or workload?
+A14: Scaling Self-Supervised Learning typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Self-Supervised Learning?
+A15: The central trade-offs for Self-Supervised Learning involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Self-Supervised Learning?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Self-Supervised Learning after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Self-Supervised Learning compare with a closely related approach?
+A18: It allows models to learn general representations from large unlabeled datasets.
+
+Q19 [Interview]: Give a practical example where Self-Supervised Learning is the right choice.
+A19: A practical example is applying Self-Supervised Learning to LLM pretraining, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Self-Supervised Learning in a way suitable for an ML engineering interview.
+A20: In an interview, define Self-Supervised Learning, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Self-Supervised Learning but sees unstable production results. What should they investigate first?
+A21: Self-supervised learning creates supervision from the data itself, often by predicting masked, transformed, or related parts.
+
+Q22 [Scenario]: A model based on Self-Supervised Learning performs well offline but poorly after deployment. What are plausible causes?
+A22: Self-supervised learning creates supervision from the data itself, often by predicting masked, transformed, or related parts.
+
+Q23 [Scenario]: How would you explain the main trade-off of Self-Supervised Learning to a product manager?
+A23: The central trade-offs for Self-Supervised Learning involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Self-Supervised Learning?
+A24: Self-supervised learning creates supervision from the data itself, often by predicting masked, transformed, or related parts.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Self-Supervised Learning?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

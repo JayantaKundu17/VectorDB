@@ -1,0 +1,77 @@
+QUESTION BANK: LSTM
+CATEGORY: lstm
+
+Q1 [Easy]: What is LSTM?
+A1: LSTM is an RNN architecture with gated memory cells designed to preserve or forget information over longer sequences.
+
+Q2 [Easy]: Why is LSTM important in AI or machine learning?
+A2: LSTM matters because sequence modeling and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does LSTM work at a high level?
+A3: Input, forget, and output gates regulate information flow through the cell state.
+
+Q4 [Easy]: What problem does LSTM solve?
+A4: LSTM addresses problems involving sequence modeling, forecasting, speech, older NLP systems.
+
+Q5 [Easy]: What are the main components of LSTM?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use LSTM?
+A6: LSTM is an RNN architecture with gated memory cells designed to preserve or forget information over longer sequences.
+
+Q7 [Medium]: When should you avoid LSTM?
+A7: more complex and slower than simple RNNs and often superseded by transformers
+
+Q8 [Medium]: What are the main advantages of LSTM?
+A8: Strengths of LSTM include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of LSTM?
+A9: more complex and slower than simple RNNs and often superseded by transformers
+
+Q10 [Medium]: What assumptions does LSTM make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on LSTM?
+A11: Input, forget, and output gates regulate information flow through the cell state.
+
+Q12 [Medium]: What common mistakes occur when implementing LSTM?
+A12: Common checks for LSTM include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in LSTM?
+A13: Common checks for LSTM include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale LSTM to a larger dataset or workload?
+A14: Scaling LSTM typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing LSTM?
+A15: The central trade-offs for LSTM involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using LSTM?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect LSTM after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does LSTM compare with a closely related approach?
+A18: Input, forget, and output gates regulate information flow through the cell state.
+
+Q19 [Interview]: Give a practical example where LSTM is the right choice.
+A19: A practical example is applying LSTM to sequence modeling, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain LSTM in a way suitable for an ML engineering interview.
+A20: In an interview, define LSTM, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts LSTM but sees unstable production results. What should they investigate first?
+A21: LSTM is an RNN architecture with gated memory cells designed to preserve or forget information over longer sequences.
+
+Q22 [Scenario]: A model based on LSTM performs well offline but poorly after deployment. What are plausible causes?
+A22: LSTM is an RNN architecture with gated memory cells designed to preserve or forget information over longer sequences.
+
+Q23 [Scenario]: How would you explain the main trade-off of LSTM to a product manager?
+A23: The central trade-offs for LSTM involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind LSTM?
+A24: LSTM is an RNN architecture with gated memory cells designed to preserve or forget information over longer sequences.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for LSTM?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

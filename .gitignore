@@ -25,3 +25,4 @@ __pycache__/
 # Keys / certificates
 *.pem
 *.key
+.ingest_checkpoint.json

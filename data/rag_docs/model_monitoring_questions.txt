@@ -1,0 +1,77 @@
+QUESTION BANK: Model Monitoring
+CATEGORY: model_monitoring
+
+Q1 [Easy]: What is Model Monitoring?
+A1: Model monitoring observes production inputs, outputs, latency, errors, and performance-related signals.
+
+Q2 [Easy]: Why is Model Monitoring important in AI or machine learning?
+A2: Model Monitoring matters because production ML and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Model Monitoring work at a high level?
+A3: Monitoring can include data-quality checks, drift detection, service-level metrics, and delayed ground-truth evaluation.
+
+Q4 [Easy]: What problem does Model Monitoring solve?
+A4: Model Monitoring addresses problems involving production ML.
+
+Q5 [Easy]: What are the main components of Model Monitoring?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Model Monitoring?
+A6: Model monitoring observes production inputs, outputs, latency, errors, and performance-related signals.
+
+Q7 [Medium]: When should you avoid Model Monitoring?
+A7: monitoring cannot detect what is not instrumented
+
+Q8 [Medium]: What are the main advantages of Model Monitoring?
+A8: Strengths of Model Monitoring include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Model Monitoring?
+A9: monitoring cannot detect what is not instrumented
+
+Q10 [Medium]: What assumptions does Model Monitoring make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Model Monitoring?
+A11: Monitoring can include data-quality checks, drift detection, service-level metrics, and delayed ground-truth evaluation.
+
+Q12 [Medium]: What common mistakes occur when implementing Model Monitoring?
+A12: Common checks for Model Monitoring include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Model Monitoring?
+A13: Common checks for Model Monitoring include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Model Monitoring to a larger dataset or workload?
+A14: Scaling Model Monitoring typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Model Monitoring?
+A15: The central trade-offs for Model Monitoring involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Model Monitoring?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Model Monitoring after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Model Monitoring compare with a closely related approach?
+A18: Monitoring can include data-quality checks, drift detection, service-level metrics, and delayed ground-truth evaluation.
+
+Q19 [Interview]: Give a practical example where Model Monitoring is the right choice.
+A19: A practical example is applying Model Monitoring to production ML, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Model Monitoring in a way suitable for an ML engineering interview.
+A20: In an interview, define Model Monitoring, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Model Monitoring but sees unstable production results. What should they investigate first?
+A21: Model monitoring observes production inputs, outputs, latency, errors, and performance-related signals.
+
+Q22 [Scenario]: A model based on Model Monitoring performs well offline but poorly after deployment. What are plausible causes?
+A22: Model monitoring observes production inputs, outputs, latency, errors, and performance-related signals.
+
+Q23 [Scenario]: How would you explain the main trade-off of Model Monitoring to a product manager?
+A23: The central trade-offs for Model Monitoring involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Model Monitoring?
+A24: Model monitoring observes production inputs, outputs, latency, errors, and performance-related signals.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Model Monitoring?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

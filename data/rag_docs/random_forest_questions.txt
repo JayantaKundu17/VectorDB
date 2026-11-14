@@ -1,0 +1,86 @@
+QUESTION BANK: Random Forest
+CATEGORY: random_forest
+
+Q1 [Easy]: What is Random Forest?
+A1: Random forest averages many decision trees trained with randomness in samples or features.
+
+Q2 [Easy]: Why is Random Forest important in AI or machine learning?
+A2: Random Forest matters because tabular classification and regression and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Random Forest work at a high level?
+A3: Bagging and feature subsampling reduce correlation among trees and often improve generalization.
+
+Q4 [Easy]: What problem does Random Forest solve?
+A4: Random Forest addresses problems involving tabular classification and regression, robust baselines.
+
+Q5 [Easy]: What are the main components of Random Forest?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Random Forest?
+A6: Random forest averages many decision trees trained with randomness in samples or features.
+
+Q7 [Medium]: When should you avoid Random Forest?
+A7: larger models cost more memory and may be less interpretable than a single tree
+
+Q8 [Medium]: What are the main advantages of Random Forest?
+A8: Strengths of Random Forest include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Random Forest?
+A9: larger models cost more memory and may be less interpretable than a single tree
+
+Q10 [Medium]: What assumptions does Random Forest make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Random Forest?
+A11: Bagging and feature subsampling reduce correlation among trees and often improve generalization.
+
+Q12 [Medium]: What common mistakes occur when implementing Random Forest?
+A12: Common checks for Random Forest include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Random Forest?
+A13: Common checks for Random Forest include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Random Forest to a larger dataset or workload?
+A14: Scaling Random Forest typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Random Forest?
+A15: The central trade-offs for Random Forest involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Random Forest?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Random Forest after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Random Forest compare with a closely related approach?
+A18: Bagging and feature subsampling reduce correlation among trees and often improve generalization.
+
+Q19 [Interview]: Give a practical example where Random Forest is the right choice.
+A19: A practical example is applying Random Forest to tabular classification and regression, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Random Forest in a way suitable for an ML engineering interview.
+A20: In an interview, define Random Forest, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Advanced]: Why does random forest use feature subsampling?
+A21: Random forest averages many decision trees trained with randomness in samples or features.
+
+Q22 [Advanced]: How does bagging reduce variance?
+A22: Bagging and feature subsampling reduce correlation among trees and often improve generalization.
+
+Q23 [Advanced]: How do you estimate feature importance in a random forest?
+A23: Bagging and feature subsampling reduce correlation among trees and often improve generalization.
+
+Q24 [Scenario]: A team adopts Random Forest but sees unstable production results. What should they investigate first?
+A24: Random forest averages many decision trees trained with randomness in samples or features.
+
+Q25 [Scenario]: A model based on Random Forest performs well offline but poorly after deployment. What are plausible causes?
+A25: Random forest averages many decision trees trained with randomness in samples or features.
+
+Q26 [Scenario]: How would you explain the main trade-off of Random Forest to a product manager?
+A26: The central trade-offs for Random Forest involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q27 [Deep Dive]: What is the mathematical or algorithmic intuition behind Random Forest?
+A27: Random forest averages many decision trees trained with randomness in samples or features.
+
+Q28 [Deep Dive]: What hyperparameters or design choices matter most for Random Forest?
+A28: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

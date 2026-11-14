@@ -1,0 +1,77 @@
+QUESTION BANK: Vector Databases
+CATEGORY: vector_databases
+
+Q1 [Easy]: What is Vector Databases?
+A1: A vector database stores vectors and supports nearest-neighbor or similarity search, often alongside metadata or source text.
+
+Q2 [Easy]: Why is Vector Databases important in AI or machine learning?
+A2: Vector Databases matters because semantic search and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Vector Databases work at a high level?
+A3: ANN indexes such as HNSW make retrieval practical for larger vector collections.
+
+Q4 [Easy]: What problem does Vector Databases solve?
+A4: Vector Databases addresses problems involving semantic search, RAG, recommendation, multimodal retrieval.
+
+Q5 [Easy]: What are the main components of Vector Databases?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Vector Databases?
+A6: A vector database stores vectors and supports nearest-neighbor or similarity search, often alongside metadata or source text.
+
+Q7 [Medium]: When should you avoid Vector Databases?
+A7: index quality, storage cost, metadata filtering, and consistency
+
+Q8 [Medium]: What are the main advantages of Vector Databases?
+A8: Strengths of Vector Databases include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Vector Databases?
+A9: index quality, storage cost, metadata filtering, and consistency
+
+Q10 [Medium]: What assumptions does Vector Databases make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Vector Databases?
+A11: ANN indexes such as HNSW make retrieval practical for larger vector collections.
+
+Q12 [Medium]: What common mistakes occur when implementing Vector Databases?
+A12: Common checks for Vector Databases include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Vector Databases?
+A13: Common checks for Vector Databases include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Vector Databases to a larger dataset or workload?
+A14: Scaling Vector Databases typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Vector Databases?
+A15: The central trade-offs for Vector Databases involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Vector Databases?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Vector Databases after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Vector Databases compare with a closely related approach?
+A18: ANN indexes such as HNSW make retrieval practical for larger vector collections.
+
+Q19 [Interview]: Give a practical example where Vector Databases is the right choice.
+A19: A practical example is applying Vector Databases to semantic search, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Vector Databases in a way suitable for an ML engineering interview.
+A20: In an interview, define Vector Databases, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Vector Databases but sees unstable production results. What should they investigate first?
+A21: A vector database stores vectors and supports nearest-neighbor or similarity search, often alongside metadata or source text.
+
+Q22 [Scenario]: A model based on Vector Databases performs well offline but poorly after deployment. What are plausible causes?
+A22: A vector database stores vectors and supports nearest-neighbor or similarity search, often alongside metadata or source text.
+
+Q23 [Scenario]: How would you explain the main trade-off of Vector Databases to a product manager?
+A23: The central trade-offs for Vector Databases involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Vector Databases?
+A24: A vector database stores vectors and supports nearest-neighbor or similarity search, often alongside metadata or source text.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Vector Databases?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

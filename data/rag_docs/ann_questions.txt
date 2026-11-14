@@ -1,0 +1,77 @@
+QUESTION BANK: Approximate Nearest Neighbor
+CATEGORY: ann
+
+Q1 [Easy]: What is Approximate Nearest Neighbor?
+A1: Approximate nearest-neighbor methods trade a small amount of recall for much faster search than exhaustive comparison.
+
+Q2 [Easy]: Why is Approximate Nearest Neighbor important in AI or machine learning?
+A2: Approximate Nearest Neighbor matters because large-scale vector retrieval and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Approximate Nearest Neighbor work at a high level?
+A3: Structures include HNSW, inverted-file methods, product quantization, and tree-based approaches depending on data and workload.
+
+Q4 [Easy]: What problem does Approximate Nearest Neighbor solve?
+A4: Approximate Nearest Neighbor addresses problems involving large-scale vector retrieval.
+
+Q5 [Easy]: What are the main components of Approximate Nearest Neighbor?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Approximate Nearest Neighbor?
+A6: Approximate nearest-neighbor methods trade a small amount of recall for much faster search than exhaustive comparison.
+
+Q7 [Medium]: When should you avoid Approximate Nearest Neighbor?
+A7: recall-speed tradeoff and index tuning
+
+Q8 [Medium]: What are the main advantages of Approximate Nearest Neighbor?
+A8: Strengths of Approximate Nearest Neighbor include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Approximate Nearest Neighbor?
+A9: recall-speed tradeoff and index tuning
+
+Q10 [Medium]: What assumptions does Approximate Nearest Neighbor make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Approximate Nearest Neighbor?
+A11: Structures include HNSW, inverted-file methods, product quantization, and tree-based approaches depending on data and workload.
+
+Q12 [Medium]: What common mistakes occur when implementing Approximate Nearest Neighbor?
+A12: Common checks for Approximate Nearest Neighbor include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Approximate Nearest Neighbor?
+A13: Common checks for Approximate Nearest Neighbor include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Approximate Nearest Neighbor to a larger dataset or workload?
+A14: Scaling Approximate Nearest Neighbor typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Approximate Nearest Neighbor?
+A15: The central trade-offs for Approximate Nearest Neighbor involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Approximate Nearest Neighbor?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Approximate Nearest Neighbor after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Approximate Nearest Neighbor compare with a closely related approach?
+A18: Structures include HNSW, inverted-file methods, product quantization, and tree-based approaches depending on data and workload.
+
+Q19 [Interview]: Give a practical example where Approximate Nearest Neighbor is the right choice.
+A19: A practical example is applying Approximate Nearest Neighbor to large-scale vector retrieval, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Approximate Nearest Neighbor in a way suitable for an ML engineering interview.
+A20: In an interview, define Approximate Nearest Neighbor, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Approximate Nearest Neighbor but sees unstable production results. What should they investigate first?
+A21: Approximate nearest-neighbor methods trade a small amount of recall for much faster search than exhaustive comparison.
+
+Q22 [Scenario]: A model based on Approximate Nearest Neighbor performs well offline but poorly after deployment. What are plausible causes?
+A22: Approximate nearest-neighbor methods trade a small amount of recall for much faster search than exhaustive comparison.
+
+Q23 [Scenario]: How would you explain the main trade-off of Approximate Nearest Neighbor to a product manager?
+A23: The central trade-offs for Approximate Nearest Neighbor involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Approximate Nearest Neighbor?
+A24: Approximate nearest-neighbor methods trade a small amount of recall for much faster search than exhaustive comparison.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Approximate Nearest Neighbor?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

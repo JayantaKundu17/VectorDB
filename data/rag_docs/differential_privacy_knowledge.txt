@@ -1,0 +1,30 @@
+TOPIC: Differential Privacy
+CATEGORY: differential_privacy
+
+DEFINITION
+Differential privacy limits how much the output of an analysis can reveal about any individual record.
+
+HOW IT WORKS
+Noise or other mechanisms are calibrated using a privacy budget, often represented by epsilon and sometimes delta.
+
+KEY IDEAS
+The exact implementation depends on the model family, data type, objective, and operating constraints.
+The main design variables are representation, objective function, optimization or search procedure, and evaluation criteria.
+
+COMMON USE CASES
+privacy-preserving statistics and ML
+
+ADVANTAGES / STRENGTHS
+This approach is useful when its assumptions and inductive biases match the structure of the problem. It can provide a strong baseline, specialized performance, interpretability, efficiency, or scalability depending on the topic.
+
+LIMITATIONS / FAILURE MODES
+privacy-utility tradeoff and composition
+
+COMPARISON
+Differential Privacy should be distinguished from federated learning. The best choice depends on data size, feature type, dimensionality, latency, accuracy, interpretability, and operational constraints.
+
+EVALUATION / PRACTICAL CHECKS
+Choose metrics that match the task and business cost of errors. Validate on a representative holdout or cross-validation design, check leakage, inspect failure cases, and monitor performance after deployment.
+
+INTERVIEW TAKEAWAY
+Be prepared to explain what Differential Privacy is, how it works, when to use it, what assumptions it makes, and what trade-offs or failure modes it has.

@@ -1,0 +1,77 @@
+QUESTION BANK: OCR
+CATEGORY: ocr
+
+Q1 [Easy]: What is OCR?
+A1: Optical character recognition converts text in images or scanned documents into machine-readable characters.
+
+Q2 [Easy]: Why is OCR important in AI or machine learning?
+A2: OCR matters because documents and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does OCR work at a high level?
+A3: Modern OCR systems often combine text detection, recognition, language modeling, and image preprocessing.
+
+Q4 [Easy]: What problem does OCR solve?
+A4: OCR addresses problems involving documents, invoices, forms, digitization.
+
+Q5 [Easy]: What are the main components of OCR?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use OCR?
+A6: Optical character recognition converts text in images or scanned documents into machine-readable characters.
+
+Q7 [Medium]: When should you avoid OCR?
+A7: complex layouts, handwriting, low-quality images
+
+Q8 [Medium]: What are the main advantages of OCR?
+A8: Strengths of OCR include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of OCR?
+A9: complex layouts, handwriting, low-quality images
+
+Q10 [Medium]: What assumptions does OCR make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on OCR?
+A11: Modern OCR systems often combine text detection, recognition, language modeling, and image preprocessing.
+
+Q12 [Medium]: What common mistakes occur when implementing OCR?
+A12: Common checks for OCR include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in OCR?
+A13: Common checks for OCR include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale OCR to a larger dataset or workload?
+A14: Scaling OCR typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing OCR?
+A15: The central trade-offs for OCR involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using OCR?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect OCR after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does OCR compare with a closely related approach?
+A18: Modern OCR systems often combine text detection, recognition, language modeling, and image preprocessing.
+
+Q19 [Interview]: Give a practical example where OCR is the right choice.
+A19: A practical example is applying OCR to documents, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain OCR in a way suitable for an ML engineering interview.
+A20: In an interview, define OCR, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts OCR but sees unstable production results. What should they investigate first?
+A21: Optical character recognition converts text in images or scanned documents into machine-readable characters.
+
+Q22 [Scenario]: A model based on OCR performs well offline but poorly after deployment. What are plausible causes?
+A22: Optical character recognition converts text in images or scanned documents into machine-readable characters.
+
+Q23 [Scenario]: How would you explain the main trade-off of OCR to a product manager?
+A23: The central trade-offs for OCR involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind OCR?
+A24: Optical character recognition converts text in images or scanned documents into machine-readable characters.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for OCR?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

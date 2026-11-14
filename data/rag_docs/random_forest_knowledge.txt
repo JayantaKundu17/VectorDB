@@ -1,0 +1,30 @@
+TOPIC: Random Forest
+CATEGORY: random_forest
+
+DEFINITION
+Random forest averages many decision trees trained with randomness in samples or features.
+
+HOW IT WORKS
+Bagging and feature subsampling reduce correlation among trees and often improve generalization.
+
+KEY IDEAS
+The exact implementation depends on the model family, data type, objective, and operating constraints.
+The main design variables are representation, objective function, optimization or search procedure, and evaluation criteria.
+
+COMMON USE CASES
+tabular classification and regression, robust baselines
+
+ADVANTAGES / STRENGTHS
+This approach is useful when its assumptions and inductive biases match the structure of the problem. It can provide a strong baseline, specialized performance, interpretability, efficiency, or scalability depending on the topic.
+
+LIMITATIONS / FAILURE MODES
+larger models cost more memory and may be less interpretable than a single tree
+
+COMPARISON
+Random Forest should be distinguished from bagging and gradient boosting. The best choice depends on data size, feature type, dimensionality, latency, accuracy, interpretability, and operational constraints.
+
+EVALUATION / PRACTICAL CHECKS
+Choose metrics that match the task and business cost of errors. Validate on a representative holdout or cross-validation design, check leakage, inspect failure cases, and monitor performance after deployment.
+
+INTERVIEW TAKEAWAY
+Be prepared to explain what Random Forest is, how it works, when to use it, what assumptions it makes, and what trade-offs or failure modes it has.

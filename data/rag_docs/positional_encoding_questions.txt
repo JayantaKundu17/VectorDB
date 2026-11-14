@@ -1,0 +1,77 @@
+QUESTION BANK: Positional Encoding
+CATEGORY: positional_encoding
+
+Q1 [Easy]: What is Positional Encoding?
+A1: Positional encoding injects information about token order into transformer inputs because self-attention alone is permutation-aware.
+
+Q2 [Easy]: Why is Positional Encoding important in AI or machine learning?
+A2: Positional Encoding matters because language and sequence transformers and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Positional Encoding work at a high level?
+A3: Methods include fixed sinusoidal encodings and learned or rotary position representations.
+
+Q4 [Easy]: What problem does Positional Encoding solve?
+A4: Positional Encoding addresses problems involving language and sequence transformers.
+
+Q5 [Easy]: What are the main components of Positional Encoding?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Positional Encoding?
+A6: Positional encoding injects information about token order into transformer inputs because self-attention alone is permutation-aware.
+
+Q7 [Medium]: When should you avoid Positional Encoding?
+A7: context-length limits and extrapolation behavior depend on the positional method
+
+Q8 [Medium]: What are the main advantages of Positional Encoding?
+A8: Strengths of Positional Encoding include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Positional Encoding?
+A9: context-length limits and extrapolation behavior depend on the positional method
+
+Q10 [Medium]: What assumptions does Positional Encoding make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Positional Encoding?
+A11: Methods include fixed sinusoidal encodings and learned or rotary position representations.
+
+Q12 [Medium]: What common mistakes occur when implementing Positional Encoding?
+A12: Common checks for Positional Encoding include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Positional Encoding?
+A13: Common checks for Positional Encoding include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Positional Encoding to a larger dataset or workload?
+A14: Scaling Positional Encoding typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Positional Encoding?
+A15: The central trade-offs for Positional Encoding involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Positional Encoding?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Positional Encoding after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Positional Encoding compare with a closely related approach?
+A18: Methods include fixed sinusoidal encodings and learned or rotary position representations.
+
+Q19 [Interview]: Give a practical example where Positional Encoding is the right choice.
+A19: A practical example is applying Positional Encoding to language and sequence transformers, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Positional Encoding in a way suitable for an ML engineering interview.
+A20: In an interview, define Positional Encoding, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Positional Encoding but sees unstable production results. What should they investigate first?
+A21: Positional encoding injects information about token order into transformer inputs because self-attention alone is permutation-aware.
+
+Q22 [Scenario]: A model based on Positional Encoding performs well offline but poorly after deployment. What are plausible causes?
+A22: Positional encoding injects information about token order into transformer inputs because self-attention alone is permutation-aware.
+
+Q23 [Scenario]: How would you explain the main trade-off of Positional Encoding to a product manager?
+A23: The central trade-offs for Positional Encoding involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Positional Encoding?
+A24: Positional encoding injects information about token order into transformer inputs because self-attention alone is permutation-aware.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Positional Encoding?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

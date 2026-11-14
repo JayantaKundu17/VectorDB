@@ -1,0 +1,77 @@
+QUESTION BANK: Statistics for ML
+CATEGORY: statistics
+
+Q1 [Easy]: What is Statistics for ML?
+A1: Statistics provides methods for summarizing data, estimating quantities, testing hypotheses, and quantifying uncertainty.
+
+Q2 [Easy]: Why is Statistics for ML important in AI or machine learning?
+A2: Statistics for ML matters because EDA and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Statistics for ML work at a high level?
+A3: Descriptive statistics, sampling, confidence intervals, hypothesis tests, and regression are common tools.
+
+Q4 [Easy]: What problem does Statistics for ML solve?
+A4: Statistics for ML addresses problems involving EDA, experimentation, feature analysis, A/B testing.
+
+Q5 [Easy]: What are the main components of Statistics for ML?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Statistics for ML?
+A6: Statistics provides methods for summarizing data, estimating quantities, testing hypotheses, and quantifying uncertainty.
+
+Q7 [Medium]: When should you avoid Statistics for ML?
+A7: sampling bias, confounding, p-hacking, multiple comparisons
+
+Q8 [Medium]: What are the main advantages of Statistics for ML?
+A8: Strengths of Statistics for ML include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Statistics for ML?
+A9: sampling bias, confounding, p-hacking, multiple comparisons
+
+Q10 [Medium]: What assumptions does Statistics for ML make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Statistics for ML?
+A11: Descriptive statistics, sampling, confidence intervals, hypothesis tests, and regression are common tools.
+
+Q12 [Medium]: What common mistakes occur when implementing Statistics for ML?
+A12: Common checks for Statistics for ML include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Statistics for ML?
+A13: Common checks for Statistics for ML include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Statistics for ML to a larger dataset or workload?
+A14: Scaling Statistics for ML typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Statistics for ML?
+A15: The central trade-offs for Statistics for ML involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Statistics for ML?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Statistics for ML after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Statistics for ML compare with a closely related approach?
+A18: Descriptive statistics, sampling, confidence intervals, hypothesis tests, and regression are common tools.
+
+Q19 [Interview]: Give a practical example where Statistics for ML is the right choice.
+A19: A practical example is applying Statistics for ML to EDA, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Statistics for ML in a way suitable for an ML engineering interview.
+A20: In an interview, define Statistics for ML, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Statistics for ML but sees unstable production results. What should they investigate first?
+A21: Statistics provides methods for summarizing data, estimating quantities, testing hypotheses, and quantifying uncertainty.
+
+Q22 [Scenario]: A model based on Statistics for ML performs well offline but poorly after deployment. What are plausible causes?
+A22: Statistics provides methods for summarizing data, estimating quantities, testing hypotheses, and quantifying uncertainty.
+
+Q23 [Scenario]: How would you explain the main trade-off of Statistics for ML to a product manager?
+A23: The central trade-offs for Statistics for ML involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Statistics for ML?
+A24: Statistics provides methods for summarizing data, estimating quantities, testing hypotheses, and quantifying uncertainty.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Statistics for ML?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

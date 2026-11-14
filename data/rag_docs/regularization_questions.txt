@@ -1,0 +1,77 @@
+QUESTION BANK: Regularization
+CATEGORY: regularization
+
+Q1 [Easy]: What is Regularization?
+A1: Regularization constrains learning to reduce overfitting and improve generalization.
+
+Q2 [Easy]: Why is Regularization important in AI or machine learning?
+A2: Regularization matters because supervised learning and deep learning and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Regularization work at a high level?
+A3: Examples include weight decay, dropout, early stopping, data augmentation, and simpler model structures.
+
+Q4 [Easy]: What problem does Regularization solve?
+A4: Regularization addresses problems involving supervised learning and deep learning.
+
+Q5 [Easy]: What are the main components of Regularization?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Regularization?
+A6: Regularization constrains learning to reduce overfitting and improve generalization.
+
+Q7 [Medium]: When should you avoid Regularization?
+A7: too much regularization causes underfitting
+
+Q8 [Medium]: What are the main advantages of Regularization?
+A8: Strengths of Regularization include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Regularization?
+A9: too much regularization causes underfitting
+
+Q10 [Medium]: What assumptions does Regularization make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Regularization?
+A11: Examples include weight decay, dropout, early stopping, data augmentation, and simpler model structures.
+
+Q12 [Medium]: What common mistakes occur when implementing Regularization?
+A12: Common checks for Regularization include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Regularization?
+A13: Common checks for Regularization include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Regularization to a larger dataset or workload?
+A14: Scaling Regularization typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Regularization?
+A15: The central trade-offs for Regularization involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Regularization?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Regularization after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Regularization compare with a closely related approach?
+A18: Examples include weight decay, dropout, early stopping, data augmentation, and simpler model structures.
+
+Q19 [Interview]: Give a practical example where Regularization is the right choice.
+A19: A practical example is applying Regularization to supervised learning and deep learning, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Regularization in a way suitable for an ML engineering interview.
+A20: In an interview, define Regularization, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Regularization but sees unstable production results. What should they investigate first?
+A21: Regularization constrains learning to reduce overfitting and improve generalization.
+
+Q22 [Scenario]: A model based on Regularization performs well offline but poorly after deployment. What are plausible causes?
+A22: Regularization constrains learning to reduce overfitting and improve generalization.
+
+Q23 [Scenario]: How would you explain the main trade-off of Regularization to a product manager?
+A23: The central trade-offs for Regularization involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Regularization?
+A24: Regularization constrains learning to reduce overfitting and improve generalization.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Regularization?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

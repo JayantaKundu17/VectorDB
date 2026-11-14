@@ -1,0 +1,77 @@
+QUESTION BANK: Explainable AI
+CATEGORY: xai
+
+Q1 [Easy]: What is Explainable AI?
+A1: Explainable AI develops techniques that make model behavior more understandable to humans.
+
+Q2 [Easy]: Why is Explainable AI important in AI or machine learning?
+A2: Explainable AI matters because regulated decisions and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Explainable AI work at a high level?
+A3: Approaches include feature attribution, surrogate explanations, counterfactuals, partial dependence, and inherently interpretable models.
+
+Q4 [Easy]: What problem does Explainable AI solve?
+A4: Explainable AI addresses problems involving regulated decisions, debugging, trust.
+
+Q5 [Easy]: What are the main components of Explainable AI?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Explainable AI?
+A6: Explainable AI develops techniques that make model behavior more understandable to humans.
+
+Q7 [Medium]: When should you avoid Explainable AI?
+A7: explanations may be approximate and can be misleading
+
+Q8 [Medium]: What are the main advantages of Explainable AI?
+A8: Strengths of Explainable AI include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Explainable AI?
+A9: explanations may be approximate and can be misleading
+
+Q10 [Medium]: What assumptions does Explainable AI make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Explainable AI?
+A11: Approaches include feature attribution, surrogate explanations, counterfactuals, partial dependence, and inherently interpretable models.
+
+Q12 [Medium]: What common mistakes occur when implementing Explainable AI?
+A12: Common checks for Explainable AI include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Explainable AI?
+A13: Common checks for Explainable AI include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Explainable AI to a larger dataset or workload?
+A14: Scaling Explainable AI typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Explainable AI?
+A15: The central trade-offs for Explainable AI involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Explainable AI?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Explainable AI after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Explainable AI compare with a closely related approach?
+A18: Approaches include feature attribution, surrogate explanations, counterfactuals, partial dependence, and inherently interpretable models.
+
+Q19 [Interview]: Give a practical example where Explainable AI is the right choice.
+A19: A practical example is applying Explainable AI to regulated decisions, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Explainable AI in a way suitable for an ML engineering interview.
+A20: In an interview, define Explainable AI, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Explainable AI but sees unstable production results. What should they investigate first?
+A21: Explainable AI develops techniques that make model behavior more understandable to humans.
+
+Q22 [Scenario]: A model based on Explainable AI performs well offline but poorly after deployment. What are plausible causes?
+A22: Explainable AI develops techniques that make model behavior more understandable to humans.
+
+Q23 [Scenario]: How would you explain the main trade-off of Explainable AI to a product manager?
+A23: The central trade-offs for Explainable AI involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Explainable AI?
+A24: Explainable AI develops techniques that make model behavior more understandable to humans.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Explainable AI?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

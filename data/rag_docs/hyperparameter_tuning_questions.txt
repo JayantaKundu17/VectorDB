@@ -1,0 +1,77 @@
+QUESTION BANK: Hyperparameter Tuning
+CATEGORY: hyperparameter_tuning
+
+Q1 [Easy]: What is Hyperparameter Tuning?
+A1: Hyperparameters are settings chosen outside ordinary model parameter learning, such as tree depth or learning rate.
+
+Q2 [Easy]: Why is Hyperparameter Tuning important in AI or machine learning?
+A2: Hyperparameter Tuning matters because model development and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Hyperparameter Tuning work at a high level?
+A3: Grid search, random search, Bayesian optimization, and successive-halving methods explore configurations.
+
+Q4 [Easy]: What problem does Hyperparameter Tuning solve?
+A4: Hyperparameter Tuning addresses problems involving model development.
+
+Q5 [Easy]: What are the main components of Hyperparameter Tuning?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Hyperparameter Tuning?
+A6: Hyperparameters are settings chosen outside ordinary model parameter learning, such as tree depth or learning rate.
+
+Q7 [Medium]: When should you avoid Hyperparameter Tuning?
+A7: search-space design and validation leakage
+
+Q8 [Medium]: What are the main advantages of Hyperparameter Tuning?
+A8: Strengths of Hyperparameter Tuning include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Hyperparameter Tuning?
+A9: search-space design and validation leakage
+
+Q10 [Medium]: What assumptions does Hyperparameter Tuning make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Hyperparameter Tuning?
+A11: Grid search, random search, Bayesian optimization, and successive-halving methods explore configurations.
+
+Q12 [Medium]: What common mistakes occur when implementing Hyperparameter Tuning?
+A12: Common checks for Hyperparameter Tuning include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Hyperparameter Tuning?
+A13: Common checks for Hyperparameter Tuning include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Hyperparameter Tuning to a larger dataset or workload?
+A14: Scaling Hyperparameter Tuning typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Hyperparameter Tuning?
+A15: The central trade-offs for Hyperparameter Tuning involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Hyperparameter Tuning?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Hyperparameter Tuning after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Hyperparameter Tuning compare with a closely related approach?
+A18: Grid search, random search, Bayesian optimization, and successive-halving methods explore configurations.
+
+Q19 [Interview]: Give a practical example where Hyperparameter Tuning is the right choice.
+A19: A practical example is applying Hyperparameter Tuning to model development, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Hyperparameter Tuning in a way suitable for an ML engineering interview.
+A20: In an interview, define Hyperparameter Tuning, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Hyperparameter Tuning but sees unstable production results. What should they investigate first?
+A21: Hyperparameters are settings chosen outside ordinary model parameter learning, such as tree depth or learning rate.
+
+Q22 [Scenario]: A model based on Hyperparameter Tuning performs well offline but poorly after deployment. What are plausible causes?
+A22: Hyperparameters are settings chosen outside ordinary model parameter learning, such as tree depth or learning rate.
+
+Q23 [Scenario]: How would you explain the main trade-off of Hyperparameter Tuning to a product manager?
+A23: The central trade-offs for Hyperparameter Tuning involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Hyperparameter Tuning?
+A24: Hyperparameters are settings chosen outside ordinary model parameter learning, such as tree depth or learning rate.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Hyperparameter Tuning?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

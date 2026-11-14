@@ -1,0 +1,43 @@
+TOPIC: Gradient Descent for Neural Network Training
+
+CATEGORY: gradient_descent, neural_network, backpropagation
+
+HOW GRADIENT DESCENT TRAINS A NEURAL NETWORK
+
+Gradient descent trains a neural network by adjusting its weights and biases to minimize a loss function. The network learns by repeatedly making predictions, measuring errors, calculating gradients, and updating parameters.
+
+STEP 1: INITIALIZE PARAMETERS
+Initialize the weights and biases of the neural network. These parameters determine how inputs are transformed as they pass through the network.
+
+STEP 2: FORWARD PROPAGATION
+Pass a batch of input examples through the network. Each layer applies its weights, biases, and activation function to produce the next layer's output. The final layer produces the prediction, usually represented by y_hat.
+
+STEP 3: CALCULATE THE LOSS
+Compare the prediction with the true target using a loss function. For regression, mean squared error is a common choice. For classification, cross-entropy loss is often used. The loss measures how inaccurate the model's predictions are.
+
+STEP 4: BACKPROPAGATION
+Calculate how much the loss changes with respect to each weight and bias. Backpropagation applies the chain rule of calculus to propagate gradients from the output layer toward earlier layers. It computes gradients such as dL/dw and dL/db, where L is the loss, w is a weight, and b is a bias.
+
+STEP 5: UPDATE PARAMETERS
+Gradient descent updates each parameter in the direction that reduces the loss:
+w_new = w_old - learning_rate * dL/dw
+b_new = b_old - learning_rate * dL/db
+
+The learning rate controls the size of each update. If it is too large, training may become unstable or overshoot useful solutions. If it is too small, training may progress very slowly.
+
+For example, if a weight is 0.5, its gradient is 0.2, and the learning rate is 0.1, the updated weight is 0.5 - (0.1 * 0.2) = 0.48.
+
+STEP 6: REPEAT TRAINING
+Repeat forward propagation, loss calculation, backpropagation, and parameter updates for multiple batches. One complete pass through the training dataset is called an epoch. Continue for multiple epochs while monitoring training and validation performance.
+
+BATCH VARIANTS
+Batch gradient descent calculates gradients using the entire training dataset for an update. Stochastic gradient descent uses one example per update. Mini-batch gradient descent uses a smaller group of examples and is common in neural network training.
+
+ROLE OF GRADIENT DESCENT AND BACKPROPAGATION
+Backpropagation calculates gradients; gradient descent uses those gradients to update the parameters. They are related but different operations. Gradient descent is an optimization method, whereas backpropagation is a method for computing gradients efficiently.
+
+HOW TO EVALUATE TRAINING
+Monitor loss and appropriate task metrics on separate validation data. Training loss decreasing does not guarantee good generalization. If training performance improves while validation performance worsens, the model may be overfitting.
+
+SUMMARY
+A neural network learns through a repeated cycle: forward propagation produces predictions, a loss function measures errors, backpropagation computes gradients, and gradient descent updates weights and biases. This process gradually optimizes the network's parameters.

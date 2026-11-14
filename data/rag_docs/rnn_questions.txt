@@ -1,0 +1,77 @@
+QUESTION BANK: RNN
+CATEGORY: rnn
+
+Q1 [Easy]: What is RNN?
+A1: A recurrent neural network processes sequences by maintaining a hidden state that is updated across time steps.
+
+Q2 [Easy]: Why is RNN important in AI or machine learning?
+A2: RNN matters because sequence modeling and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does RNN work at a high level?
+A3: The recurrent state lets the model use previous information, but long dependencies are difficult because repeated multiplication can shrink or grow gradients.
+
+Q4 [Easy]: What problem does RNN solve?
+A4: RNN addresses problems involving sequence modeling, historical NLP and time series.
+
+Q5 [Easy]: What are the main components of RNN?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use RNN?
+A6: A recurrent neural network processes sequences by maintaining a hidden state that is updated across time steps.
+
+Q7 [Medium]: When should you avoid RNN?
+A7: vanishing/exploding gradients and limited parallelism
+
+Q8 [Medium]: What are the main advantages of RNN?
+A8: Strengths of RNN include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of RNN?
+A9: vanishing/exploding gradients and limited parallelism
+
+Q10 [Medium]: What assumptions does RNN make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on RNN?
+A11: The recurrent state lets the model use previous information, but long dependencies are difficult because repeated multiplication can shrink or grow gradients.
+
+Q12 [Medium]: What common mistakes occur when implementing RNN?
+A12: Common checks for RNN include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in RNN?
+A13: Common checks for RNN include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale RNN to a larger dataset or workload?
+A14: Scaling RNN typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing RNN?
+A15: The central trade-offs for RNN involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using RNN?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect RNN after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does RNN compare with a closely related approach?
+A18: The recurrent state lets the model use previous information, but long dependencies are difficult because repeated multiplication can shrink or grow gradients.
+
+Q19 [Interview]: Give a practical example where RNN is the right choice.
+A19: A practical example is applying RNN to sequence modeling, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain RNN in a way suitable for an ML engineering interview.
+A20: In an interview, define RNN, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts RNN but sees unstable production results. What should they investigate first?
+A21: A recurrent neural network processes sequences by maintaining a hidden state that is updated across time steps.
+
+Q22 [Scenario]: A model based on RNN performs well offline but poorly after deployment. What are plausible causes?
+A22: A recurrent neural network processes sequences by maintaining a hidden state that is updated across time steps.
+
+Q23 [Scenario]: How would you explain the main trade-off of RNN to a product manager?
+A23: The central trade-offs for RNN involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind RNN?
+A24: A recurrent neural network processes sequences by maintaining a hidden state that is updated across time steps.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for RNN?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

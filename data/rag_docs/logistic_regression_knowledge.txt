@@ -1,0 +1,30 @@
+TOPIC: Logistic Regression
+CATEGORY: logistic_regression
+
+DEFINITION
+Logistic regression models class probability using a logistic link applied to a linear score.
+
+HOW IT WORKS
+For binary classification p(y=1|x)=1/(1+exp(-z)) where z is a linear function of features. A threshold converts probabilities to labels.
+
+KEY IDEAS
+Binary sigmoid form: p(y=1|x) = 1/(1+exp(-z)), with z = w^T x + b.
+The main design variables are representation, objective function, optimization or search procedure, and evaluation criteria.
+
+COMMON USE CASES
+classification, calibrated baselines, interpretable models
+
+ADVANTAGES / STRENGTHS
+This approach is useful when its assumptions and inductive biases match the structure of the problem. It can provide a strong baseline, specialized performance, interpretability, efficiency, or scalability depending on the topic.
+
+LIMITATIONS / FAILURE MODES
+linear decision boundary and sensitivity to feature representation
+
+COMPARISON
+Logistic Regression should be distinguished from linear regression and SVM. The best choice depends on data size, feature type, dimensionality, latency, accuracy, interpretability, and operational constraints.
+
+EVALUATION / PRACTICAL CHECKS
+Choose metrics that match the task and business cost of errors. Validate on a representative holdout or cross-validation design, check leakage, inspect failure cases, and monitor performance after deployment.
+
+INTERVIEW TAKEAWAY
+Be prepared to explain what Logistic Regression is, how it works, when to use it, what assumptions it makes, and what trade-offs or failure modes it has.

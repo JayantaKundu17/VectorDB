@@ -1,0 +1,77 @@
+QUESTION BANK: RAG Security
+CATEGORY: rag_security
+
+Q1 [Easy]: What is RAG Security?
+A1: RAG systems introduce security issues around untrusted documents, prompt injection, access control, data exfiltration, and tool use.
+
+Q2 [Easy]: Why is RAG Security important in AI or machine learning?
+A2: RAG Security matters because enterprise RAG and agents and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does RAG Security work at a high level?
+A3: Retrieved text should be treated as data rather than trusted instructions, and permissions must be enforced outside the language model.
+
+Q4 [Easy]: What problem does RAG Security solve?
+A4: RAG Security addresses problems involving enterprise RAG and agents.
+
+Q5 [Easy]: What are the main components of RAG Security?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use RAG Security?
+A6: RAG systems introduce security issues around untrusted documents, prompt injection, access control, data exfiltration, and tool use.
+
+Q7 [Medium]: When should you avoid RAG Security?
+A7: retrieved content can contain malicious instructions
+
+Q8 [Medium]: What are the main advantages of RAG Security?
+A8: Strengths of RAG Security include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of RAG Security?
+A9: retrieved content can contain malicious instructions
+
+Q10 [Medium]: What assumptions does RAG Security make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on RAG Security?
+A11: Retrieved text should be treated as data rather than trusted instructions, and permissions must be enforced outside the language model.
+
+Q12 [Medium]: What common mistakes occur when implementing RAG Security?
+A12: Common checks for RAG Security include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in RAG Security?
+A13: Common checks for RAG Security include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale RAG Security to a larger dataset or workload?
+A14: Scaling RAG Security typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing RAG Security?
+A15: The central trade-offs for RAG Security involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using RAG Security?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect RAG Security after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does RAG Security compare with a closely related approach?
+A18: Retrieved text should be treated as data rather than trusted instructions, and permissions must be enforced outside the language model.
+
+Q19 [Interview]: Give a practical example where RAG Security is the right choice.
+A19: A practical example is applying RAG Security to enterprise RAG and agents, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain RAG Security in a way suitable for an ML engineering interview.
+A20: In an interview, define RAG Security, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts RAG Security but sees unstable production results. What should they investigate first?
+A21: RAG systems introduce security issues around untrusted documents, prompt injection, access control, data exfiltration, and tool use.
+
+Q22 [Scenario]: A model based on RAG Security performs well offline but poorly after deployment. What are plausible causes?
+A22: RAG systems introduce security issues around untrusted documents, prompt injection, access control, data exfiltration, and tool use.
+
+Q23 [Scenario]: How would you explain the main trade-off of RAG Security to a product manager?
+A23: The central trade-offs for RAG Security involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind RAG Security?
+A24: RAG systems introduce security issues around untrusted documents, prompt injection, access control, data exfiltration, and tool use.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for RAG Security?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

@@ -1,0 +1,77 @@
+QUESTION BANK: Data Cleaning
+CATEGORY: data_cleaning
+
+Q1 [Easy]: What is Data Cleaning?
+A1: Data cleaning identifies and corrects invalid, inconsistent, duplicated, missing, or corrupted records before modeling.
+
+Q2 [Easy]: Why is Data Cleaning important in AI or machine learning?
+A2: Data Cleaning matters because nearly every ML project and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Data Cleaning work at a high level?
+A3: Cleaning should be based on domain rules and should be applied without leaking information from the test set into training.
+
+Q4 [Easy]: What problem does Data Cleaning solve?
+A4: Data Cleaning addresses problems involving nearly every ML project.
+
+Q5 [Easy]: What are the main components of Data Cleaning?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Data Cleaning?
+A6: Data cleaning identifies and corrects invalid, inconsistent, duplicated, missing, or corrupted records before modeling.
+
+Q7 [Medium]: When should you avoid Data Cleaning?
+A7: accidentally deleting signal, inconsistent rules, hidden leakage
+
+Q8 [Medium]: What are the main advantages of Data Cleaning?
+A8: Strengths of Data Cleaning include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Data Cleaning?
+A9: accidentally deleting signal, inconsistent rules, hidden leakage
+
+Q10 [Medium]: What assumptions does Data Cleaning make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Data Cleaning?
+A11: Cleaning should be based on domain rules and should be applied without leaking information from the test set into training.
+
+Q12 [Medium]: What common mistakes occur when implementing Data Cleaning?
+A12: Common checks for Data Cleaning include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Data Cleaning?
+A13: Common checks for Data Cleaning include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Data Cleaning to a larger dataset or workload?
+A14: Scaling Data Cleaning typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Data Cleaning?
+A15: The central trade-offs for Data Cleaning involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Data Cleaning?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Data Cleaning after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Data Cleaning compare with a closely related approach?
+A18: Cleaning should be based on domain rules and should be applied without leaking information from the test set into training.
+
+Q19 [Interview]: Give a practical example where Data Cleaning is the right choice.
+A19: A practical example is applying Data Cleaning to nearly every ML project, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Data Cleaning in a way suitable for an ML engineering interview.
+A20: In an interview, define Data Cleaning, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Data Cleaning but sees unstable production results. What should they investigate first?
+A21: Data cleaning identifies and corrects invalid, inconsistent, duplicated, missing, or corrupted records before modeling.
+
+Q22 [Scenario]: A model based on Data Cleaning performs well offline but poorly after deployment. What are plausible causes?
+A22: Data cleaning identifies and corrects invalid, inconsistent, duplicated, missing, or corrupted records before modeling.
+
+Q23 [Scenario]: How would you explain the main trade-off of Data Cleaning to a product manager?
+A23: The central trade-offs for Data Cleaning involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Data Cleaning?
+A24: Data cleaning identifies and corrects invalid, inconsistent, duplicated, missing, or corrupted records before modeling.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Data Cleaning?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

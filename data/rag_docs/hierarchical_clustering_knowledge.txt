@@ -1,0 +1,30 @@
+TOPIC: Hierarchical Clustering
+CATEGORY: hierarchical_clustering
+
+DEFINITION
+Hierarchical clustering builds a tree of nested groups, called a dendrogram.
+
+HOW IT WORKS
+Agglomerative methods start with individual points and repeatedly merge groups using a linkage criterion.
+
+KEY IDEAS
+The exact implementation depends on the model family, data type, objective, and operating constraints.
+The main design variables are representation, objective function, optimization or search procedure, and evaluation criteria.
+
+COMMON USE CASES
+taxonomy exploration, small to medium datasets
+
+ADVANTAGES / STRENGTHS
+This approach is useful when its assumptions and inductive biases match the structure of the problem. It can provide a strong baseline, specialized performance, interpretability, efficiency, or scalability depending on the topic.
+
+LIMITATIONS / FAILURE MODES
+can be expensive and sensitive to linkage and distance
+
+COMPARISON
+Hierarchical Clustering should be distinguished from closely related approaches in the same problem family. The best choice depends on data size, feature type, dimensionality, latency, accuracy, interpretability, and operational constraints.
+
+EVALUATION / PRACTICAL CHECKS
+Choose metrics that match the task and business cost of errors. Validate on a representative holdout or cross-validation design, check leakage, inspect failure cases, and monitor performance after deployment.
+
+INTERVIEW TAKEAWAY
+Be prepared to explain what Hierarchical Clustering is, how it works, when to use it, what assumptions it makes, and what trade-offs or failure modes it has.

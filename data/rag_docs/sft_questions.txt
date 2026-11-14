@@ -1,0 +1,77 @@
+QUESTION BANK: Supervised Fine-Tuning
+CATEGORY: sft
+
+Q1 [Easy]: What is Supervised Fine-Tuning?
+A1: Supervised fine-tuning adapts a pretrained model using labeled input-output examples aligned to desired behavior.
+
+Q2 [Easy]: Why is Supervised Fine-Tuning important in AI or machine learning?
+A2: Supervised Fine-Tuning matters because instruction-tuned LLMs and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Supervised Fine-Tuning work at a high level?
+A3: The model is optimized on curated examples for instruction following, style, domain behavior, or task performance.
+
+Q4 [Easy]: What problem does Supervised Fine-Tuning solve?
+A4: Supervised Fine-Tuning addresses problems involving instruction-tuned LLMs, domain adaptation.
+
+Q5 [Easy]: What are the main components of Supervised Fine-Tuning?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Supervised Fine-Tuning?
+A6: Supervised fine-tuning adapts a pretrained model using labeled input-output examples aligned to desired behavior.
+
+Q7 [Medium]: When should you avoid Supervised Fine-Tuning?
+A7: data quality strongly affects behavior and overfitting
+
+Q8 [Medium]: What are the main advantages of Supervised Fine-Tuning?
+A8: Strengths of Supervised Fine-Tuning include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Supervised Fine-Tuning?
+A9: data quality strongly affects behavior and overfitting
+
+Q10 [Medium]: What assumptions does Supervised Fine-Tuning make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Supervised Fine-Tuning?
+A11: The model is optimized on curated examples for instruction following, style, domain behavior, or task performance.
+
+Q12 [Medium]: What common mistakes occur when implementing Supervised Fine-Tuning?
+A12: Common checks for Supervised Fine-Tuning include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Supervised Fine-Tuning?
+A13: Common checks for Supervised Fine-Tuning include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Supervised Fine-Tuning to a larger dataset or workload?
+A14: Scaling Supervised Fine-Tuning typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Supervised Fine-Tuning?
+A15: The central trade-offs for Supervised Fine-Tuning involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Supervised Fine-Tuning?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Supervised Fine-Tuning after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Supervised Fine-Tuning compare with a closely related approach?
+A18: The model is optimized on curated examples for instruction following, style, domain behavior, or task performance.
+
+Q19 [Interview]: Give a practical example where Supervised Fine-Tuning is the right choice.
+A19: A practical example is applying Supervised Fine-Tuning to instruction-tuned LLMs, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Supervised Fine-Tuning in a way suitable for an ML engineering interview.
+A20: In an interview, define Supervised Fine-Tuning, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Supervised Fine-Tuning but sees unstable production results. What should they investigate first?
+A21: Supervised fine-tuning adapts a pretrained model using labeled input-output examples aligned to desired behavior.
+
+Q22 [Scenario]: A model based on Supervised Fine-Tuning performs well offline but poorly after deployment. What are plausible causes?
+A22: Supervised fine-tuning adapts a pretrained model using labeled input-output examples aligned to desired behavior.
+
+Q23 [Scenario]: How would you explain the main trade-off of Supervised Fine-Tuning to a product manager?
+A23: The central trade-offs for Supervised Fine-Tuning involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Supervised Fine-Tuning?
+A24: Supervised fine-tuning adapts a pretrained model using labeled input-output examples aligned to desired behavior.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Supervised Fine-Tuning?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

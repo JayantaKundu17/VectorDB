@@ -1,0 +1,77 @@
+QUESTION BANK: Exploratory Data Analysis
+CATEGORY: eda
+
+Q1 [Easy]: What is Exploratory Data Analysis?
+A1: EDA uses summaries and visualizations to understand distributions, relationships, missingness, outliers, and possible data quality problems.
+
+Q2 [Easy]: Why is Exploratory Data Analysis important in AI or machine learning?
+A2: Exploratory Data Analysis matters because data understanding and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Exploratory Data Analysis work at a high level?
+A3: Typical tools include histograms, scatter plots, box plots, correlations, group summaries, and stratified analysis.
+
+Q4 [Easy]: What problem does Exploratory Data Analysis solve?
+A4: Exploratory Data Analysis addresses problems involving data understanding, feature design, debugging datasets.
+
+Q5 [Easy]: What are the main components of Exploratory Data Analysis?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Exploratory Data Analysis?
+A6: EDA uses summaries and visualizations to understand distributions, relationships, missingness, outliers, and possible data quality problems.
+
+Q7 [Medium]: When should you avoid Exploratory Data Analysis?
+A7: correlation is not causation and visual patterns can be misleading
+
+Q8 [Medium]: What are the main advantages of Exploratory Data Analysis?
+A8: Strengths of Exploratory Data Analysis include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Exploratory Data Analysis?
+A9: correlation is not causation and visual patterns can be misleading
+
+Q10 [Medium]: What assumptions does Exploratory Data Analysis make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Exploratory Data Analysis?
+A11: Typical tools include histograms, scatter plots, box plots, correlations, group summaries, and stratified analysis.
+
+Q12 [Medium]: What common mistakes occur when implementing Exploratory Data Analysis?
+A12: Common checks for Exploratory Data Analysis include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Exploratory Data Analysis?
+A13: Common checks for Exploratory Data Analysis include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Exploratory Data Analysis to a larger dataset or workload?
+A14: Scaling Exploratory Data Analysis typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Exploratory Data Analysis?
+A15: The central trade-offs for Exploratory Data Analysis involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Exploratory Data Analysis?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Exploratory Data Analysis after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Exploratory Data Analysis compare with a closely related approach?
+A18: Typical tools include histograms, scatter plots, box plots, correlations, group summaries, and stratified analysis.
+
+Q19 [Interview]: Give a practical example where Exploratory Data Analysis is the right choice.
+A19: A practical example is applying Exploratory Data Analysis to data understanding, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Exploratory Data Analysis in a way suitable for an ML engineering interview.
+A20: In an interview, define Exploratory Data Analysis, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Exploratory Data Analysis but sees unstable production results. What should they investigate first?
+A21: EDA uses summaries and visualizations to understand distributions, relationships, missingness, outliers, and possible data quality problems.
+
+Q22 [Scenario]: A model based on Exploratory Data Analysis performs well offline but poorly after deployment. What are plausible causes?
+A22: EDA uses summaries and visualizations to understand distributions, relationships, missingness, outliers, and possible data quality problems.
+
+Q23 [Scenario]: How would you explain the main trade-off of Exploratory Data Analysis to a product manager?
+A23: The central trade-offs for Exploratory Data Analysis involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Exploratory Data Analysis?
+A24: EDA uses summaries and visualizations to understand distributions, relationships, missingness, outliers, and possible data quality problems.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Exploratory Data Analysis?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

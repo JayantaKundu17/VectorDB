@@ -1,0 +1,77 @@
+QUESTION BANK: Autoencoders
+CATEGORY: autoencoders
+
+Q1 [Easy]: What is Autoencoders?
+A1: An autoencoder learns an encoder-decoder pair that reconstructs input data through a learned representation.
+
+Q2 [Easy]: Why is Autoencoders important in AI or machine learning?
+A2: Autoencoders matters because unsupervised representation learning and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Autoencoders work at a high level?
+A3: Variants support denoising, compression, anomaly detection, and representation learning.
+
+Q4 [Easy]: What problem does Autoencoders solve?
+A4: Autoencoders addresses problems involving unsupervised representation learning.
+
+Q5 [Easy]: What are the main components of Autoencoders?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Autoencoders?
+A6: An autoencoder learns an encoder-decoder pair that reconstructs input data through a learned representation.
+
+Q7 [Medium]: When should you avoid Autoencoders?
+A7: reconstruction objectives do not always produce semantically useful features
+
+Q8 [Medium]: What are the main advantages of Autoencoders?
+A8: Strengths of Autoencoders include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Autoencoders?
+A9: reconstruction objectives do not always produce semantically useful features
+
+Q10 [Medium]: What assumptions does Autoencoders make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Autoencoders?
+A11: Variants support denoising, compression, anomaly detection, and representation learning.
+
+Q12 [Medium]: What common mistakes occur when implementing Autoencoders?
+A12: Common checks for Autoencoders include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Autoencoders?
+A13: Common checks for Autoencoders include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Autoencoders to a larger dataset or workload?
+A14: Scaling Autoencoders typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Autoencoders?
+A15: The central trade-offs for Autoencoders involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Autoencoders?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Autoencoders after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Autoencoders compare with a closely related approach?
+A18: Variants support denoising, compression, anomaly detection, and representation learning.
+
+Q19 [Interview]: Give a practical example where Autoencoders is the right choice.
+A19: A practical example is applying Autoencoders to unsupervised representation learning, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Autoencoders in a way suitable for an ML engineering interview.
+A20: In an interview, define Autoencoders, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Autoencoders but sees unstable production results. What should they investigate first?
+A21: An autoencoder learns an encoder-decoder pair that reconstructs input data through a learned representation.
+
+Q22 [Scenario]: A model based on Autoencoders performs well offline but poorly after deployment. What are plausible causes?
+A22: An autoencoder learns an encoder-decoder pair that reconstructs input data through a learned representation.
+
+Q23 [Scenario]: How would you explain the main trade-off of Autoencoders to a product manager?
+A23: The central trade-offs for Autoencoders involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Autoencoders?
+A24: An autoencoder learns an encoder-decoder pair that reconstructs input data through a learned representation.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Autoencoders?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

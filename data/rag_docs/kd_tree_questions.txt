@@ -1,0 +1,32 @@
+QUESTION BANK: KD-Tree
+CATEGORY: kd_tree
+
+Q1 [Easy]: What is a KD-Tree?
+A1: A KD-Tree is a space-partitioning data structure for organizing points in k-dimensional space.
+
+Q2 [Easy]: What problem does a KD-Tree solve?
+A2: It can support nearest-neighbor and range-search operations efficiently for suitable datasets.
+
+Q3 [Easy]: How does a KD-Tree work?
+A3: It recursively partitions points by selecting dimensions and splitting the data into regions.
+
+Q4 [Medium]: What is the main advantage of a KD-Tree?
+A4: It can provide efficient exact nearest-neighbor search for suitable low-dimensional data.
+
+Q5 [Medium]: Why are KD-Trees less effective in high dimensions?
+A5: As dimensionality increases, more branches may need to be explored, reducing the effectiveness of spatial pruning.
+
+Q6 [Medium]: What is the curse of dimensionality in KD-Trees?
+A6: In high-dimensional spaces, the tree loses much of its ability to prune irrelevant regions efficiently.
+
+Q7 [Advanced]: How does KD-Tree compare with HNSW?
+A7: KD-Trees use recursive spatial partitioning and can support exact nearest-neighbor search for suitable lower-dimensional data, while HNSW uses a multilayer graph for approximate nearest-neighbor search and is often better suited to high-dimensional embeddings.
+
+Q8 [Advanced]: When should KD-Tree be preferred over HNSW?
+A8: KD-Tree should be considered when exact nearest-neighbor search is required and the data is sufficiently low-dimensional for spatial partitioning to remain effective.
+
+Q9 [Advanced]: When should HNSW be preferred over KD-Tree?
+A9: HNSW is generally more suitable for large-scale high-dimensional embedding search where approximate nearest-neighbor retrieval provides better scalability.
+
+Q10 [Scenario]: A system uses 768-dimensional embeddings. Which is generally more suitable, KD-Tree or HNSW?
+A10: HNSW is generally more suitable because KD-Trees become less effective as dimensionality increases, while HNSW is designed for efficient approximate search in high-dimensional vector spaces.

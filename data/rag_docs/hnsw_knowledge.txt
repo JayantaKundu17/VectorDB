@@ -1,0 +1,30 @@
+TOPIC: HNSW
+CATEGORY: hnsw
+
+DEFINITION
+HNSW stands for Hierarchical Navigable Small World and is an approximate nearest-neighbor search structure based on a multilayer graph.
+
+HOW IT WORKS
+Search begins at a high level, navigates toward promising neighbors, and descends through progressively denser layers.
+
+KEY IDEAS
+HNSW uses a hierarchy of graph layers to navigate approximately toward nearby vectors.
+The main design variables are representation, objective function, optimization or search procedure, and evaluation criteria.
+
+COMMON USE CASES
+high-dimensional similarity search
+
+ADVANTAGES / STRENGTHS
+This approach is useful when its assumptions and inductive biases match the structure of the problem. It can provide a strong baseline, specialized performance, interpretability, efficiency, or scalability depending on the topic.
+
+LIMITATIONS / FAILURE MODES
+approximation can miss the exact nearest neighbor and memory can be significant
+
+COMPARISON
+HNSW should be distinguished from brute-force nearest-neighbor search. The best choice depends on data size, feature type, dimensionality, latency, accuracy, interpretability, and operational constraints.
+
+EVALUATION / PRACTICAL CHECKS
+Choose metrics that match the task and business cost of errors. Validate on a representative holdout or cross-validation design, check leakage, inspect failure cases, and monitor performance after deployment.
+
+INTERVIEW TAKEAWAY
+Be prepared to explain what HNSW is, how it works, when to use it, what assumptions it makes, and what trade-offs or failure modes it has.

@@ -1,0 +1,77 @@
+QUESTION BANK: Vision Transformers
+CATEGORY: vit
+
+Q1 [Easy]: What is Vision Transformers?
+A1: Vision Transformers apply transformer-style self-attention to sequences of image patches or visual tokens.
+
+Q2 [Easy]: Why is Vision Transformers important in AI or machine learning?
+A2: Vision Transformers matters because image classification and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Vision Transformers work at a high level?
+A3: An image can be split into patches, projected into embeddings, augmented with positional information, and processed by attention blocks.
+
+Q4 [Easy]: What problem does Vision Transformers solve?
+A4: Vision Transformers addresses problems involving image classification, multimodal systems.
+
+Q5 [Easy]: What are the main components of Vision Transformers?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Vision Transformers?
+A6: Vision Transformers apply transformer-style self-attention to sequences of image patches or visual tokens.
+
+Q7 [Medium]: When should you avoid Vision Transformers?
+A7: data and compute requirements can be high
+
+Q8 [Medium]: What are the main advantages of Vision Transformers?
+A8: Strengths of Vision Transformers include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Vision Transformers?
+A9: data and compute requirements can be high
+
+Q10 [Medium]: What assumptions does Vision Transformers make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Vision Transformers?
+A11: An image can be split into patches, projected into embeddings, augmented with positional information, and processed by attention blocks.
+
+Q12 [Medium]: What common mistakes occur when implementing Vision Transformers?
+A12: Common checks for Vision Transformers include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Vision Transformers?
+A13: Common checks for Vision Transformers include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Vision Transformers to a larger dataset or workload?
+A14: Scaling Vision Transformers typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Vision Transformers?
+A15: The central trade-offs for Vision Transformers involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Vision Transformers?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Vision Transformers after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Vision Transformers compare with a closely related approach?
+A18: An image can be split into patches, projected into embeddings, augmented with positional information, and processed by attention blocks.
+
+Q19 [Interview]: Give a practical example where Vision Transformers is the right choice.
+A19: A practical example is applying Vision Transformers to image classification, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Vision Transformers in a way suitable for an ML engineering interview.
+A20: In an interview, define Vision Transformers, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Vision Transformers but sees unstable production results. What should they investigate first?
+A21: Vision Transformers apply transformer-style self-attention to sequences of image patches or visual tokens.
+
+Q22 [Scenario]: A model based on Vision Transformers performs well offline but poorly after deployment. What are plausible causes?
+A22: Vision Transformers apply transformer-style self-attention to sequences of image patches or visual tokens.
+
+Q23 [Scenario]: How would you explain the main trade-off of Vision Transformers to a product manager?
+A23: The central trade-offs for Vision Transformers involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Vision Transformers?
+A24: Vision Transformers apply transformer-style self-attention to sequences of image patches or visual tokens.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Vision Transformers?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

@@ -1,0 +1,30 @@
+TOPIC: Search Algorithms
+CATEGORY: search
+
+DEFINITION
+AI search algorithms explore a state space to find a path or solution that satisfies a goal.
+
+HOW IT WORKS
+Breadth-first search expands shallow nodes first, depth-first search explores deeply, and heuristic methods such as A* use an estimate of remaining cost.
+
+KEY IDEAS
+The exact implementation depends on the model family, data type, objective, and operating constraints.
+The main design variables are representation, objective function, optimization or search procedure, and evaluation criteria.
+
+COMMON USE CASES
+path planning, puzzle solving, routing, game search
+
+ADVANTAGES / STRENGTHS
+This approach is useful when its assumptions and inductive biases match the structure of the problem. It can provide a strong baseline, specialized performance, interpretability, efficiency, or scalability depending on the topic.
+
+LIMITATIONS / FAILURE MODES
+state-space explosion, heuristic quality, computational cost
+
+COMPARISON
+Search Algorithms should be distinguished from closely related approaches in the same problem family. The best choice depends on data size, feature type, dimensionality, latency, accuracy, interpretability, and operational constraints.
+
+EVALUATION / PRACTICAL CHECKS
+Choose metrics that match the task and business cost of errors. Validate on a representative holdout or cross-validation design, check leakage, inspect failure cases, and monitor performance after deployment.
+
+INTERVIEW TAKEAWAY
+Be prepared to explain what Search Algorithms is, how it works, when to use it, what assumptions it makes, and what trade-offs or failure modes it has.

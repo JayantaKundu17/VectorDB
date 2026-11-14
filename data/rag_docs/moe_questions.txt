@@ -1,0 +1,77 @@
+QUESTION BANK: Mixture of Experts
+CATEGORY: moe
+
+Q1 [Easy]: What is Mixture of Experts?
+A1: Mixture-of-Experts models contain multiple expert subnetworks and route each token to a subset of them.
+
+Q2 [Easy]: Why is Mixture of Experts important in AI or machine learning?
+A2: Mixture of Experts matters because large language models and conditional computation and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Mixture of Experts work at a high level?
+A3: Sparse routing can increase total parameter capacity without activating every parameter for every token.
+
+Q4 [Easy]: What problem does Mixture of Experts solve?
+A4: Mixture of Experts addresses problems involving large language models and conditional computation.
+
+Q5 [Easy]: What are the main components of Mixture of Experts?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Mixture of Experts?
+A6: Mixture-of-Experts models contain multiple expert subnetworks and route each token to a subset of them.
+
+Q7 [Medium]: When should you avoid Mixture of Experts?
+A7: routing balance, communication cost, and expert collapse
+
+Q8 [Medium]: What are the main advantages of Mixture of Experts?
+A8: Strengths of Mixture of Experts include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Mixture of Experts?
+A9: routing balance, communication cost, and expert collapse
+
+Q10 [Medium]: What assumptions does Mixture of Experts make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Mixture of Experts?
+A11: Sparse routing can increase total parameter capacity without activating every parameter for every token.
+
+Q12 [Medium]: What common mistakes occur when implementing Mixture of Experts?
+A12: Common checks for Mixture of Experts include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Mixture of Experts?
+A13: Common checks for Mixture of Experts include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Mixture of Experts to a larger dataset or workload?
+A14: Scaling Mixture of Experts typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Mixture of Experts?
+A15: The central trade-offs for Mixture of Experts involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Mixture of Experts?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Mixture of Experts after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Mixture of Experts compare with a closely related approach?
+A18: Sparse routing can increase total parameter capacity without activating every parameter for every token.
+
+Q19 [Interview]: Give a practical example where Mixture of Experts is the right choice.
+A19: A practical example is applying Mixture of Experts to large language models and conditional computation, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Mixture of Experts in a way suitable for an ML engineering interview.
+A20: In an interview, define Mixture of Experts, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Mixture of Experts but sees unstable production results. What should they investigate first?
+A21: Mixture-of-Experts models contain multiple expert subnetworks and route each token to a subset of them.
+
+Q22 [Scenario]: A model based on Mixture of Experts performs well offline but poorly after deployment. What are plausible causes?
+A22: Mixture-of-Experts models contain multiple expert subnetworks and route each token to a subset of them.
+
+Q23 [Scenario]: How would you explain the main trade-off of Mixture of Experts to a product manager?
+A23: The central trade-offs for Mixture of Experts involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Mixture of Experts?
+A24: Mixture-of-Experts models contain multiple expert subnetworks and route each token to a subset of them.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Mixture of Experts?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

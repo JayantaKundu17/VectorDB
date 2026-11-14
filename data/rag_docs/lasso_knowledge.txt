@@ -1,0 +1,30 @@
+TOPIC: Lasso Regression
+CATEGORY: lasso
+
+DEFINITION
+Lasso regression adds an L1 penalty that can shrink some coefficients exactly to zero.
+
+HOW IT WORKS
+The sparsity induced by L1 regularization can act as a form of feature selection.
+
+KEY IDEAS
+Objective: squared error + lambda * sum(|w_i|).
+The main design variables are representation, objective function, optimization or search procedure, and evaluation criteria.
+
+COMMON USE CASES
+high-dimensional regression, sparse models
+
+ADVANTAGES / STRENGTHS
+This approach is useful when its assumptions and inductive biases match the structure of the problem. It can provide a strong baseline, specialized performance, interpretability, efficiency, or scalability depending on the topic.
+
+LIMITATIONS / FAILURE MODES
+unstable feature selection under highly correlated predictors
+
+COMPARISON
+Lasso Regression should be distinguished from Ridge and Elastic Net. The best choice depends on data size, feature type, dimensionality, latency, accuracy, interpretability, and operational constraints.
+
+EVALUATION / PRACTICAL CHECKS
+Choose metrics that match the task and business cost of errors. Validate on a representative holdout or cross-validation design, check leakage, inspect failure cases, and monitor performance after deployment.
+
+INTERVIEW TAKEAWAY
+Be prepared to explain what Lasso Regression is, how it works, when to use it, what assumptions it makes, and what trade-offs or failure modes it has.

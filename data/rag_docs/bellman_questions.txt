@@ -1,0 +1,77 @@
+QUESTION BANK: Bellman Equation
+CATEGORY: bellman
+
+Q1 [Easy]: What is Bellman Equation?
+A1: The Bellman equations express a value function recursively in terms of immediate reward and expected future value.
+
+Q2 [Easy]: Why is Bellman Equation important in AI or machine learning?
+A2: Bellman Equation matters because dynamic programming and RL and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Bellman Equation work at a high level?
+A3: For a policy, V(s)=E[r + gamma V(s')] in the standard discounted formulation. Optimal Bellman equations replace policy expectations with maximizing actions.
+
+Q4 [Easy]: What problem does Bellman Equation solve?
+A4: Bellman Equation addresses problems involving dynamic programming and RL.
+
+Q5 [Easy]: What are the main components of Bellman Equation?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Bellman Equation?
+A6: The Bellman equations express a value function recursively in terms of immediate reward and expected future value.
+
+Q7 [Medium]: When should you avoid Bellman Equation?
+A7: bootstrapping estimates can propagate error
+
+Q8 [Medium]: What are the main advantages of Bellman Equation?
+A8: Strengths of Bellman Equation include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Bellman Equation?
+A9: bootstrapping estimates can propagate error
+
+Q10 [Medium]: What assumptions does Bellman Equation make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Bellman Equation?
+A11: For a policy, V(s)=E[r + gamma V(s')] in the standard discounted formulation. Optimal Bellman equations replace policy expectations with maximizing actions.
+
+Q12 [Medium]: What common mistakes occur when implementing Bellman Equation?
+A12: Common checks for Bellman Equation include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Bellman Equation?
+A13: Common checks for Bellman Equation include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Bellman Equation to a larger dataset or workload?
+A14: Scaling Bellman Equation typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Bellman Equation?
+A15: The central trade-offs for Bellman Equation involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Bellman Equation?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Bellman Equation after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Bellman Equation compare with a closely related approach?
+A18: For a policy, V(s)=E[r + gamma V(s')] in the standard discounted formulation. Optimal Bellman equations replace policy expectations with maximizing actions.
+
+Q19 [Interview]: Give a practical example where Bellman Equation is the right choice.
+A19: A practical example is applying Bellman Equation to dynamic programming and RL, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Bellman Equation in a way suitable for an ML engineering interview.
+A20: In an interview, define Bellman Equation, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Bellman Equation but sees unstable production results. What should they investigate first?
+A21: The Bellman equations express a value function recursively in terms of immediate reward and expected future value.
+
+Q22 [Scenario]: A model based on Bellman Equation performs well offline but poorly after deployment. What are plausible causes?
+A22: The Bellman equations express a value function recursively in terms of immediate reward and expected future value.
+
+Q23 [Scenario]: How would you explain the main trade-off of Bellman Equation to a product manager?
+A23: The central trade-offs for Bellman Equation involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Bellman Equation?
+A24: The Bellman equations express a value function recursively in terms of immediate reward and expected future value.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Bellman Equation?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

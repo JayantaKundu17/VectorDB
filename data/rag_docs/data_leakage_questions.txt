@@ -1,0 +1,77 @@
+QUESTION BANK: Data Leakage
+CATEGORY: data_leakage
+
+Q1 [Easy]: What is Data Leakage?
+A1: Data leakage occurs when information unavailable at prediction time influences training or evaluation.
+
+Q2 [Easy]: Why is Data Leakage important in AI or machine learning?
+A2: Data Leakage matters because ML evaluation and production safety and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Data Leakage work at a high level?
+A3: Leakage can enter through preprocessing, temporal splits, target-derived features, duplicated records, or improper validation.
+
+Q4 [Easy]: What problem does Data Leakage solve?
+A4: Data Leakage addresses problems involving ML evaluation and production safety.
+
+Q5 [Easy]: What are the main components of Data Leakage?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Data Leakage?
+A6: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q7 [Medium]: When should you avoid Data Leakage?
+A7: inflated offline metrics and production failure
+
+Q8 [Medium]: What are the main advantages of Data Leakage?
+A8: Strengths of Data Leakage include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Data Leakage?
+A9: inflated offline metrics and production failure
+
+Q10 [Medium]: What assumptions does Data Leakage make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Data Leakage?
+A11: Leakage can enter through preprocessing, temporal splits, target-derived features, duplicated records, or improper validation.
+
+Q12 [Medium]: What common mistakes occur when implementing Data Leakage?
+A12: Common checks for Data Leakage include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Data Leakage?
+A13: Common checks for Data Leakage include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Data Leakage to a larger dataset or workload?
+A14: Scaling Data Leakage typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Data Leakage?
+A15: The central trade-offs for Data Leakage involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Data Leakage?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Data Leakage after deployment?
+A17: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q18 [Advanced]: How does Data Leakage compare with a closely related approach?
+A18: Leakage can enter through preprocessing, temporal splits, target-derived features, duplicated records, or improper validation.
+
+Q19 [Interview]: Give a practical example where Data Leakage is the right choice.
+A19: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q20 [Interview]: Explain Data Leakage in a way suitable for an ML engineering interview.
+A20: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q21 [Scenario]: A team adopts Data Leakage but sees unstable production results. What should they investigate first?
+A21: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q22 [Scenario]: A model based on Data Leakage performs well offline but poorly after deployment. What are plausible causes?
+A22: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q23 [Scenario]: How would you explain the main trade-off of Data Leakage to a product manager?
+A23: The central trade-offs for Data Leakage involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Data Leakage?
+A24: Data leakage occurs when information unavailable at prediction time influences training or evaluation.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Data Leakage?
+A25: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.

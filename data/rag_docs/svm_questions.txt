@@ -1,0 +1,77 @@
+QUESTION BANK: Support Vector Machines
+CATEGORY: svm
+
+Q1 [Easy]: What is Support Vector Machines?
+A1: SVM finds a decision boundary that maximizes margin and can use kernels to model nonlinear relationships.
+
+Q2 [Easy]: Why is Support Vector Machines important in AI or machine learning?
+A2: Support Vector Machines matters because text and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Support Vector Machines work at a high level?
+A3: The soft-margin formulation trades margin size against classification violations. Kernel methods implicitly map data into richer feature spaces.
+
+Q4 [Easy]: What problem does Support Vector Machines solve?
+A4: Support Vector Machines addresses problems involving text, medium-sized tabular datasets, nonlinear classification.
+
+Q5 [Easy]: What are the main components of Support Vector Machines?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Support Vector Machines?
+A6: SVM finds a decision boundary that maximizes margin and can use kernels to model nonlinear relationships.
+
+Q7 [Medium]: When should you avoid Support Vector Machines?
+A7: scaling, kernel choice, and computational cost on very large datasets
+
+Q8 [Medium]: What are the main advantages of Support Vector Machines?
+A8: Strengths of Support Vector Machines include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Support Vector Machines?
+A9: scaling, kernel choice, and computational cost on very large datasets
+
+Q10 [Medium]: What assumptions does Support Vector Machines make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Support Vector Machines?
+A11: The soft-margin formulation trades margin size against classification violations. Kernel methods implicitly map data into richer feature spaces.
+
+Q12 [Medium]: What common mistakes occur when implementing Support Vector Machines?
+A12: Common checks for Support Vector Machines include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Support Vector Machines?
+A13: Common checks for Support Vector Machines include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Support Vector Machines to a larger dataset or workload?
+A14: Scaling Support Vector Machines typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Support Vector Machines?
+A15: The central trade-offs for Support Vector Machines involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Support Vector Machines?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Support Vector Machines after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Support Vector Machines compare with a closely related approach?
+A18: The soft-margin formulation trades margin size against classification violations. Kernel methods implicitly map data into richer feature spaces.
+
+Q19 [Interview]: Give a practical example where Support Vector Machines is the right choice.
+A19: A practical example is applying Support Vector Machines to text, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Support Vector Machines in a way suitable for an ML engineering interview.
+A20: In an interview, define Support Vector Machines, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Support Vector Machines but sees unstable production results. What should they investigate first?
+A21: SVM finds a decision boundary that maximizes margin and can use kernels to model nonlinear relationships.
+
+Q22 [Scenario]: A model based on Support Vector Machines performs well offline but poorly after deployment. What are plausible causes?
+A22: SVM finds a decision boundary that maximizes margin and can use kernels to model nonlinear relationships.
+
+Q23 [Scenario]: How would you explain the main trade-off of Support Vector Machines to a product manager?
+A23: The central trade-offs for Support Vector Machines involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Support Vector Machines?
+A24: SVM finds a decision boundary that maximizes margin and can use kernels to model nonlinear relationships.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Support Vector Machines?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

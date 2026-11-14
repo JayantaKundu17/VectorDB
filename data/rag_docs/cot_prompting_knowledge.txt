@@ -1,0 +1,30 @@
+TOPIC: Chain-of-Thought Prompting
+CATEGORY: cot_prompting
+
+DEFINITION
+Chain-of-thought prompting asks a model to reason through a problem in intermediate steps, often improving difficult reasoning tasks.
+
+HOW IT WORKS
+In production systems, concise rationale or structured verification may be safer than exposing or relying on unrestricted internal reasoning.
+
+KEY IDEAS
+The exact implementation depends on the model family, data type, objective, and operating constraints.
+The main design variables are representation, objective function, optimization or search procedure, and evaluation criteria.
+
+COMMON USE CASES
+complex reasoning, planning, math
+
+ADVANTAGES / STRENGTHS
+This approach is useful when its assumptions and inductive biases match the structure of the problem. It can provide a strong baseline, specialized performance, interpretability, efficiency, or scalability depending on the topic.
+
+LIMITATIONS / FAILURE MODES
+reasoning traces can contain mistakes and should not be treated as ground truth
+
+COMPARISON
+Chain-of-Thought Prompting should be distinguished from closely related approaches in the same problem family. The best choice depends on data size, feature type, dimensionality, latency, accuracy, interpretability, and operational constraints.
+
+EVALUATION / PRACTICAL CHECKS
+Choose metrics that match the task and business cost of errors. Validate on a representative holdout or cross-validation design, check leakage, inspect failure cases, and monitor performance after deployment.
+
+INTERVIEW TAKEAWAY
+Be prepared to explain what Chain-of-Thought Prompting is, how it works, when to use it, what assumptions it makes, and what trade-offs or failure modes it has.

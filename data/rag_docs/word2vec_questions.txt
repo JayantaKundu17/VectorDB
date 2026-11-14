@@ -1,0 +1,77 @@
+QUESTION BANK: Word2Vec
+CATEGORY: word2vec
+
+Q1 [Easy]: What is Word2Vec?
+A1: Word2Vec learns dense word embeddings by predicting words from context or context from a word.
+
+Q2 [Easy]: Why is Word2Vec important in AI or machine learning?
+A2: Word2Vec matters because semantic similarity and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Word2Vec work at a high level?
+A3: CBOW predicts a target from nearby words; skip-gram predicts nearby words from a target word.
+
+Q4 [Easy]: What problem does Word2Vec solve?
+A4: Word2Vec addresses problems involving semantic similarity, classic NLP.
+
+Q5 [Easy]: What are the main components of Word2Vec?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Word2Vec?
+A6: Word2Vec learns dense word embeddings by predicting words from context or context from a word.
+
+Q7 [Medium]: When should you avoid Word2Vec?
+A7: static embeddings do not change meaning by sentence context
+
+Q8 [Medium]: What are the main advantages of Word2Vec?
+A8: Strengths of Word2Vec include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Word2Vec?
+A9: static embeddings do not change meaning by sentence context
+
+Q10 [Medium]: What assumptions does Word2Vec make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Word2Vec?
+A11: CBOW predicts a target from nearby words; skip-gram predicts nearby words from a target word.
+
+Q12 [Medium]: What common mistakes occur when implementing Word2Vec?
+A12: Common checks for Word2Vec include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Word2Vec?
+A13: Common checks for Word2Vec include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Word2Vec to a larger dataset or workload?
+A14: Scaling Word2Vec typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Word2Vec?
+A15: The central trade-offs for Word2Vec involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Word2Vec?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Word2Vec after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Word2Vec compare with a closely related approach?
+A18: CBOW predicts a target from nearby words; skip-gram predicts nearby words from a target word.
+
+Q19 [Interview]: Give a practical example where Word2Vec is the right choice.
+A19: A practical example is applying Word2Vec to semantic similarity, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Word2Vec in a way suitable for an ML engineering interview.
+A20: In an interview, define Word2Vec, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Word2Vec but sees unstable production results. What should they investigate first?
+A21: Word2Vec learns dense word embeddings by predicting words from context or context from a word.
+
+Q22 [Scenario]: A model based on Word2Vec performs well offline but poorly after deployment. What are plausible causes?
+A22: Word2Vec learns dense word embeddings by predicting words from context or context from a word.
+
+Q23 [Scenario]: How would you explain the main trade-off of Word2Vec to a product manager?
+A23: The central trade-offs for Word2Vec involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Word2Vec?
+A24: Word2Vec learns dense word embeddings by predicting words from context or context from a word.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Word2Vec?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.

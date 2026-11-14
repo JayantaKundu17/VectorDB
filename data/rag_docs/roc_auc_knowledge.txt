@@ -1,0 +1,30 @@
+TOPIC: ROC AUC
+CATEGORY: roc_auc
+
+DEFINITION
+ROC AUC summarizes ranking performance across classification thresholds using true-positive and false-positive rates.
+
+HOW IT WORKS
+It can be interpreted as the probability that a randomly chosen positive receives a higher score than a randomly chosen negative under common conditions.
+
+KEY IDEAS
+AUC is the area under the ROC curve across thresholds.
+The main design variables are representation, objective function, optimization or search procedure, and evaluation criteria.
+
+COMMON USE CASES
+binary classification
+
+ADVANTAGES / STRENGTHS
+This approach is useful when its assumptions and inductive biases match the structure of the problem. It can provide a strong baseline, specialized performance, interpretability, efficiency, or scalability depending on the topic.
+
+LIMITATIONS / FAILURE MODES
+can look strong even when precision at the operating point is poor under severe imbalance
+
+COMPARISON
+ROC AUC should be distinguished from closely related approaches in the same problem family. The best choice depends on data size, feature type, dimensionality, latency, accuracy, interpretability, and operational constraints.
+
+EVALUATION / PRACTICAL CHECKS
+Choose metrics that match the task and business cost of errors. Validate on a representative holdout or cross-validation design, check leakage, inspect failure cases, and monitor performance after deployment.
+
+INTERVIEW TAKEAWAY
+Be prepared to explain what ROC AUC is, how it works, when to use it, what assumptions it makes, and what trade-offs or failure modes it has.

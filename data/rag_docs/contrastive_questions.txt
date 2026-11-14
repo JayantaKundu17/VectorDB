@@ -1,0 +1,77 @@
+QUESTION BANK: Contrastive Learning
+CATEGORY: contrastive
+
+Q1 [Easy]: What is Contrastive Learning?
+A1: Contrastive learning trains representations so related examples are close and unrelated examples are farther apart under a chosen similarity objective.
+
+Q2 [Easy]: Why is Contrastive Learning important in AI or machine learning?
+A2: Contrastive Learning matters because embeddings and related tasks benefit when its assumptions and design match the problem.
+
+Q3 [Easy]: How does Contrastive Learning work at a high level?
+A3: Positive and negative pairs or views define the training signal.
+
+Q4 [Easy]: What problem does Contrastive Learning solve?
+A4: Contrastive Learning addresses problems involving embeddings, vision, multimodal learning.
+
+Q5 [Easy]: What are the main components of Contrastive Learning?
+A5: Core elements include the representation or data structure, the learning/search objective, the algorithmic update or retrieval procedure, and task-specific evaluation.
+
+Q6 [Medium]: When should you use Contrastive Learning?
+A6: Contrastive learning trains representations so related examples are close and unrelated examples are farther apart under a chosen similarity objective.
+
+Q7 [Medium]: When should you avoid Contrastive Learning?
+A7: negative sampling, augmentation, and batch composition matter
+
+Q8 [Medium]: What are the main advantages of Contrastive Learning?
+A8: Strengths of Contrastive Learning include suitability for its target workload and useful inductive biases; the exact benefit depends on data, scale, and operational requirements.
+
+Q9 [Medium]: What are the main limitations of Contrastive Learning?
+A9: negative sampling, augmentation, and batch composition matter
+
+Q10 [Medium]: What assumptions does Contrastive Learning make?
+A10: The important assumptions depend on the formulation, but they include appropriate data representation, a suitable objective, and a deployment distribution that is not radically different from training.
+
+Q11 [Medium]: How do you evaluate a system based on Contrastive Learning?
+A11: Positive and negative pairs or views define the training signal.
+
+Q12 [Medium]: What common mistakes occur when implementing Contrastive Learning?
+A12: Common checks for Contrastive Learning include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q13 [Advanced]: How would you debug poor performance in Contrastive Learning?
+A13: Common checks for Contrastive Learning include data leakage, feature or label bugs, preprocessing mismatch, hyperparameter settings, class or sample imbalance, and distribution shift.
+
+Q14 [Advanced]: How would you scale Contrastive Learning to a larger dataset or workload?
+A14: Scaling Contrastive Learning typically requires attention to computational complexity, batching or indexing, memory use, parallelism, and approximate methods where exact computation becomes expensive.
+
+Q15 [Advanced]: What trade-offs should you consider when choosing Contrastive Learning?
+A15: The central trade-offs for Contrastive Learning involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q16 [Advanced]: How can data leakage affect a system using Contrastive Learning?
+A16: Leakage can make offline results unrealistically strong by allowing information unavailable at prediction time into training or evaluation.
+
+Q17 [Advanced]: How can distribution shift affect Contrastive Learning after deployment?
+A17: Distribution shift can reduce performance when production inputs or input-target relationships differ from the training environment.
+
+Q18 [Advanced]: How does Contrastive Learning compare with a closely related approach?
+A18: Positive and negative pairs or views define the training signal.
+
+Q19 [Interview]: Give a practical example where Contrastive Learning is the right choice.
+A19: A practical example is applying Contrastive Learning to embeddings, provided the method's assumptions and operational constraints fit.
+
+Q20 [Interview]: Explain Contrastive Learning in a way suitable for an ML engineering interview.
+A20: In an interview, define Contrastive Learning, explain its core mechanism, give one use case, then state one limitation and one comparison point.
+
+Q21 [Scenario]: A team adopts Contrastive Learning but sees unstable production results. What should they investigate first?
+A21: Contrastive learning trains representations so related examples are close and unrelated examples are farther apart under a chosen similarity objective.
+
+Q22 [Scenario]: A model based on Contrastive Learning performs well offline but poorly after deployment. What are plausible causes?
+A22: Contrastive learning trains representations so related examples are close and unrelated examples are farther apart under a chosen similarity objective.
+
+Q23 [Scenario]: How would you explain the main trade-off of Contrastive Learning to a product manager?
+A23: The central trade-offs for Contrastive Learning involve quality versus latency, compute and memory, simplicity versus flexibility, and accuracy versus interpretability or robustness.
+
+Q24 [Deep Dive]: What is the mathematical or algorithmic intuition behind Contrastive Learning?
+A24: Contrastive learning trains representations so related examples are close and unrelated examples are farther apart under a chosen similarity objective.
+
+Q25 [Deep Dive]: What hyperparameters or design choices matter most for Contrastive Learning?
+A25: Important choices depend on the method and commonly include model capacity, regularization, optimization settings, thresholds, or index parameters. Tune them using leakage-safe validation.
