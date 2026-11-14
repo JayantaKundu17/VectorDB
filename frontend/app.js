@@ -486,7 +486,7 @@ async function loadStats() {
         ).textContent =
             data.index || "HNSW";
 
-        setSystemOnline();
+        // Health monitoring is the single source of truth for system status.
 
     } catch (error) {
 
@@ -510,7 +510,7 @@ async function loadStats() {
         ).textContent =
             "—";
 
-        setSystemOffline();
+        // Let the health monitor update the global system status.
     }
 }
 
@@ -546,7 +546,6 @@ async function updateHealth() {
     if (healthCheckInProgress) return false;
 
     healthCheckInProgress = true;
-    setSystemWaking();
 
     try {
         const healthy = await checkHealth();
@@ -628,6 +627,9 @@ function setSystemOffline() {
 
 function startHealthMonitoring() {
     if (healthRetryTimer) clearTimeout(healthRetryTimer);
+
+    // Show the waking state only for the initial connection attempt.
+    setSystemWaking();
 
     const checkAndSchedule = async () => {
         await updateHealth();
