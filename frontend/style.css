@@ -2131,3 +2131,202 @@ svg[fill="#3b82f6"] {
         margin: 12px 16px 0;
     }
 }
+
+
+/* =========================================================
+   CLEANER UI — REDUCE EXCESSIVE BORDERS AND DIVIDER LINES
+   Keeps functional focus states and important status accents.
+   ========================================================= */
+
+:root {
+    --border: #eceef2;
+    --border-dark: #e2e5ea;
+}
+
+/* Main layout separators */
+.sidebar {
+    border-right: 0;
+}
+
+.sidebar-bottom {
+    border-top: 0;
+}
+
+.topbar {
+    border-bottom: 0;
+}
+
+/* Brand and status areas */
+.brand-icon {
+    border: 0;
+    background: #f5f7fb;
+}
+
+.status-card {
+    border: 0;
+    background: #f7f8fa;
+}
+
+/* Navigation: use soft fills rather than outlined buttons */
+.nav-item {
+    border-color: transparent !important;
+}
+
+.nav-item[data-section="ragSection"]:hover,
+.nav-item[data-section="databaseSection"]:hover,
+.nav-item[data-section="systemSection"]:hover {
+    border-color: transparent !important;
+}
+
+.nav-item[data-section="ragSection"].active,
+.nav-item[data-section="databaseSection"].active,
+.nav-item[data-section="systemSection"].active {
+    border-color: transparent !important;
+}
+
+/* Main RAG panels */
+.chat-panel,
+.sources-panel {
+    border: 0;
+    box-shadow: none;
+    background: #ffffff;
+}
+
+.panel-header {
+    border-bottom: 0;
+}
+
+/* Chat input area */
+.input-container {
+    border-top: 0;
+    background: #f7f8fa;
+}
+
+#questionInput {
+    border: 1px solid #e5e7eb;
+    box-shadow: none;
+}
+
+#questionInput:focus {
+    border-color: #93b4f5 !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08) !important;
+}
+
+/* Softer example prompts and chat bubbles */
+.example-question {
+    border: 0;
+    background: #f5f7fa;
+}
+
+.example-question:hover {
+    border-color: transparent !important;
+}
+
+.user-bubble {
+    border: 0;
+}
+
+/* Retrieved source cards */
+.source-card {
+    border: 0;
+    background: #f7f8fa;
+}
+
+.source-card:hover {
+    border-color: transparent;
+}
+
+/* Database and system cards */
+.stat-card,
+.config-card,
+.architecture-card,
+.benchmark-card,
+.vector-space-card,
+.system-flow-card,
+.algorithm-card,
+.system-card {
+    border: 0;
+    box-shadow: none;
+    background: #f8f9fb;
+}
+
+.algorithm-card.featured {
+    background: #eff6ff !important;
+    border: 0 !important;
+}
+
+/* Pipeline and architecture elements */
+.pipeline-node,
+.pipeline-node.highlight,
+.pipeline-icon,
+.system-flow span,
+.system-flow .flow-highlight {
+    border: 0;
+}
+
+.pipeline-node {
+    background: #f5f7fa;
+}
+
+.pipeline-node.highlight {
+    background: #eff6ff;
+}
+
+.pipeline-icon {
+    background: #eaf1ff;
+}
+
+/* Benchmark table: remove row and header rules */
+.benchmark-table th,
+.benchmark-table td {
+    border-bottom: 0;
+}
+
+.benchmark-table tbody tr:nth-child(even) {
+    background: #f8f9fb;
+}
+
+/* PCA: avoid double borders around the canvas */
+.vector-plot-wrapper {
+    border: 0;
+    background: #f8f9fb;
+}
+
+#scatter,
+#pcaCanvas,
+canvas {
+    border: 0;
+}
+
+/* Selected PCA item and tooltip */
+.pca-selected {
+    border: 0;
+    background: #f5f7fa;
+}
+
+.pca-tooltip {
+    border: 0;
+}
+
+/* Backend notice: retain a subtle background, remove outline */
+.backend-notice {
+    border: 0;
+    background: #eff6ff;
+}
+
+/* Keep clear keyboard accessibility without decorative borders */
+button:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+/* Refresh control remains visibly interactive but understated */
+.refresh-button {
+    border: 0;
+    background: #f5f7fa;
+}
+
+.refresh-button:hover {
+    border-color: transparent;
+    background: #edf1f7;
+}
